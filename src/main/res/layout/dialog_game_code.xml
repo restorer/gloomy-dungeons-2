@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp"
+	android:paddingTop="10dp"
+	android:paddingBottom="10dp"
+>
+	<EditText
+		android:id="@+id/code"
+		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:singleLine="true"
+		android:scrollHorizontally="true"
+		android:hint="@string/dlg_game_code"
+		android:inputType="text|textNoSuggestions"
+	/>
+</LinearLayout>

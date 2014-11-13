@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources"
+>
+    <string name="menu_connect">Кантролер: Падключыць</string>
+    <string name="menu_disconnect">Кантролер: Адключыць</string>
+    <string name="connecting">Падлучэнне &#8230;</string>
+    <string name="disconnecting">Адключэнне &#8230;</string>
+
+    <string name="dlg_select_zeemote_mapping">Выберыце прызначэнне кнопкі</string>
+    <string name="dlg_zeemote_preferences">Наладкі Zeemote</string>
+    <string name="pref_zeemote">Zeemote</string>
+    <string name="pref_zeemote_x_accel">Паскарэнне па X</string>
+    <string name="pref_zeemote_y_accel">Паскарэнне па Y</string>
+    <string name="pref_zeemote_mapping_fire">Button A</string>
+    <string name="pref_zeemote_mapping_a">Button B</string>
+    <string name="pref_zeemote_mapping_b">Button C</string>
+    <string name="pref_zeemote_mapping_c">Button D</string>
+</resources>

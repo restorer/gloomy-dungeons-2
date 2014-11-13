@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="zame.game"
+	android:installLocation="auto"
+>
+	<!-- xlargeScreens - For Android versions 3.2 or higher, there is a Zooming-In button which expands apps made for smart phones into a size fit for tablets. However, because this function obstructs proper running of ads, it should not be used. -->
+	<support-screens android:anyDensity="true" android:xlargeScreens="true" />
+
+	<uses-feature android:name="android.software.live_wallpaper" />
+
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+	<application
+		android:label="@string/app_name"
+		android:icon="@drawable/ic_launcher"
+		android:name="zame.game.MyApplication"
+		android:hardwareAccelerated="false"
+		android:largeHeap="true"
+	>
+		<activity
+			android:screenOrientation="landscape"
+			android:name="zame.game.MainActivity"
+			android:label="@string/app_name"
+			android:launchMode="singleTop"
+			android:alwaysRetainTaskState="true"
+			android:theme="@style/Gloomy.Theme.MainActivity"
+			android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+		>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:screenOrientation="landscape"
+			android:name="zame.game.misc.GeneralWebActivity"
+			android:label="@string/app_name"
+			android:launchMode="standard"
+			android:theme="@style/Gloomy.Theme.WebActivity"
+			android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+		/>
+		<receiver
+			android:name="zame.game.misc.InstallReferrerReceiver"
+			android:exported="true"
+			tools:ignore="ExportedReceiver"
+		>
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+		</receiver>
+
+		<service
+			android:name="zame.game.MyWallpaperService"
+			android:enabled="true"
+			android:permission="android.permission.BIND_WALLPAPER"
+			android:label="@string/app_name"
+		>
+			<intent-filter>
+				<action android:name="android.service.wallpaper.WallpaperService" />
+			</intent-filter>
+			<meta-data android:name="android.service.wallpaper" android:resource="@xml/wallpaper" />
+		</service>
+
+		<receiver android:name="zame.game.MyWidgetProvider">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider" android:resource="@xml/widget" />
+		</receiver>
+	</application>
+</manifest>

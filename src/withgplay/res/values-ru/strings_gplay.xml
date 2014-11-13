@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources"
+>
+    <string name="achievements_use_facebook_name">Взять имя из Facebook</string>
+    <string name="menu_rate_game">Оцените эту игру!</string>
+    <string name="pt_earn_facebook">Лайкнуть игру на Facebook</string>
+    <string name="pd_earn_facebook">Лайкните эту игру на Facebook и получите 0 кредитов и безграничное уважение</string>
+</resources>

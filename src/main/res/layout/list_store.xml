@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+	android:paddingRight="@dimen/gloomy_store_item_padding_hor"
+	android:paddingTop="@dimen/gloomy_store_item_padding_vert"
+	android:paddingBottom="@dimen/gloomy_store_item_padding_vert"
+>
+	<ImageView
+		android:id="@+id/icon"
+		android:layout_width="@dimen/gloomy_store_item_icon_size"
+		android:layout_height="@dimen/gloomy_store_item_icon_size"
+		android:layout_marginRight="@dimen/gloomy_store_item_padding_between"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:scaleType="fitCenter"
+	/>
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/price"
+		android:layout_toRightOf="@+id/icon"
+		style="@style/Gloomy.Store.Item.Title"
+	/>
+	<TextView
+		android:id="@+id/description"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/price"
+		android:layout_below="@+id/title"
+		android:layout_toRightOf="@+id/icon"
+		style="@style/Gloomy.Store.Item.Text"
+	/>
+	<TextView
+		android:id="@+id/price"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:gravity="right"
+		android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+		style="@style/Gloomy.Store.Item.Price"
+	/>
+	<TextView
+		android:id="@+id/free_credits"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/price"
+		android:gravity="right"
+		android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+		style="@style/Gloomy.Store.Item.FreeCredits"
+	/>
+</RelativeLayout>

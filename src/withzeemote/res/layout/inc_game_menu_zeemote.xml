@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zeemote"
+    android:fontFamily="gloomy"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/gloomy_common_button_height"
+    android:layout_marginTop="15dp"
+    style="@style/Gloomy.GameMenu.Button"
+    android:text="@string/dlg_zeemote_preferences"
+    android:visibility="gone"
+/>

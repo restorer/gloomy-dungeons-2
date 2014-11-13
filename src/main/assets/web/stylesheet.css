@@ -1,0 +1,51 @@
+@font-face {
+	font-family: furore;
+	src: url("file:///android_asset/fonts/furore.ttf");
+}
+
+body {
+	background: #000000;
+	color: #A89A90;
+	font-family: furore, sans-serif;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+	font-size: 15px;
+}
+
+a {
+	color: #CCCCCC;
+	font-size: 15px;
+}
+
+b {
+	color: #CCCCCC;
+}
+
+.wrap {
+	padding: 15px;
+}
+
+h1 {
+	padding: 0 0 10px 0;
+	margin: 0;
+	font-size: 30px;
+	color: #CCCCCC;
+}
+
+h1.nopad {
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+p.botpad {
+	padding-bottom: 30px;
+}
+
+p.toppad {
+	padding-top: 20px;
+}

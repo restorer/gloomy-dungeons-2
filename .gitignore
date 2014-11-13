@@ -1,0 +1,9 @@
+/.gradle
+/build
+/libraries/*/build
+/temp/*
+!/temp/.keep
+/tools/signing.keystore
+/tools/signing.properties
+/local.properties
+.DS_Store

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zame.game.libs.AbsoluteLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:zame="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/back_common"
+	tools:ignore="NestedWeights,Overdraw"
+>
+	<include layout="@layout/inc_select_episode_gplay_promo" />
+	<include layout="@layout/inc_select_episode_gplay_share" />
+	<!-- layout_yWeight = 0.3625 - 0.1125 -->
+	<TextView
+		android:id="@+id/episode"
+		android:fontFamily="gloomy"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		zame:layout_widthWeight="0.95"
+		zame:layout_heightWeight="0.1125"
+		zame:layout_xWeight="0.025"
+		zame:layout_yWeight="0.25"
+		style="@style/Gloomy.SelectEpisode.EpisodeText"
+	/>
+	<FrameLayout
+		android:id="@+id/images_wrap"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		zame:layout_widthWeight="0.95"
+		zame:layout_heightWeight="0.3875"
+		zame:layout_xWeight="0.025"
+		zame:layout_yWeight="0.3625"
+	>
+		<ImageView
+			android:id="@+id/image_1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="fill"
+			android:scaleType="fitCenter"
+			tools:ignore="ContentDescription"
+		/>
+		<ImageView
+			android:id="@+id/image_2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="fill"
+			android:scaleType="fitCenter"
+			android:visibility="invisible"
+			tools:ignore="ContentDescription"
+		/>
+	</FrameLayout>
+	<TextView
+		android:fontFamily="gloomy"
+		android:id="@+id/info"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		zame:layout_widthWeight="0.95"
+		zame:layout_heightWeight="0.1125"
+		zame:layout_xWeight="0.025"
+		zame:layout_yWeight="0.75"
+		style="@style/Gloomy.SelectEpisode.Text"
+	/>
+	<Button
+		android:fontFamily="gloomy"
+		android:id="@+id/back"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/gloomy_common_button_height"
+		zame:layout_widthWeight="0.35"
+		zame:layout_xWeight="0.025"
+		zame:layout_byWeight="0.975"
+		style="@style/Gloomy.Common.Button"
+		android:text="@string/se_back"
+	/>
+	<Button
+		android:fontFamily="gloomy"
+		android:id="@+id/kontinue"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/gloomy_common_button_height"
+		zame:layout_widthWeight="0.35"
+		zame:layout_rxWeight="0.975"
+		zame:layout_byWeight="0.975"
+		style="@style/Gloomy.Common.Button"
+		android:text="@string/se_continue"
+	/>
+</zame.game.libs.AbsoluteLayout>

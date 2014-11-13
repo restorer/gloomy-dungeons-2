@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="gloomy_store_normal">#FFFFFF</color>
+	<color name="gloomy_store_locked">#696969</color>
+	<color name="gloomy_store_price">#FF0000</color>
+	<color name="gloomy_store_purchased">#ADFF2F</color>
+	<color name="gloomy_store_earn">#FFD700</color>
+	<color name="gloomy_store_free_credits">@color/gloomy_store_purchased</color>
+
+	<color name="gloomy_achievements_locked">@color/gloomy_store_locked</color>
+	<color name="gloomy_achievements_achieved">@color/gloomy_store_purchased</color>
+
+	<color name="gloomy_leaderboard_normal">#FFFFFF</color>
+	<color name="gloomy_leaderboard_owner">#FFD700</color>
+	<color name="gloomy_leaderboard_error">#FF0000</color>
+</resources>

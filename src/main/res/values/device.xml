@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources xmlns:tools="https://schemas.android.com/tools">
+	<bool name="gloomy_device_large">false</bool>
+</resources>

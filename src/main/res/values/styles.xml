@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Gloomy" />
+
+	<style name="Gloomy.Common" />
+	<style name="Gloomy.Common.Button">
+		<item name="android:background">@drawable/button</item>
+		<item name="android:textColor">@color/button</item>
+		<item name="android:shadowColor">#000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">2</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textSize">@dimen/gloomy_common_button_textsize</item>
+		<item name="android:singleLine">true</item>
+	</style>
+
+	<style name="Gloomy.GameMenu" />
+	<style name="Gloomy.GameMenu.Button" parent="@style/Gloomy.Common.Button">
+		<item name="android:textSize">@dimen/gloomy_gamemenu_button_textsize</item>
+	</style>
+	<style name="Gloomy.GameMenu.Text">
+		<item name="android:gravity">center</item>
+		<item name="android:textSize">@dimen/gloomy_gamemenu_textsize</item>
+	</style>
+
+	<style name="Gloomy.Menu" />
+	<style name="Gloomy.Menu.Text">
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textSize">@dimen/gloomy_menu_textsize</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:paddingTop">5dp</item>
+	</style>
+
+	<style name="Gloomy.Endl" />
+	<style name="Gloomy.Endl.Text">
+		<item name="android:textColor">#EEE</item>
+		<item name="android:shadowColor">#000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">2</item>
+		<item name="android:textSize">@dimen/gloomy_endl_textsize</item>
+		<item name="android:gravity">center</item>
+	</style>
+
+	<style name="Gloomy.Prep" />
+	<style name="Gloomy.Prep.Title" parent="@style/Gloomy.Endl.Text">
+		<item name="android:textSize">@dimen/gloomy_prep_title_textsize</item>
+	</style>
+	<style name="Gloomy.Prep.Action" parent="@style/Gloomy.Endl.Text">
+		<item name="android:textSize">@dimen/gloomy_prep_action_textsize</item>
+	</style>
+
+	<style name="Gloomy.SelectEpisode" />
+	<style name="Gloomy.SelectEpisode.Text" parent="@style/Gloomy.Endl.Text">
+		<item name="android:textSize">@dimen/gloomy_selectepisode_textsize</item>
+	</style>
+	<style name="Gloomy.SelectEpisode.EpisodeText" parent="@style/Gloomy.Endl.Text">
+		<item name="android:textSize">@dimen/gloomy_selectepisode_episode_textsize</item>
+	</style>
+
+	<style name="Gloomy.Store" />
+	<style name="Gloomy.Store.Item" />
+	<style name="Gloomy.Store.Item.Text">
+		<item name="android:textColor">@color/primary_text_holo_dark</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">@dimen/gloomy_store_item_textsize</item>
+	</style>
+	<style name="Gloomy.Store.Item.Title" parent="@style/Gloomy.Store.Item.Text">
+		<item name="android:textSize">@dimen/gloomy_store_title_textsize</item>
+		<!-- Don't use textAllCaps, because it removes spans -->
+	</style>
+	<style name="Gloomy.Store.Item.Price" parent="@style/Gloomy.Store.Item.Text">
+		<item name="android:textSize">@dimen/gloomy_store_price_textsize</item>
+		<item name="android:textAllCaps">true</item>
+	</style>
+	<style name="Gloomy.Store.Item.FreeCredits" parent="@style/Gloomy.Store.Item.Price">
+		<item name="android:textColor">@color/gloomy_store_free_credits</item>
+	</style>
+	<style name="Gloomy.Store.Footer">
+		<item name="android:textColor">@color/primary_text_holo_dark</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textAllCaps">true</item>
+	</style>
+	<style name="Gloomy.Store.Footer.Button" parent="@style/Gloomy.Store.Footer">
+		<item name="android:textSize">@dimen/gloomy_store_footer_button_textsize</item>
+		<item name="android:paddingLeft">@dimen/gloomy_store_footer_button_padding</item>
+		<item name="android:paddingRight">@dimen/gloomy_store_footer_button_padding</item>
+	</style>
+	<style name="Gloomy.Store.Footer.Text" parent="@style/Gloomy.Store.Footer">
+		<item name="android:textSize">@dimen/gloomy_store_footer_textsize</item>
+		<item name="android:textColor">@color/gloomy_store_earn</item>
+	</style>
+
+	<style name="Gloomy.Leaderboard" />
+	<style name="Gloomy.Leaderboard.Item" parent="@style/Gloomy.Store.Item" />
+	<style name="Gloomy.Leaderboard.Item.Position">
+		<item name="android:textSize">@dimen/gloomy_leaderboard_position_textsize</item>
+	</style>
+	<style name="Gloomy.Leaderboard.Item.Name" parent="@style/Gloomy.Store.Item.Title" />
+	<style name="Gloomy.Leaderboard.Item.Achieved" parent="@style/Gloomy.Store.Item.Text" />
+	<style name="Gloomy.Leaderboard.Item.Exp" parent="@style/Gloomy.Store.Item.Price" />
+</resources>

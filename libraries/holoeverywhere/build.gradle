@@ -1,0 +1,34 @@
+apply plugin: 'android-library'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+allprojects {
+    tasks.withType(Compile) {
+        options.compilerArgs << '-Xlint:-deprecation'
+        options.compilerArgs << '-Xlint:-unchecked'
+        options.compilerArgs << '-Xlint:-rawtypes'
+        options.compilerArgs << '-Xlint:-fallthrough'
+        options.compilerArgs << '-Xlint:-dep-ann'
+        options.compilerArgs << '-Xlint:-cast'
+    }
+}
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+}

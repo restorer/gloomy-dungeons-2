@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="entries_controls">
+		<item>Static Move Pad</item>
+		<item>Free Move Pad</item>
+		<item>Zeemote</item>
+	</string-array>
+	<string-array name="entries_zeemote_mapping">
+		<item>Няма дзеяння</item>
+		<item>Агонь</item>
+		<item>Наступная зброя</item>
+		<item>Ўключыць рэжым кроку</item>
+		<item>Карта</item>
+	</string-array>
+</resources>

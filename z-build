@@ -1,0 +1,51 @@
+#!/bin/bash
+
+if [[ "$1" = "" || "$2" = "" ]] ; then
+	echo "Usage: z-build <gplay|fdroid> <debug|release> [install]"
+	exit
+fi
+
+VERSION_NAME=`cat gradle.properties | grep VERSION_NAME | sed -e 's/^[ ]*VERSION_NAME[ ]*=//' | sed -e 's/[ ]*$//'`
+
+if [[ "$3" = "install" ]] ; then
+	PREFIX="install"
+else
+	PREFIX="assemble"
+fi
+
+case "$2" in
+	debug)
+		SUFFIX="Debug"
+		;;
+
+	release)
+		SUFFIX="Release"
+		;;
+
+	*)
+		echo "Unknown build type: $2"
+		exit
+esac
+
+case "$1" in
+	gplay)
+		TASK="ForgplayWithgplayWithzeemoteWoutko"
+		SRCNAME="gloomy-dungeons-2-forgplay-withgplay-withzeemote-woutko-release.apk"
+		DSTNAME="gloomy-dungeons-2-fullnfree-${VERSION_NAME}.apk"
+		;;
+
+	fdroid)
+		TASK="ForfdroidWoutgplayWoutzeemoteWoutko"
+		;;
+
+	*)
+		echo "Unknown build variant: $1"
+		exit
+esac
+
+./gradlew "${PREFIX}${TASK}${SUFFIX}"
+
+if [[ "$2" = "release" && -e "temp" && "$SRCNAME" != "" && "$DSTNAME" != "" ]] ; then
+	[ -e "temp/${DSTNAME}" ] && rm "temp/${DSTNAME}"
+	[ -e "build/outputs/apk/${SRCNAME}" ] && cp "build/outputs/apk/${SRCNAME}" "temp/${DSTNAME}"
+fi

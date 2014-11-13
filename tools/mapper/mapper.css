@@ -1,0 +1,422 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-size: cover;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	color: #FFF;
+	font-family: Tahoma, Arial;
+	font-size: 12px;
+	cursor: default;
+}
+
+table {
+	border-collapse: collapse;
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+th {
+	font-weight: normal;
+	text-align: left;
+}
+
+th, td {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0 5px 0 0;
+	list-style: none;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: #888;
+	border-bottom: 1px solid #666;
+}
+
+.menu li {
+	float: left;
+	position: relative;
+}
+
+.menu .right {
+	float: right;
+}
+
+.menu em {
+	padding: 0 5px;
+	color: #444;
+	text-shadow: 0 1px 1px #CCC;
+	font-style: normal;
+}
+
+.menu span {
+	display: block;
+	padding: 0 10px;
+}
+
+.menu span,
+.menu label {
+	color: #000;
+	text-shadow: 0 1px 1px #CCC;
+	cursor: pointer;
+}
+
+.menu .right>span {
+	padding: 0 5px;
+}
+
+.menu span:hover,
+.menu label:hover {
+	color: #444;
+}
+
+.menu .active,
+.menu span:active,
+.menu .active:hover,
+.menu label:active {
+	color: #FFF;
+}
+
+.menu .disabled,
+.menu .disabled:hover,
+.menu .disabled:active {
+	color: #666;
+}
+
+.sidebar {
+	position: absolute;
+	top: 30px;
+	bottom: 0;
+	right: 0;
+	width: 280px;
+	overflow-y: scroll;
+}
+
+.toolbox {
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.toolbox strong {
+	display: block;
+	height: 25px;
+	border-bottom: 1px solid #555;
+	line-height: 25px;
+	padding-left: 10px;
+	background: #777;
+	color: #000;
+	text-shadow: 0 1px 1px #CCC;
+	font-weight: normal;
+}
+
+.toolbox .item {
+	position: relative;
+	width: 64px;
+	height: 64px;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 64px 64px;
+}
+
+.toolbox .item-double {
+	height: 128px;
+	margin-bottom: 8px;
+	background-position: 0 0, 0 64px;
+}
+
+.toolbox .item.active {
+	border: 2px dashed #F00;
+	background-position: -2px -2px;
+}
+
+.toolbox .item:hover {
+	border: 2px solid #F00;
+	background-position: -2px -2px;
+}
+
+.toolbox .item-double:hover,
+.toolbox .item-double.active,
+.toolbox .item-double.active:hover {
+	background-position: -2px -2px, -2px 62px;
+}
+
+.item-inner-tl {
+	top: 0;
+	left: 0;
+}
+
+.item-inner-tr {
+	top: 0;
+	right: 0;
+}
+
+.item-inner-bl {
+	bottom: 0;
+	left: 0;
+}
+
+.item-inner-br {
+	bottom: 0;
+	right: 0;
+}
+
+.toolbox .item-sel:hover {
+	border: 0 none;
+	background-position: 0 0;
+}
+
+.toolbox .item-sel .item-sel-inner {
+	position: absolute;
+	border: 2px solid #000;
+	background-color: #400;
+	width: 32px;
+	height: 32px;
+}
+
+.toolbox .item-disp {
+	border: 0 none !important;
+	background-position: 0 0 !important;
+}
+
+.toolbox .item-disp-border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 64px;
+	height: 64px;
+}
+
+.toolbox .item.active .item-disp-border {
+	border: 2px dashed #F00;
+}
+
+.toolbox .item-disp:hover .item-disp-border {
+	border: 2px solid red;
+}
+
+.toolbox .item-disp .item-disp-inner {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-size: 64px 64px;
+	overflow: hidden;
+}
+
+.toolbox .item-sel .item-sel-inner:hover {
+	border: 2px solid #F00;
+}
+
+.sidebar-z50 .toolbox .item {
+	zoom: 0.5;
+	-moz-transform-origin: 0 0;
+	-moz-transform: scale(0.5);
+}
+
+.subdialog {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background: #777;
+	padding: 5px 10px;
+	z-index: 100;
+	border-bottom: 1px solid #666;
+	white-space: nowrap;
+	line-height: 25px;
+}
+
+.subdialog-right {
+	left: auto;
+	right: 0;
+}
+
+input, textarea {
+	color: #222;
+	background: #FFF;
+	border-top: 1px solid #666;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #666;
+	margin: 0;
+	padding: 4px;
+}
+
+textarea {
+	font-family: monospace;
+}
+
+#actions {
+	width: 400px;
+	font-size: 10px;
+}
+
+.subdialog span,
+.subdialog em {
+	display: inline-block;
+	padding: 0;
+}
+
+.subdialog .pad {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.subdialog .lpad {
+	padding-left: 5px;
+}
+
+.subdialog .rpad {
+	padding-right: 5px;
+}
+
+.subdialog .maxw {
+	width: 100%;
+}
+
+.subdialog .maxh {
+	height: 100%;
+}
+
+.map-wrap {
+	position: absolute;
+	top: 30px;
+	bottom: 0;
+	left: 0;
+	right: 280px;
+	overflow: scroll;
+	z-index: 10;
+	background: #000;
+}
+
+.map-z25 {
+	zoom: 0.25;
+	-moz-transform-origin: 0 0;
+	-moz-transform: scale(0.25);
+}
+
+.map-z50 {
+	zoom: 0.5;
+	-moz-transform-origin: 0 0;
+	-moz-transform: scale(0.5);
+}
+
+.map {
+	width: 4096px;
+	height: 4096px;
+	position: relative;
+}
+
+.map-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*
+.cell {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	overflow: hidden;
+	text-align: center;
+	line-height: 64px;
+	font-weight: bold;
+	color: #F00;
+
+	text-shadow:
+		-1px 0 #000, 0 -1px #000, 1px 0 #000, 0 1px #000,
+		-2px 0 #000, 0 -2px #000, 2px 0 #000, 0 2px #000;
+}
+
+.cell-inner-f {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-size: 64px 64px;
+}
+
+.cell-inner-o {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 64px;
+	height: 64px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 64px 64px;
+}
+*/
+
+.selection {
+	position: absolute;
+	background: rgba(0, 0, 255, 0.25);
+}
+
+.cursor {
+	position: absolute;
+	border: 4px solid red;
+}
+
+@-webkit-keyframes rotate {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes rotate {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
+}
+
+@-ms-keyframes rotate {
+	from { -ms-transform: rotate(0deg); }
+	to { -ms-transform: rotate(360deg); }
+}
+
+@-o-keyframes rotate {
+	from { -o-transform: rotate(0deg); }
+	to { -o-transform: rotate(360deg); }
+}
+
+@-o-keyframes rotate {
+	from { -o-transform: rotate(0deg); }
+	to { -o-transform: rotate(360deg); }
+}
+
+.ajax-loader {
+	display: block;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: bold;
+
+	-webkit-animation: rotate 0.5s infinite linear;
+	-moz-animation: rotate 0.5s infinite linear;
+	-ms-animation: rotate 0.5s infinite linear;
+	-o-animation: rotate 0.5s infinite linear;
+	animation: rotate 0.5s infinite linear;
+}

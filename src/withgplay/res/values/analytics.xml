@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources
+	xmlns:tools="https://schemas.android.com/tools"
+	tools:ignore="TypographyDashes"
+>
+	<string name="ga_trackingId">UA-1782921-33</string>
+	<integer name="ga_dispatchPeriod">60</integer>
+
+	<!-- tag: GAV2 -->
+	<bool name="ga_debug">false</bool>
+
+	<!-- Use custom exception reporter to avoid bug in GA v2.0 beta 4 -->
+	<bool name="ga_reportUncaughtExceptions">false</bool>
+</resources>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:ignore="UnusedResources"
+>
+	<string name="app_name">Gloomy Dungeons II</string>
+	<string name="typeface">JockeyOne-Regular.ttf</string>
+	<string name="typeface_interface">roboto</string>
+
+	<string name="menu_achievements">LOGROS</string>
+	<string name="menu_store">TIENDA</string>
+	<string name="menu_play">JUGAR</string>
+	<string name="menu_load">CARGAR</string>
+	<string name="menu_save">SALVAR</string>
+	<string name="menu_options">OPCIONES</string>
+	<string name="menu_share">COMPARTIR</string>
+	<string name="menu_discount_offer" formatted="false">¡Oferta limitada! ¡Gana 25% de crédito gratis!</string>
+	<string name="menu_new_version">Hay una nueva versión disponible. Pulsa aquí para descargar.</string>
+
+	<string name="prep_textures">Preparing textures</string>
+	<string name="prep_downloading_music">Downloading HQ music</string>
+	<string name="prep_download_later">Download later</string>
+	<string name="prep_download_error">Download error</string>
+
+	<string name="se_back">← Volver</string>
+	<string name="se_continue">Continuar →</string>
+	<string name="se_info">Muertes: %1$d / Artículos: %2$d / Secretos: %3$d / Tiempo: %4$s</string>
+
+	<string name="dlg_yes">Si</string>
+	<string name="dlg_no">No</string>
+	<string name="dlg_new_game">El progreso actual se perderá</string>
+	<string name="dlg_quit_game">Hay mas monstruos que eliminar. ¿Estas seguro de querer abandonar?</string>
+	<string name="dlg_ok">OK</string>
+	<string name="dlg_cancel">Cancelar</string>
+	<string name="dlg_rate_title">Puntua este juego</string>
+	<string name="dlg_rate_quit">Abandona la partida</string>
+	<string name="dlg_select_controls">Selecciona el programa de control</string>
+	<string name="dlg_select_slot_load">Selecciona el espacio para cargar</string>
+	<string name="dlg_select_slot_save">Selecciona el espacio para guardar</string>
+	<string name="dlg_enter_code">Introduce el código</string>
+	<string name="dlg_change_weapon">Cambia de arma</string>
+	<string name="dlg_exit_to_menu">⇪ Salir al menú</string>
+	<string name="dlg_game_code">Código de juego</string>
+	<string name="dlg_upgrade">⇪ Upgrade</string>
+	<string name="dlg_difficulty_title">Cambiar dificultad</string>
+	<string name="dlg_difficulty_newbie">Novato</string>
+	<string name="dlg_difficulty_easy">Fácil</string>
+	<string name="dlg_difficulty_normal">Normal</string>
+	<string name="dlg_difficulty_hard">Difícil</string>
+	<string name="dlg_difficulty_ultimate">Máxima</string>
+	<string name="dlg_share">Compartir</string>
+	<string name="dlg_state_enabled">Activar</string>
+	<string name="dlg_state_disabled">Desactivar</string>
+
+	<string name="msg_game_saved">Juego guardado</string>
+	<string name="msg_cant_copy_state">No se puede copiar estado - probably there is no free space in internal storage</string>
+	<string name="msg_cant_save_state">No se puede guardar estado - probably there is no free space in internal storage</string>
+	<string name="msg_cant_load_state">No se puede cargar estado</string>
+	<string name="msg_cant_save_profile">No se puede guardar perfil - probably there is no free space in internal storage</string>
+	<string name="msg_cant_load_profile">No se puede cargar perfil</string>
+
+	<string name="pref_general">General</string>
+	<string name="pref_help">Ayuda</string>
+	<string name="pref_about">Licencias</string>
+	<string name="pref_restart">Comenzar el juego desde el principio</string>
+	<string name="pref_controls">Controles</string>
+	<string name="pref_controls_scheme">Plano de control</string>
+	<string name="pref_controls_settings">Ajustes de control</string>
+	<string name="pref_controls_alpha">Opacidad de control</string>
+	<string name="pref_controls_scale">Escala de control</string>
+	<string name="pref_accelerometer_enabled">Activar acelerometro</string>
+	<string name="pref_accelerometer_acceleration">Aceleración de aceleromotro</string>
+	<string name="pref_trackball_acceleration">Aceleración de trackball</string>
+	<string name="pref_invert_vertical_look">Invertir estilo vertical</string>
+	<string name="pref_invert_horizontal_look">Invertir estilo horizontal</string>
+	<string name="pref_left_hand_aim">Apuntar a la izquierda</string>
+	<string name="pref_fire_button_at_top">Botón de disparo</string>
+	<string name="pref_move_speed">Velocidad de movimiento</string>
+	<string name="pref_strafe_speed">Velocidad de disparo</string>
+	<string name="pref_rotate_speed">Velocidad de giro</string>
+	<string name="pref_key_mappings">Tecla de mapa</string>
+	<string name="pref_screen">Pantalla</string>
+	<string name="pref_gamma">Gamma</string>
+	<string name="pref_smoothing_level">Nivel suave</string>
+	<string name="pref_sound">Sonido</string>
+	<string name="pref_enable_sound">Activar sonido</string>
+	<string name="pref_music_volume">Volumen de música</string>
+	<string name="pref_effects_volume">Volumen de efectos</string>
+	<string name="pref_key_forward">Hacia delante</string>
+	<string name="pref_key_backward">hacia atrás</string>
+	<string name="pref_key_strafe_left">Disparar a la izquierda</string>
+	<string name="pref_key_strafe_right">Disparar a la derecha</string>
+	<string name="pref_key_rotate_left">Girar a la izquierda</string>
+	<string name="pref_key_rotate_right">Girar a la derecha</string>
+	<string name="pref_key_fire">Disparar</string>
+	<string name="pref_key_next_weapon">Próxima arma</string>
+	<string name="pref_key_toggle_map">Interruptor mapa</string>
+	<string name="pref_key_strafe_mode">Activar modo disparo</string>
+	<string name="pref_map_position">Posición de mapa</string>
+	<string name="pref_show_crosshair">Mostrar mira telescópica</string>
+	<string name="pref_rotate_screen">Girar la pantalla de juego</string>
+
+	<string name="val_empty">Vaciar</string>
+	<string name="lib_press_key">Presiona una tecla de hardware</string>
+	<string name="lib_none">&lt;ninguna&gt;</string>
+	<string name="lib_clear">Limpiar</string>
+
+	<string name="lbl_fps">FPS: %d</string>
+	<string name="lbl_cant_open_door">No se puede abrir esta puerta</string>
+	<string name="lbl_need_blue_key">Necesitas una llave azul</string>
+	<string name="lbl_need_red_key">Necesitas una llave roja</string>
+	<string name="lbl_need_green_key">Necesitas una llave verde</string>
+	<string name="lbl_secret_found">Secreto encontrado</string>
+	<string name="lbl_endl_kills">Muertes: %d%%</string>
+	<string name="lbl_endl_items">Artículos: %d%%</string>
+	<string name="lbl_endl_secrets">Secretos: %d%%</string>
+	<string name="lbl_endl_time">Tiempo: %s</string>
+	<string name="lbl_gameover">Game Over</string>
+	<string name="lbl_gameover_load_autosave">Presiona tecla disparo para cargar autoguardado</string>
+
+	<string name="lblh_move">Mover</string>
+	<string name="lblh_menu">Cambiar Arma / Menu</string>
+	<string name="lblh_fire">Disparar</string>
+	<string name="lblh_map">Interruptor de mapa</string>
+	<string name="lblh_rotate">Girar</string>
+
+	<string name="lblm_door">Para abrir la puerta, solo atraviesala</string>
+	<string name="lblm_switch">Para activar el interruptor, acercate tanto como puedas</string>
+	<string name="lblm_turn_left">Gire a la izquierda</string>
+	<string name="lblm_turn_right">Luego gire a la derecha</string>
+	<string name="lblm_this_is_window">Esta es la ventana. No la atravieses</string>
+
+	<string name="eod_info">¡Felicidades! Has completado todos los episodios. Pero este no es el final - ¡compra nuevos niveles y continua jugando!</string>
+	<string name="eod_info_locked">¡Felicidades! Has completado todos los episodios. Ahora mismo estamos trabajando duro creando nuevos episodios. ¡Espera las actualizaciones!</string>
+	<string name="eod_ok">Comprar Nuevos Niveles</string>
+	<string name="eod_cancel">Cancelar</string>
+
+	<string name="achievements">Logros</string>
+	<string name="achievements_item_achieved">★ LOGRADO ★</string>
+	<string name="achievements_exp">EXP: %d</string>
+
+	<string name="leaderboard">Mejores resultados</string>
+	<string name="leaderboard_exp">EXP: %d</string>
+	<string name="leaderboard_achieved">%1$d/%2$d logrado</string>
+
+	<string name="store_levels">Niveles</string>
+	<string name="store_upgrade">Mejorar</string>
+	<string name="store_additional">Adicional</string>
+	<string name="store_earn">★ Ganar Créditos ★</string>
+	<string name="store_back">← Volver</string>
+	<string name="store_credits">%d créditos</string>
+	<string name="store_item_locked">BLOQUEADO</string>
+	<string name="store_item_purchased">COMPRADO</string>
+	<string name="store_item_price">%d CREDITOS</string>
+	<string name="store_item_earn">GANA %d CREDITOS</string>
+	<string name="store_item_earn_free">+%d GRATIS</string>
+	<string name="store_buy_title">COMPRAR / %s</string>
+	<string name="store_buy_price">%d CREDITOS</string>
+	<string name="store_buy_accept"><![CDATA[<b><font color="#FF0000">★ ACEPTAR ★</font></b>]]></string>
+	<string name="store_buy_cancel"><![CDATA[<b>CANCELAR</b>]]></string>
+	<string name="store_nocred_title">No hay crédito suficiente</string>
+	<string name="store_nocred_content"><![CDATA[
+<b>%1$s</b><br /><br />
+%2$s<br /><br />
+<b><font color="#FFD700">NECESITAS: %3$d CREDITOS</font></b><br />
+<b><font color="#FF0000">TIENES: %4$d CREDITOS</font></b>
+	]]></string>
+	<string name="store_nocred_earn"><![CDATA[<b><font color="#FFD700">★ AÑADIR CREDITO ★</font></b>]]></string>
+	<string name="store_nocred_cancel"><![CDATA[<b>CANCELAR</b>]]></string>
+
+	<string name="share_title">Gloomy Dungeons 2: Blood Honor: un verdadero juego de disparos 3D de la vieja escuela.</string>
+	<string name="send_email_using">Mandar email usando…</string>
+	<string name="share_fb_name">Gloomy Dungeons II</string>
+	<string name="share_fb_caption">Gloomy Dungeons II – un verdadero juego de acción 3D para ti</string>
+	<string name="share_fb_description">EXP: %1$d / MAPA: %2$s / MUERTES: %3$d / ARTICULOS: %4$d / SECRETOS: %5$d / TIEMPO: %6$s</string>
+
+	<!-- store : levels -->
+	<string name="pt_tutorial">Tutorial</string>
+	<string name="pt_episode_1">Episodio I</string>
+	<string name="pd_episode_1">Cinco niveles básicos</string>
+	<string name="pt_episode_2">Episodio II</string>
+	<string name="pd_episode_2">Segundo episodio</string>
+	<string name="pt_episode_3">Episodio III</string>
+	<string name="pd_episode_3">Tercer episodio</string>
+	<string name="pt_episode_4">Episodio IV</string>
+	<string name="pd_episode_4">Cuarto episodio</string>
+	<string name="pt_episode_5">Episodio V</string>
+	<string name="pd_episode_5">Quinto episodio</string>
+
+	<!-- store : upgrade -->
+	<string name="pt_initial_armor">Armadura inicial</string>
+	<string name="pd_initial_armor">Para iniciar el nivel con la armadura al menos 200</string>
+	<string name="pt_dbl_chaingun">Doble automática.</string>
+	<string name="pd_dbl_chaingun">¿Necesitas mas de una automática? ¡La doble automática es para ti!</string>
+	<string name="pt_dbl_pistol">Double pistol</string>
+	<string name="pd_dbl_pistol">Premium gun available only in the store. 8x more powerful than a pistol.</string>
+	<string name="pt_prem_dbl_shotgun">Improved double shotgun</string>
+	<string name="pd_prem_dbl_shotgun">Premium gun available only in the store. 1.5x more powerful than a double shotgun.</string>
+	<string name="pt_additional_health">Salud adicional</string>
+	<string name="pd_additional_health">Añade +50 a salud máxima</string>
+	<string name="pt_additional_ammo">Munición adicional</string>
+	<string name="pd_additional_ammo">Añade +75 a máximo de golpes, +35 a máximo de proyectiles, +25 a máximo de cohetes</string>
+	<string name="pt_additional_armor">Blindaje adicional</string>
+	<string name="pd_additional_armor">Añade +100 a máximo de blindaje</string>
+
+	<!-- store : additional -->
+	<string name="pt_difficulty">Cambiar dificultad</string>
+	<string name="pd_difficulty">¿Es el juego muy difícil para ti? ¿O eres un jugador de la vieja escuela DOOM y te resulta muy fácil? ¡Cambia en nivel de dificultad!</string>
+	<string name="pt_always_open_map">Siempre mapa abierto</string>
+	<string name="pd_always_open_map">Empieza el juego con mapa abierto (puedes desactivarlo si lo deseas)</string>
+	<string name="pt_secrets">Guia de secretos</string>
+	<string name="pd_secrets">¿No puedes encontrar ningún secreto? Todos los secretos se mostrarán en el minimapa!</string>
+	<string name="pt_codes">Códigos de trucos</string>
+	<string name="pd_codes">¿Quieres salir del nivel? ¿Mostrar FPS actual? ¿Obtener todos los códigos? ¿O te gustan los códigos secretos? Esta guia revela el misterio de los códigos secretos.</string>
+
+	<!-- store : earn -->
+	<string name="pt_earn_debug">créditos</string>
+	<string name="pd_earn_debug">100 créditos</string>
+
+	<!-- store : texts -->
+	<string name="store_secrets"><![CDATA[
+Todos los secretos se mostrarán en un minimapa
+	]]></string>
+	<string name="store_codes"><![CDATA[
+To enter these codes, in the game press game menu button, than (in game menu) press <b>Código de juego</b> button.<br />
+<br />
+<b>iwda</b> – Obtén todas las armas posibles y munición.<br />
+<b>iwdh</b> – Restaura tu salud y obtén un chaleco antibalas rojo.<br />
+<b>iwdk</b> – Obten todas las llaves.<br />
+<b>iwdm</b> – Muestra todo el mapa en el minimapa.<br />
+<b>iwgm</b> – Modo Dios (Serás un malicioso tramposo, si utilizas este código).<br />
+<b>scli</b> – Salta instantaneamente a este nivel.<br />
+<b>slfb</b> - Reinicia el nivel actual.<br />
+<b>sfps</b> – Muestra fotogramas por segundo en la pantalla.<br />
+<b>iddqd</b> – :)
+	]]></string>
+
+	<!-- achievements -->
+	<string name="ac_unlocked">Logro desbloqueado: %s</string>
+	<string name="at_monsters_killed_5">Manos ensangrentadas</string>
+	<string name="ad_monsters_killed_5">Mata a 5 monstruos</string>
+	<string name="at_monsters_killed_25">Aprendiz de asesino</string>
+	<string name="ad_monsters_killed_25">Mata a 25 monstruos</string>
+	<string name="at_monsters_killed_100">Es mi trabajo</string>
+	<string name="ad_monsters_killed_100">Mata a 100 monstruos</string>
+	<string name="at_monsters_killed_500">Ron Jambo</string>
+	<string name="ad_monsters_killed_500">Mata a 500 monstruos</string>
+	<string name="at_monsters_killed_1000">Veo monstruos muertos.</string>
+	<string name="ad_monsters_killed_1000">Mata 1000 monstruos</string>
+	<string name="at_doors_opened_5">Puertas dominadas</string>
+	<string name="ad_doors_opened_5">Abre 5 puertas</string>
+	<string name="at_doors_opened_25">Guardian de la puerta</string>
+	<string name="ad_doors_opened_25">Abre 25 puertas</string>
+	<string name="at_doors_opened_100">La ganzúa es mi amiga</string>
+	<string name="ad_doors_opened_100">Abre 100 puertas</string>
+	<string name="at_doors_opened_500">Llave azul, llave verde, cual es la diferencia</string>
+	<string name="ad_doors_opened_500">Abre 500 puertas</string>
+	<string name="at_doors_opened_1000">Tu princesa está en otro castillo</string>
+	<string name="ad_doors_opened_1000">Abre 1000 puertas</string>
+	<string name="at_secrets_found_5">Secretos dominados</string>
+	<string name="ad_secrets_found_5">Encuentra 5 secretos</string>
+	<string name="at_secrets_found_10">El explorador</string>
+	<string name="ad_secrets_found_10">Encuentra 10 secretos</string>
+	<string name="at_secrets_found_25">Sigue al conejo blanco</string>
+	<string name="ad_secrets_found_25">Encuentra 25 secretos</string>
+	<string name="at_secrets_found_50">Mi nombre es RentgenMan</string>
+	<string name="ad_secrets_found_50">Encuentra 50 secretos</string>
+	<string name="at_secrets_found_100">Indiana Ford</string>
+	<string name="ad_secrets_found_100">Encuentra 100 secretos</string>
+	<string name="at_p100_kills_row_5" formatted="false">No es país para viejos monstruos</string>
+	<string name="ad_p100_kills_row_5" formatted="false">100% muertes en 5 niveles seguidos</string>
+	<string name="at_p100_items_row_5" formatted="false">Coleccionista</string>
+	<string name="ad_p100_items_row_5" formatted="false">100% de artículos en 5 niveles seguidos</string>
+	<string name="at_p100_secrets_row_5" formatted="false">Voluntad de hierro</string>
+	<string name="ad_p100_secrets_row_5" formatted="false">100% de secretos en 5 niveles seguidos</string>
+	<string name="at_p100_kills_row_10" formatted="false">Devastador</string>
+	<string name="ad_p100_kills_row_10" formatted="false">100% de muertes en 10 niveles seguidos.</string>
+	<string name="at_p100_items_row_10" formatted="false">Botín</string>
+	<string name="ad_p100_items_row_10" formatted="false">100% de artículos en 10 niveles seguidos</string>
+	<string name="at_p100_secrets_row_10" formatted="false"><![CDATA[Último ninja <font color="#FFD700">+ Double pistol GRATIS</font>]]></string>
+	<string name="ad_p100_secrets_row_10" formatted="false"><![CDATA[100% de secretos en 10 niveles seguidos <font color="#FFD700">+ Double pistol GRATIS</font>]]></string>
+	<string name="at_quicky"><![CDATA[Rápido <font color="#FFD700">+ Episodio II GRATIS</font>]]></string>
+	<string name="ad_quicky"><![CDATA[Completa el tutorial y el primer episodio en menos de 4:30 <font color="#FFD700">+ Episodio II GRATIS</font>]]></string>
+
+	<string name="pref_delete_profile">Debug: delete profile</string>
+	<string name="dlg_delete_profile">All credits and purchases will be lost.\nAre you sure?</string>
+</resources>

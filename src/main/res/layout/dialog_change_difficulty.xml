@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="15dp"
+>
+	<RadioButton
+		android:id="@+id/difficulty_newbie"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/dlg_difficulty_newbie"
+	/>
+	<RadioButton
+		android:id="@+id/difficulty_easy"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/dlg_difficulty_easy"
+	/>
+	<RadioButton
+		android:id="@+id/difficulty_normal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/dlg_difficulty_normal"
+	/>
+	<RadioButton
+		android:id="@+id/difficulty_hard"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/dlg_difficulty_hard"
+	/>
+	<RadioButton
+		android:id="@+id/difficulty_ultimate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/dlg_difficulty_ultimate"
+	/>
+</RadioGroup>

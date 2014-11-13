@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources"
+>
+    <string name="menu_connect">Mando: Conectar</string>
+    <string name="menu_disconnect">Mando: Desconectar</string>
+    <string name="connecting">Conectando &#8230;</string>
+    <string name="disconnecting">Disconectando &#8230;</string>
+
+    <string name="dlg_select_zeemote_mapping">Selecciona el botón de mapa</string>
+    <string name="dlg_zeemote_preferences">Preferencias Zeemote</string>
+    <string name="pref_zeemote">Zeemote</string>
+    <string name="pref_zeemote_x_accel">X-Aceleración</string>
+    <string name="pref_zeemote_y_accel">Y-Aceleración</string>
+    <string name="pref_zeemote_mapping_fire">Boton A</string>
+    <string name="pref_zeemote_mapping_a">Boton B</string>
+    <string name="pref_zeemote_mapping_b">Boton C</string>
+    <string name="pref_zeemote_mapping_c">Boton D</string>
+</resources>

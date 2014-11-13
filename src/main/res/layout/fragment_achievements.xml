@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:holo="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:ignore="NestedWeights,Overdraw"
+>
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+	>
+		<ListView
+			android:id="@+id/items"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+		/>
+		<ProgressBar
+			android:id="@+id/progress"
+			android:indeterminate="true"
+			android:indeterminateOnly="true"
+			style="?android:attr/progressBarStyleLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:visibility="gone"
+		/>
+	</FrameLayout>
+	<View
+		android:background="@color/holo_blue_light"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+	/>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+		android:paddingRight="@dimen/gloomy_store_item_padding_hor"
+		android:paddingTop="@dimen/gloomy_store_footer_padding_vert"
+		android:paddingBottom="@dimen/gloomy_store_footer_padding_vert"
+	>
+		<Button
+			android:id="@+id/back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			style="@style/Gloomy.Store.Footer.Button"
+			android:text="@string/store_back"
+		/>
+		<include layout="@layout/inc_achievements_gplay" />
+		<TextView
+			android:id="@+id/player_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toLeftOf="@+id/exp"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="@dimen/gloomy_store_footer_button_padding"
+			style="@style/Gloomy.Store.Footer.Text"
+			android:text="Player #1234"
+		/>
+		<TextView
+			android:id="@+id/exp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="@dimen/gloomy_store_footer_button_padding"
+			style="@style/Gloomy.Store.Footer.Text"
+		/>
+	</RelativeLayout>
+</LinearLayout>

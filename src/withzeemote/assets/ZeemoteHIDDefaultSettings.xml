@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--	Copyright (c) 2011-2012 Zeemote. All rights reserved.	-->
+
+<HIDConfigurations>
+
+	<!-- This file's version number. -->
+	<FileVersionNumber value="5" />
+	
+	<HIDDeviceConfig>
+	
+		<!-- Default Setting -->
+
+		<!-- Device name -->
+		<DeviceName value="default" />
+	
+		<!-- Enable override flag -->
+		<EnableOverride value="true" />
+		
+		<!-- Button setting list -->
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_A" label="A" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_B" label="B" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_X" label="X" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_Y" label="Y" />
+			<Button buttonCode="BUTTON_E" androidKeyCode="KEYCODE_BUTTON_Z" label="Z" />
+			<Button buttonCode="BUTTON_F" androidKeyCode="KEYCODE_BUTTON_C" label="C" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_DPAD_UP" label="UP" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_DPAD_DOWN" label="DOWN" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_DPAD_LEFT" label="LEFT" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_DPAD_RIGHT" label="RIGHT" />
+			<Button buttonCode="BUTTON_CENTER" androidKeyCode="KEYCODE_DPAD_CENTER" label="CENTER" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_L1" label="L1" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_R1" label="R1" />
+			<Button buttonCode="BUTTON_L2" androidKeyCode="KEYCODE_BUTTON_L2" label="L2" />
+			<Button buttonCode="BUTTON_R2" androidKeyCode="KEYCODE_BUTTON_R2" label="R2" />
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_BUTTON_THUMBL" label="THUMBL" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_BUTTON_THUMBR" label="THUMBR" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_START" label="START" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_SELECT" label="SELECT" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_BUTTON_MODE" label="MODE" />
+			<Button buttonCode="BUTTON_1" androidKeyCode="KEYCODE_BUTTON_1" label="1" />
+			<Button buttonCode="BUTTON_2" androidKeyCode="KEYCODE_BUTTON_2" label="2" />
+			<Button buttonCode="BUTTON_3" androidKeyCode="KEYCODE_BUTTON_3" label="3" />
+			<Button buttonCode="BUTTON_4" androidKeyCode="KEYCODE_BUTTON_4" label="4" />
+			<Button buttonCode="BUTTON_5" androidKeyCode="KEYCODE_BUTTON_5" label="5" />
+			<Button buttonCode="BUTTON_6" androidKeyCode="KEYCODE_BUTTON_6" label="6" />
+			<Button buttonCode="BUTTON_7" androidKeyCode="KEYCODE_BUTTON_7" label="7" />
+			<Button buttonCode="BUTTON_8" androidKeyCode="KEYCODE_BUTTON_8" label="8" />
+			<Button buttonCode="BUTTON_9" androidKeyCode="KEYCODE_BUTTON_9" label="9" />
+			<Button buttonCode="BUTTON_10" androidKeyCode="KEYCODE_BUTTON_10" label="10" />
+			<Button buttonCode="BUTTON_11" androidKeyCode="KEYCODE_BUTTON_11" label="11" />
+			<Button buttonCode="BUTTON_12" androidKeyCode="KEYCODE_BUTTON_12" label="12" />
+			<Button buttonCode="BUTTON_13" androidKeyCode="KEYCODE_BUTTON_13" label="13" />
+			<Button buttonCode="BUTTON_14" androidKeyCode="KEYCODE_BUTTON_14" label="14" />
+			<Button buttonCode="BUTTON_15" androidKeyCode="KEYCODE_BUTTON_15" label="15" />
+			<Button buttonCode="BUTTON_16" androidKeyCode="KEYCODE_BUTTON_16" label="16" />
+		</ButtonList>
+		
+		<!-- Joystick setting list -->
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_Y" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_Z" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_RZ" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_HAT_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_HAT_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_LTRIGGER" max="1" min="0" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_RTRIGGER" max="1" min="0" flat="0.05" />
+			</Joystick>
+		</JoystickList>
+		
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig deviceType="keyboard">
+	
+		<!-- HID Keyboard Default Setting -->
+
+		<!-- Device name -->
+		<DeviceName value="default" />
+	
+		<!-- Enable override flag -->
+		<EnableOverride value="true" />
+		
+		<!-- Button setting list -->
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_X" label="X" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_C" label="C" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_S" label="S" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_D" label="D" />
+			<Button buttonCode="BUTTON_E" androidKeyCode="KEYCODE_F" label="F" />
+			<Button buttonCode="BUTTON_F" androidKeyCode="KEYCODE_V" label="V" />
+			<Button buttonCode="BUTTON_G" androidKeyCode="KEYCODE_G" label="G" />
+			<Button buttonCode="BUTTON_H" androidKeyCode="KEYCODE_B" label="B" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_I" label="I" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_K" label="K" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_J" label="J" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_L" label="L" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_DPAD_UP" label="UP" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_DPAD_DOWN" label="DOWN" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_DPAD_LEFT" label="LEFT" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_DPAD_RIGHT" label="RIGHT" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_1" label="1" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_2" label="2" />
+			<Button buttonCode="BUTTON_L2" androidKeyCode="KEYCODE_3" label="3" />
+			<Button buttonCode="BUTTON_R2" androidKeyCode="KEYCODE_4" label="4" />
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_ALT_LEFT" label="LALT" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_ALT_RIGHT" label="RALT" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_ENTER" label="ENTER" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_SPACE" label="SPACE" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_TAB" label="TAB" />
+		</ButtonList>
+		
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig deviceType="arcade">
+
+		<!-- Device name -->
+		<DeviceName value="default" /> <!-- same as ION arcade game controller -->
+
+		<!-- Enable override flag -->
+		<EnableOverride value="true" />
+
+		<!-- Button setting list -->
+		<ButtonList>
+			<ArcadeButton buttonCode="BUTTON_A" arcadeKey="ARCADE_KEY_HR" label="A" />
+			<ArcadeButton buttonCode="BUTTON_B" arcadeKey="ARCADE_KEY_JN" label="B" />
+			<ArcadeButton buttonCode="BUTTON_C" arcadeKey="ARCADE_KEY_YT" label="C" />
+			<ArcadeButton buttonCode="BUTTON_D" arcadeKey="ARCADE_KEY_UF" label="D" />
+			<ArcadeButton buttonCode="BUTTON_E" arcadeKey="ARCADE_KEY_IM" label="E" />
+			<ArcadeButton buttonCode="BUTTON_F" arcadeKey="ARCADE_KEY_KP" label="F" />
+			<ArcadeButton buttonCode="BUTTON_G" arcadeKey="ARCADE_KEY_OG" label="G" />
+			<ArcadeButton buttonCode="BUTTON_H" arcadeKey="ARCADE_KEY_LV" label="H" />
+			<ArcadeButton buttonCode="BUTTON_UP" arcadeKey="ARCADE_KEY_WE" label="UP" />
+			<ArcadeButton buttonCode="BUTTON_DOWN" arcadeKey="ARCADE_KEY_XZ" label="DOWN" />
+			<ArcadeButton buttonCode="BUTTON_LEFT" arcadeKey="ARCADE_KEY_AQ" label="LEFT" />
+			<ArcadeButton buttonCode="BUTTON_RIGHT" arcadeKey="ARCADE_KEY_DC" label="RIGHT" />
+		</ButtonList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- BSGPUM1204PBK Setting -->
+
+		<DeviceName value="iBUFFALO BSGP1204P Series" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_B" label="3" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_C" label="2" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_A" label="4" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_X" label="1" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_Y" label="7" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_Z" label="8" />
+			<Button buttonCode="BUTTON_L2" androidKeyCode="KEYCODE_BUTTON_L1" label="5" />
+			<Button buttonCode="BUTTON_R2" androidKeyCode="KEYCODE_BUTTON_R1" label="6" />
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_BUTTON_SELECT" label="11" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_BUTTON_START" label="12" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_L2" label="9" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_R2" label="10" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_BUTTON_MODE" label="MODE" />
+		</ButtonList>
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="1" min="-1" flat="0.05" />
+				<YAxis axisId="AXIS_Y" max="1" min="-1" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_Z" max="1" min="-1" flat="0.05" />
+				<YAxis axisId="AXIS_RZ" max="1" min="-1" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_HAT_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_HAT_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+		</JoystickList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- SteelSeries SRWheel Setting -->
+
+		<DeviceName value="SteelSeries SRWheel" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_A" label="SELECT" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_START" label="Boost" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_MODE" label="Horn" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_X" label="Lights" />
+			<Button buttonCode="BUTTON_E" androidKeyCode="KEYCODE_BUTTON_Y" label="LookBack" />
+			<Button buttonCode="BUTTON_F" androidKeyCode="KEYCODE_BUTTON_Z" label="R.BrakeBalance" />
+			<Button buttonCode="BUTTON_G" androidKeyCode="KEYCODE_BUTTON_L1" label="F.BrakeBalance" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_C" label="LookLeft" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_SELECT" label="LookRight" />
+			<Button buttonCode="BUTTON_L2" androidKeyCode="KEYCODE_BUTTON_L2" label="L1" />
+			<!--
+			<Button buttonCode="BUTTON_R2" androidKeyCode="KEYCODE_UNKNOWN" label="R1" />
+			-->
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_BUTTON_B" label="Back" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_BUTTON_R2" label="Camera" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_THUMBR" label="LaunchControl" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_THUMBL" label="HUD" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_BUTTON_R1" label="RequestPit" />
+			<!--
+			<Button buttonCode="BUTTON_1" androidKeyCode="KEYCODE_UNKNOWN" label="SpeedLimiter" />
+			-->
+		</ButtonList>
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_WHEEL" max="1" min="-1" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_THROTTLE" max="1" min="0" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_BRAKE" max="1" min="0" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_HAT_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_HAT_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+		</JoystickList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+	
+		<!-- BUFFALO BSGPAC01 Setting -->
+
+		<DeviceName value="BSGPAC01" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_B" label="1" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_C" label="2" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_A" label="5" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_X" label="6" />
+			<Button buttonCode="BUTTON_E" androidKeyCode="KEYCODE_BUTTON_Z" label="7" />
+			<Button buttonCode="BUTTON_F" androidKeyCode="KEYCODE_BUTTON_R1" label="3" />
+			<Button buttonCode="BUTTON_G" androidKeyCode="KEYCODE_BUTTON_Y" label="8" />
+			<Button buttonCode="BUTTON_H" androidKeyCode="KEYCODE_BUTTON_L1" label="4" />
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_BUTTON_SELECT" label="L3" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_BUTTON_START" label="R3" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_L2" label="9" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_R2" label="10" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_BUTTON_MODE" label="PS" />
+		</ButtonList>
+		
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_HAT_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_HAT_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_Z" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_RZ" max="1" min="-1" flat="0" />
+			</Joystick>
+		</JoystickList>
+		
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- Sony PLAYSTATION(R)3 Controller Setting -->
+
+		<DeviceName value="Sony PLAYSTATION(R)3 Controller" />
+		<DeviceName value="PLAYSTATION(R)3 Controller" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_X" label="×" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_Y" label="○" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_A" label="□" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_B" label="△" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_DPAD_UP" label="UP" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_DPAD_DOWN" label="DOWN" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_DPAD_LEFT" label="LEFT" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_DPAD_RIGHT" label="RIGHT" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_L1" label="L1" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_R1" label="R1" />
+			<Button buttonCode="BUTTON_L2" androidKeyCode="KEYCODE_BUTTON_L2" label="L2" />
+			<Button buttonCode="BUTTON_R2" androidKeyCode="KEYCODE_BUTTON_R2" label="R2" />
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_BUTTON_THUMBL" label="L3" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_BUTTON_THUMBR" label="R3" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_START" label="START" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_SELECT" label="SELECT" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_BUTTON_1" label="PS" />
+		</ButtonList>
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_Y" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_Z" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_RZ" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_LTRIGGER" max="1" min="0" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_RTRIGGER" max="1" min="0" flat="0.05" />
+			</Joystick>
+		</JoystickList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- Microsoft X-Box 360 pad Setting -->
+
+		<DeviceName value="Microsoft X-Box 360 pad" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_A" label="A" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_B" label="B" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_X" label="X" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_Y" label="Y" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_L1" label="LB" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_R1" label="RB" />
+			<Button buttonCode="BUTTON_THUMBL" androidKeyCode="KEYCODE_BUTTON_THUMBL" label="THUMBL" />
+			<Button buttonCode="BUTTON_THUMBR" androidKeyCode="KEYCODE_BUTTON_THUMBR" label="THUMBR" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_START" label="START" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_SELECT" label="BACK" />
+			<Button buttonCode="BUTTON_MODE" androidKeyCode="KEYCODE_BUTTON_MODE" label="Xbox" />
+		</ButtonList>
+
+		<!-- Joystick setting list -->
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_Y" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_Z" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_RZ" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_HAT_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_HAT_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_LTRIGGER" max="1" min="0" flat="0.05" />
+			</Joystick>
+			<Joystick>
+				<XAxis axisId="AXIS_RTRIGGER" max="1" min="0" flat="0.05" />
+			</Joystick>
+		</JoystickList>
+
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- Microsoft® Microsoft® SideWinder® Game Pad USB Setting -->
+
+		<DeviceName value="Microsoft® Microsoft® SideWinder® Game Pad USB" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_A" label="A" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_B" label="B" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_X" label="X" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_Y" label="Y" />
+			<Button buttonCode="BUTTON_E" androidKeyCode="KEYCODE_BUTTON_Z" label="Z" />
+			<Button buttonCode="BUTTON_F" androidKeyCode="KEYCODE_BUTTON_C" label="C" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_L1" label="L" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_R1" label="R" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_L2" label="**" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_R2" label="*" />
+		</ButtonList>
+		
+		<!-- Joystick setting list -->
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="1" min="-1" flat="0.1" />
+				<YAxis axisId="AXIS_Y" max="1" min="-1" flat="0.1" />
+			</Joystick>
+		</JoystickList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- CYPRESS USB Gamepad Setting -->
+
+		<DeviceName value="CYPRESS USB Gamepad" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_A" label="A" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_B" label="B" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_X" label="X" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_Y" label="Y" />
+			<Button buttonCode="BUTTON_E" androidKeyCode="KEYCODE_BUTTON_Z" label="Z" />
+			<Button buttonCode="BUTTON_F" androidKeyCode="KEYCODE_BUTTON_C" label="C" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_L1" label="L" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_R1" label="R" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_L2" label="START" />
+		</ButtonList>
+		
+		<!-- Joystick setting list -->
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="1" min="-1" flat="0" />
+				<YAxis axisId="AXIS_Y" max="1" min="-1" flat="0" />
+			</Joystick>
+		</JoystickList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+	
+		<!-- PC Magic Box + Dreamcast Controller Setting -->
+
+		<DeviceName value="HID 6666:0667" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_3" label="A" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_2" label="B" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_4" label="X" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_1" label="Y" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_BUTTON_13" label="UP" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_BUTTON_15" label="DOWN" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_BUTTON_16" label="LEFT" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_BUTTON_14" label="RIGHT" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_5" label="L" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_7" label="R" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_9" label="START" />
+		</ButtonList>
+		
+		<JoystickList>
+			<Joystick>
+				<XAxis axisId="AXIS_X" max="0.78" min="-0.78" flat="0.05" />
+				<YAxis axisId="AXIS_Y" max="0.78" min="-0.78" flat="0.05" />
+			</Joystick>
+		</JoystickList>
+		
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig>
+
+		<!-- Gametel HID Gamepad mode-->
+
+		<DeviceName value="Gametel" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_BUTTON_L1" label="A" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_BUTTON_L2" label="B" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_BUTTON_R1" label="C" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_BUTTON_Z" label="D" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_BUTTON_A" label="UP" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_BUTTON_B" label="DOWN" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_BUTTON_C" label="LEFT" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_BUTTON_X" label="RIGHT" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_BUTTON_Y" label="L1" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_BUTTON_R2" label="R1" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_BUTTON_SELECT" label="START" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_BUTTON_START" label="SELECT" />
+		</ButtonList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig deviceType="arcade">
+
+		<!-- Gametel arcade mode-->
+
+		<DeviceName value="Gametel" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<ArcadeButton buttonCode="BUTTON_A" arcadeKey="ARCADE_KEY_LV" label="A" />
+			<ArcadeButton buttonCode="BUTTON_B" arcadeKey="ARCADE_KEY_OG" label="B" />
+			<ArcadeButton buttonCode="BUTTON_C" arcadeKey="ARCADE_KEY_KP" label="C" />
+			<ArcadeButton buttonCode="BUTTON_D" arcadeKey="ARCADE_KEY_IM" label="D" />
+			<ArcadeButton buttonCode="BUTTON_UP" arcadeKey="ARCADE_KEY_WE" label="UP" />
+			<ArcadeButton buttonCode="BUTTON_DOWN" arcadeKey="ARCADE_KEY_XZ" label="DOWN" />
+			<ArcadeButton buttonCode="BUTTON_LEFT" arcadeKey="ARCADE_KEY_AQ" label="LEFT" />
+			<ArcadeButton buttonCode="BUTTON_RIGHT" arcadeKey="ARCADE_KEY_DC" label="RIGHT" />
+			<ArcadeButton buttonCode="BUTTON_L1" arcadeKey="ARCADE_KEY_HR" label="L1" />
+			<ArcadeButton buttonCode="BUTTON_R1" arcadeKey="ARCADE_KEY_JN" label="R1" />
+			<ArcadeButton buttonCode="BUTTON_START" arcadeKey="ARCADE_KEY_UF" label="START" />
+			<ArcadeButton buttonCode="BUTTON_SELECT" arcadeKey="ARCADE_KEY_YT" label="SELECT" />
+		</ButtonList>
+	</HIDDeviceConfig>
+
+	<HIDDeviceConfig deviceType="keyboard">
+	
+		<!-- Gametel keyboard mode-->
+
+		<DeviceName value="Gametel" />
+		<EnableOverride value="true" />
+		<ButtonList>
+			<Button buttonCode="BUTTON_A" androidKeyCode="KEYCODE_Z" label="Z" />
+			<Button buttonCode="BUTTON_B" androidKeyCode="KEYCODE_X" label="X" />
+			<Button buttonCode="BUTTON_C" androidKeyCode="KEYCODE_A" label="A" />
+			<Button buttonCode="BUTTON_D" androidKeyCode="KEYCODE_S" label="S" />
+			<Button buttonCode="BUTTON_UP" androidKeyCode="KEYCODE_DPAD_UP" label="UP" />
+			<Button buttonCode="BUTTON_DOWN" androidKeyCode="KEYCODE_DPAD_DOWN" label="DOWN" />
+			<Button buttonCode="BUTTON_LEFT" androidKeyCode="KEYCODE_DPAD_LEFT" label="LEFT" />
+			<Button buttonCode="BUTTON_RIGHT" androidKeyCode="KEYCODE_DPAD_RIGHT" label="RIGHT" />
+			<Button buttonCode="BUTTON_L1" androidKeyCode="KEYCODE_Q" label="Q" />
+			<Button buttonCode="BUTTON_R1" androidKeyCode="KEYCODE_W" label="W" />
+			<Button buttonCode="BUTTON_START" androidKeyCode="KEYCODE_ENTER" label="START" />
+			<Button buttonCode="BUTTON_SELECT" androidKeyCode="KEYCODE_SPACE" label="SELECT" />
+		</ButtonList>
+		
+	</HIDDeviceConfig>
+
+</HIDConfigurations>
+
+<!-- END -->

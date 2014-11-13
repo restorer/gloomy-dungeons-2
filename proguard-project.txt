@@ -1,0 +1,59 @@
+# Game
+
+-dontnote **SuppressLint
+-dontnote **TargetApi
+-keepclassmembers class zame.promo.PromoView$JsApi { public *; }
+-keep class net.rbgrn.android.glwallpaperservice.** { *; }
+-keep class net.minidev.json.** { *; }
+
+# Support library
+
+-dontnote android.support.v4.**
+-dontwarn **CompatHoneycomb
+-dontwarn android.support.v4.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.** { *; }
+
+# HoloEverywhere
+
+-keepattributes InnerClasses
+-dontnote org.holoeverywhere.drawable.DrawableCompat
+-dontnote Internal.DialogTitle
+-dontnote Internal.ExpandedMenuView
+-dontnote Internal.HoloListMenuItemView
+-dontnote Internal.NumberPickerEditText
+-keep class org.holoeverywhere.** { *; }
+-keep interface org.holoeverywhere.** { *; }
+-keep enum org.holoeverywhere.** { *; }
+
+# Google Analytics
+
+-keep class com.google.** { *; }
+-dontwarn com.google.**
+-dontnote com.google.**
+
+# Zeemote
+
+-keep class com.zeemote.** { *; }
+-keep interface com.zeemote.** { *; }
+-keep enum com.zeemote.** { *; }
+
+-keep class com.motorola.** { *; }
+-keep interface com.motorola.** { *; }
+-keep enum com.motorola.** { *; }
+
+-keep class com.samsung.** { *; }
+-keep interface com.samsung.** { *; }
+-keep enum com.samsung.** { *; }
+
+-keep class android.bluetooth.** { *; }
+-keep interface android.bluetooth.** { *; }
+-keep enum android.bluetooth.** { *; }
+
+-dontwarn com.zeemote.**
+
+# Facebook
+
+-keep class com.facebook.** { *; }
+-keep interface com.facebook.** { *; }
+-keep enum com.facebook.** { *; }

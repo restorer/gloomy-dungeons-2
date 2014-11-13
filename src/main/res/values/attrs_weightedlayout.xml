@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="WeightedLayout">
+		<attr name="widthWeightSum" format="float" />
+		<attr name="heightWeightSum" format="float" />
+		<attr name="paddingWeight" format="float" />
+		<attr name="paddingWidthWeight" format="float" />
+		<attr name="paddingHeightWeight" format="float" />
+		<attr name="paddingLeftWeight" format="float" />
+		<attr name="paddingRightWeight" format="float" />
+		<attr name="paddingTopWeight" format="float" />
+		<attr name="paddingBottomWeight" format="float" />
+	</declare-styleable>
+	<declare-styleable name="WeightedLayout_Layout">
+		<attr name="layout_widthWeight" format="float" />
+		<attr name="layout_heightWeight" format="float" />
+		<attr name="layout_textSizeWeight" format="float" />
+	</declare-styleable>
+	<declare-styleable name="AbsoluteLayout_Layout">
+		<attr name="layout_x" format="dimension" />
+		<attr name="layout_y" format="dimension" />
+		<attr name="layout_xWeight" format="float" />
+		<attr name="layout_yWeight" format="float" />
+		<attr name="layout_cxWeight" format="float" />
+		<attr name="layout_cyWeight" format="float" />
+		<attr name="layout_rxWeight" format="float" />
+		<attr name="layout_byWeight" format="float" />
+	</declare-styleable>
+</resources>

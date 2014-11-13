@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="file:///android_asset/web/stylesheet.css" />
+</head>
+<body>
+	<div class="wrap">
+		<h1>This webpage is not available</h1>
+		<script type="text/javascript">
+var parts = location.search.replace(/\?/, '').split('&');
+var params = {};
+
+for (var i = 0; i < parts.length; i++) {
+	var pair = parts[i].split(/=/);
+
+	params[decodeURIComponent(pair[0])] = decodeURIComponent((pair[1] || '').replace(/\+/g, ' '))
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;');
+}
+
+var url = (params['url'] || '');
+var description = (params['description'] || '');
+var code = (params['code'] || '');
+
+document.write('<p class="toppad botpad"><a href="' + url + '">' + url + '</a></p>');
+document.write('<p>Error code: <b>' + code + '</b></p>');
+document.write('<p>Error description: <b>' + description + '</b></p>');
+		</script>
+	</div>
+</body>
+</html>

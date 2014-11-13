@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="gloomy_common_button_height">40dp</dimen>
+	<dimen name="gloomy_common_button_textsize">12dp</dimen>
+	<dimen name="gloomy_gamemenu_button_textsize">12dp</dimen>
+	<dimen name="gloomy_gamemenu_textsize">10dp</dimen>
+	<dimen name="gloomy_menu_textsize">10dp</dimen>
+	<dimen name="gloomy_selectepisode_textsize">12dp</dimen>
+	<dimen name="gloomy_selectepisode_episode_textsize">20dp</dimen>
+	<dimen name="gloomy_endl_textsize">16dp</dimen>
+	<dimen name="gloomy_prep_title_textsize">32dp</dimen>
+	<dimen name="gloomy_prep_action_textsize">16dp</dimen>
+
+	<dimen name="gloomy_actionbar_tab_padding">8dp</dimen>
+	<dimen name="gloomy_actionbar_tab_textsize">10dp</dimen>
+
+	<dimen name="gloomy_store_item_textsize">10dp</dimen>
+	<dimen name="gloomy_store_title_textsize">14dp</dimen>
+	<dimen name="gloomy_store_price_textsize">12dp</dimen>
+	<dimen name="gloomy_store_footer_button_textsize">10dp</dimen>
+	<dimen name="gloomy_store_footer_button_padding">15dp</dimen>
+	<dimen name="gloomy_store_footer_textsize">12dp</dimen>
+	<dimen name="gloomy_store_item_padding_vert">10dp</dimen>
+	<dimen name="gloomy_store_item_padding_hor">10dp</dimen>
+	<dimen name="gloomy_store_footer_padding_vert">5dp</dimen>
+	<dimen name="gloomy_store_item_icon_size">20dp</dimen>
+	<dimen name="gloomy_store_item_padding_between">10dp</dimen>
+
+	<dimen name="gloomy_leaderboard_position_textsize">16dp</dimen>
+	<dimen name="gloomy_leaderboard_position_width">45dp</dimen>
+
+	<dimen name="gloomy_widget_padding">8dp</dimen>
+</resources>

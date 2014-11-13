@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:ignore="UnusedResources"
+>
+	<string name="app_name">Gloomy Dungeons II</string>
+	<string name="typeface">furore.ttf</string>
+	<string name="typeface_interface">roboto</string>
+
+	<string name="menu_achievements">ДАСЯГНЕННІ</string>
+	<string name="menu_store">КРАМА</string>
+	<string name="menu_play">ГУЛЯЦЬ</string>
+	<string name="menu_load">ЗАГРУЗІЦЬ</string>
+	<string name="menu_save">ЗАПИСАЦЬ</string>
+	<string name="menu_options">НАЛАДЫ</string>
+	<string name="menu_share">ПАДЗЯЛІЦЦА</string>
+	<string name="menu_discount_offer" formatted="false">Абмежаваная прапанова! Зарабіце 25% крэдытаў бясплатна!</string>
+	<string name="menu_new_version">Даступная новая версія. Націсніце тут, каб спампаваць.</string>
+
+	<string name="prep_textures">Падрыхтоўваюцца тэкстуры</string>
+	<string name="prep_downloading_music">Спампоўваецца музыка высокай якасці</string>
+	<string name="prep_download_later">Спампаваць пазней</string>
+	<string name="prep_download_error">Download error</string>
+
+	<string name="se_back">← Назад</string>
+	<string name="se_continue">Працягнуць →</string>
+	<string name="se_info">Забойстваў: %1$d / Прадметаў: %2$d / Сакрэтаў: %3$d / Час: %4$s</string>
+
+	<string name="dlg_yes">Так</string>
+	<string name="dlg_no">Не</string>
+	<string name="dlg_new_game">Бягучая гульня будзе страчана.\nВы упэўнены?</string>
+	<string name="dlg_quit_game">Тут яшчэ засталіся монстры...\nВы сапраўды жадаеце выйсці?</string>
+	<string name="dlg_ok">Так</string>
+	<string name="dlg_cancel">Скасаваць</string>
+	<string name="dlg_rate_title">Ацаніце гэтую гульню</string>
+	<string name="dlg_rate_quit">Проста выйсці з гульні</string>
+	<string name="dlg_select_controls">Выберыце тып кіравання</string>
+	<string name="dlg_select_slot_load">Выберыце слот для загрузкі</string>
+	<string name="dlg_select_slot_save">Выберыце слот для запісу</string>
+	<string name="dlg_enter_code">Ўвядзіце код</string>
+	<string name="dlg_change_weapon">Змяніць зброю</string>
+	<string name="dlg_exit_to_menu">× У меню</string>
+	<string name="dlg_game_code">Ўвесці код</string>
+	<string name="dlg_upgrade">⇪ Прапампоўка</string>
+	<string name="dlg_difficulty_title">Змена складанасці гульні</string>
+	<string name="dlg_difficulty_newbie">Пачатковец</string>
+	<string name="dlg_difficulty_easy">Лёгка</string>
+	<string name="dlg_difficulty_normal">Сярэдне</string>
+	<string name="dlg_difficulty_hard">Цяжка</string>
+	<string name="dlg_difficulty_ultimate">Экстрэмальна</string>
+	<string name="dlg_share">Падзяліцца</string>
+	<string name="dlg_state_enabled">Ўключана</string>
+	<string name="dlg_state_disabled">Выключана</string>
+	<!-- #if USE_TSTORE -->
+		<string name="dlg_tstore_info">%1$d credits / ￦%2$d</string>
+	<!-- #end -->
+
+	<string name="msg_game_saved">Гульня захавана</string>
+	<string name="msg_cant_copy_state">Не магу скапіраваць стан - верагодна скончылася месца ва ўнутранай памяці</string>
+	<string name="msg_cant_save_state">Не магу захаваць стан - верагодна скончылася месца ва ўнутранай памяці</string>
+	<string name="msg_cant_load_state">Не магу загрузіць стан</string>
+	<string name="msg_cant_save_profile">Не магу захаваць профіль - верагодна скончылася месца ва ўнутранай памяці</string>
+	<string name="msg_cant_load_profile">Не магу загрузіць профіль</string>
+
+	<string name="pref_general">Агульныя</string>
+	<string name="pref_help">Дапамога</string>
+	<string name="pref_about">Аб гульні і ліцэнзіях</string>
+	<string name="pref_restart">Пачаць гульню з самага пачатку</string>
+	<string name="pref_controls">Кіраванне</string>
+	<string name="pref_controls_scheme">Тып кіравання</string>
+	<string name="pref_controls_settings">Налада кіравання</string>
+	<string name="pref_controls_alpha">Празрыстасць абразкоў кіравання</string>
+	<string name="pref_controls_scale">Памер абразкоў кіравання</string>
+	<string name="pref_accelerometer_enabled">Выкарыстоўваць акселерометр</string>
+	<string name="pref_accelerometer_acceleration">Паскарэнне акселерометра</string>
+	<string name="pref_trackball_acceleration">Паскарэнне трекбола</string>
+	<string name="pref_invert_vertical_look">Інвертаваць паварот па вертыкалі</string>
+	<string name="pref_invert_horizontal_look">Інвертаваць паварот па гарызанталі</string>
+	<string name="pref_left_hand_aim">Кнопка стральбы злева</string>
+	<string name="pref_fire_button_at_top">Кнопка стральбы зверху</string>
+	<string name="pref_move_speed">Хуткасць ходу</string>
+	<string name="pref_strafe_speed">Хуткасць крокаў</string>
+	<string name="pref_rotate_speed">Хуткасць павароту</string>
+	<string name="pref_key_mappings">Перапрызначэнне кнопак</string>
+	<string name="pref_screen">Экран</string>
+	<string name="pref_gamma">Яркасць</string>
+	<string name="pref_smoothing_level">Ўзровень згладжвання</string>
+	<string name="pref_sound">Гук</string>
+	<string name="pref_enable_sound">Ўключыць гук</string>
+	<string name="pref_music_volume">Гучнасць музыкі</string>
+	<string name="pref_effects_volume">Гучнасць эфектаў</string>
+	<string name="pref_key_forward">Наперад</string>
+	<string name="pref_key_backward">Назад</string>
+	<string name="pref_key_strafe_left">Крок налева</string>
+	<string name="pref_key_strafe_right">Крок направа</string>
+	<string name="pref_key_rotate_left">Павярнуцца налева</string>
+	<string name="pref_key_rotate_right">Павярнуцца направа</string>
+	<string name="pref_key_fire">Агонь</string>
+	<string name="pref_key_next_weapon">Наступная зброя</string>
+	<string name="pref_key_toggle_map">Карта</string>
+	<string name="pref_key_strafe_mode">Ўключыць рэжым кроку</string>
+	<string name="pref_map_position">Палажэнне карты</string>
+	<string name="pref_show_crosshair">Паказваць прыцэл</string>
+	<string name="pref_rotate_screen">Павярнуць гульнявы экран</string>
+
+	<string name="val_empty">Пуста</string>
+	<string name="lib_press_key">Націсніце на апаратную кнопку</string>
+	<string name="lib_none">&lt;няма&gt;</string>
+	<string name="lib_clear">Сцерці</string>
+
+	<string name="lbl_fps">FPS: %s</string>
+	<string name="lbl_cant_open_door">Не магу адкрыць гэтую дзвер</string>
+	<string name="lbl_need_blue_key">Патрэбен сіні ключ</string>
+	<string name="lbl_need_red_key">Патрэбен чырвоны ключ</string>
+	<string name="lbl_need_green_key">Патрэбен зялёны ключ</string>
+	<string name="lbl_secret_found">Знойдзен сакрэт</string>
+	<string name="lbl_endl_kills">Забойстваў: %d%%</string>
+	<string name="lbl_endl_items">Прадметаў: %d%%</string>
+	<string name="lbl_endl_secrets">Сакрэтаў: %d%%</string>
+	<string name="lbl_endl_time">Час: %s</string>
+	<string name="lbl_gameover">Гульня скончана</string>
+	<string name="lbl_gameover_load_autosave">Націсніце агонь для загрузкі аўтазахавання</string>
+
+	<string name="lblh_move">Хадзіць</string>
+	<string name="lblh_menu">Змяніць зброю / Меню</string>
+	<string name="lblh_fire">Страляць</string>
+	<string name="lblh_map">Карта</string>
+	<string name="lblh_rotate">Паварочвацца</string>
+
+	<string name="lblm_door">Каб адкрыць дзвер, проста прайдзіце праз яе</string>
+	<string name="lblm_switch">Для актывацыі перамыкача, падыдзіце да яго ўпрытык</string>
+	<string name="lblm_turn_left">Звярніцеся налева</string>
+	<string name="lblm_turn_right">А цяпер павярніцеся направа</string>
+	<string name="lblm_this_is_window">Гэта акно. Не трэба праз яго хадзіць</string>
+
+	<string name="eod_info">Віншуем! Вы прайшлі ўсе эпізоды.\nАле гэта яшчэ не канец - купіце дадатковыя ўзроўні і працягвайце гульню!</string>
+	<string name="eod_info_locked">Віншуем! Вы прайшлі ўсе эпізоды.\nЗараз мы працуем не пакладаючы рук ствараючы новыя эпізоды. Чакайце абнаўленняў!</string>
+	<string name="eod_ok">Купіць новыя ўзроўні</string>
+	<string name="eod_cancel">Скасаваць</string>
+
+	<string name="achievements">Дасягненні</string>
+	<string name="achievements_item_achieved">★ ДАСЯГНУТА ★</string>
+	<string name="achievements_exp">ВОПЫТ: %d</string>
+
+	<string name="leaderboard">Табліца рэкордаў</string>
+	<string name="leaderboard_exp">ВОПЫТ: %d</string>
+	<string name="leaderboard_achieved">Дасягнута %1$d з %2$d</string>
+
+	<string name="store_levels">Ўзроўні</string>
+	<string name="store_upgrade">Прапампоўка</string>
+	<string name="store_additional">Дадаткова</string>
+	<string name="store_earn">★ Атрымаць крэдыты ★</string>
+	<string name="store_back">← Назад</string>
+	<string name="store_credits">%d крэдытаў</string>
+	<string name="store_item_locked">НЕДАСТУПНА</string>
+	<string name="store_item_purchased">Куплены</string>
+	<string name="store_item_price">%d крэдытаў</string>
+	<string name="store_item_earn">Атрымай %d КРЭДЫТАЎ</string>
+	<string name="store_item_earn_free">+%d БЯСПЛАТНЫ</string>
+	<string name="store_buy_title">КУПІЦЬ / %s</string>
+	<string name="store_buy_price">%d КРЭДЫТАЎ</string>
+	<string name="store_buy_accept"><![CDATA[<b><font color="#FF0000">★ КУПІЦЬ ★</font></b>]]></string>
+	<string name="store_buy_cancel"><![CDATA[<b>СКАСАВАЦЬ</b>]]></string>
+	<string name="store_nocred_title">Не хапае крэдытаў</string>
+	<string name="store_nocred_content"><![CDATA[
+<b>%1$s</b><br /><br />
+%2$s<br /><br />
+<b><font color="#FFD700">ВАМ ПАТРЭБНА: %3$d КРЭДЫТАЎ</font></b><br />
+<b><font color="#FF0000">У ВАС ЁСЦЬ: %4$d КРЭДЫТАЎ</font></b>
+	]]></string>
+	<string name="store_nocred_earn"><![CDATA[<b><font color="#FFD700">★ АТРЫМАЦЬ КРЭДЫТЫ ★</font></b>]]></string>
+	<string name="store_nocred_cancel"><![CDATA[<b>СКАСАВАЦЬ</b>]]></string>
+
+	<string name="share_title">Gloomy Dungeons 2: Blood Honor: алдскульны шутар з сучаснымі 3D эфектамі</string>
+	<string name="send_email_using">Адправіць email выкарыстоўваючы...</string>
+	<string name="share_fb_name">Gloomy Dungeons II</string>
+	<string name="share_fb_caption">Gloomy Dungeons II – алдскульны шутар з сучаснымі 3D эфектамі</string>
+	<string name="share_fb_description">ВОПЫТ: %1$d / КАРТА: %2$s / МОНСТРАЎ: %3$d / ПРАДМЕТАЎ: %4$d / САКРЭТАЎ: %5$d / ЧАС: %6$s</string>
+
+	<!-- store : levels -->
+	<string name="pt_tutorial">Навучанне</string>
+	<string name="pt_episode_1">Эпізод I</string>
+	<string name="pd_episode_1">Дзесяць пачатковых узроўняў</string>
+	<string name="pt_episode_2">Эпізод II</string>
+	<string name="pd_episode_2">Другі эпізод</string>
+	<string name="pt_episode_3">Эпізод III</string>
+	<string name="pd_episode_3">Трэці эпізод</string>
+	<string name="pt_episode_4">Эпізод IV</string>
+	<string name="pd_episode_4">Чацвёрты эпізод</string>
+	<string name="pt_episode_5">Эпізод V</string>
+	<string name="pd_episode_5">Пяты эпізод</string>
+
+	<!-- store : upgrade -->
+	<string name="pt_initial_armor">Пачатковая браня</string>
+	<string name="pd_initial_armor">Пачынаць узровень з бранёй ня менш чам за 200</string>
+	<string name="pt_dbl_chaingun">Двайны кулямёт</string>
+	<string name="pd_dbl_chaingun">Мала аднаго кулямёта? Двайны кулямёт для вас!</string>
+	<string name="pt_dbl_pistol">Двайны пісталет</string>
+	<string name="pd_dbl_pistol">Прэміум зброя, даступная толькі ў краме. У 8 разоў больш магутны, чым пісталет.</string>
+	<string name="pt_prem_dbl_shotgun">Палепшаны драбавік</string>
+	<string name="pd_prem_dbl_shotgun">Прэміум зброя, даступная толькі ў краме. У 1.5 разы больш магутны, чым драбавік.</string>
+	<string name="pt_additional_health">Дадатковая энергія</string>
+	<string name="pd_additional_health">+50 максімальнай энергіі</string>
+	<string name="pt_additional_ammo">Дадатковыя баепрыпасы</string>
+	<string name="pd_additional_ammo">+75 макс. пісталетных патронаў, 35 макс. вінтовачных, 25 макс. ракет</string>
+	<string name="pt_additional_armor">Дадатковая браня</string>
+	<string name="pd_additional_armor">+100 да максімальнай брані</string>
+
+	<!-- store : additional -->
+	<string name="pt_difficulty">Змяніць складанасць</string>
+	<string name="pd_difficulty">Гульня цяжкая для вас? Ці вы олдавых ігрок у DOOM і гэтая гульня занадта простая? Зменіце гэта!</string>
+	<string name="pt_always_open_map">Пачынаць з адкрытай мінікартай</string>
+	<string name="pd_always_open_map">Пачынаць новы ўзровень з цалкам адкрытай мінікартай (пры жаданні гэта можна адключыць)</string>
+	<string name="pt_secrets">Дапамога па сакрэтам</string>
+	<string name="pd_secrets">Не можаце знайсці ні аднаго сакрэту? Усе сакрэты будуць паказвацца на мінікарце!</string>
+	<string name="pt_codes">Спіс кодаў</string>
+	<string name="pd_codes">Жадаеце прапусціць узровень? Даведацца пра бягучы FPS? Атрымаць усе ключы разам? Ці вы проста фанат чыт кодаў? Гэта кіраўніцтва прыадкрые таямніцу ігравых кодаў</string>
+
+	<string name="pt_earn_debug">Атрымаць крэдыты</string>
+	<string name="pd_earn_debug">+100 крэдытаў</string>
+
+	<!-- store : texts -->
+	<string name="store_secrets"><![CDATA[
+Усе сакрэты будуць паказаны на мінікарце як маленькія зялёныя крыжыкі.
+	]]></string>
+	<string name="store_codes"><![CDATA[
+Каб ўвесці гэтыя коды, падчас гульні націсніце кнопку гульнявога меню, затым (у гульнявым меню) націсніце кнопку <b>Ўвесці код</b>.<br />
+<br />
+<b>iwda</b> – Атрымаць усю магчымую зброю і патроны.<br />
+<b>iwdh</b> – Аднавіць здароўе і атрымаць чырвоную бронежылет.<br />
+<b>iwdk</b> – Атрымаць усе ключы.<br />
+<b>iwdm</b> – Адкрыць ўсю мінікарту.<br />
+<b>iwgm</b> – Рэжым бога (вы будзеце злосным чытэрам, калі будзеце ўжываць гэты код).<br />
+<b>scli</b> – Імгненна перайсці на наступны ўзровень.<br />
+<b>slfb</b> – Пачаць бягучы ўзровень з самага пачатку.<br />
+<b>sfps</b> – Паказваць колькасць кадраў у секунду на экране.<br />
+<b>iddqd</b> – :)
+	]]></string>
+
+	<!-- achievements -->
+	<string name="ac_unlocked">Новае дасягненне: %s</string>
+	<string name="at_monsters_killed_5">Рукі ў крыві</string>
+	<string name="ad_monsters_killed_5">Забіць 5 монстраў</string>
+	<string name="at_monsters_killed_25">Пачынаючы мяснік</string>
+	<string name="ad_monsters_killed_25">Забіць 25 монстраў</string>
+	<string name="at_monsters_killed_100">Гэта мая праца</string>
+	<string name="ad_monsters_killed_100">Забіць 100 монстраў</string>
+	<string name="at_monsters_killed_500">Рон Джэмба</string>
+	<string name="ad_monsters_killed_500">Забіць 500 монстраў</string>
+	<string name="at_monsters_killed_1000">Я бачу мёртвых монстраў. Шмат</string>
+	<string name="ad_monsters_killed_1000">Забіць 1000 монстраў</string>
+	<string name="at_doors_opened_5">Асвоіў дзверы</string>
+	<string name="ad_doors_opened_5">Адкрыць 5 дзвярэй</string>
+	<string name="at_doors_opened_25">Ахоўнік дзвярэй</string>
+	<string name="ad_doors_opened_25">Адкрыць 25 дзвярэй</string>
+	<string name="at_doors_opened_100">Адмычка - мой сябар</string>
+	<string name="ad_doors_opened_100">Адкрыць 100 дзвярэй</string>
+	<string name="at_doors_opened_500">Сіні ключ, зялёны ключ, якая розніца</string>
+	<string name="ad_doors_opened_500">Адкрыць 500 дзвярэй</string>
+	<string name="at_doors_opened_1000">Твая прынцэса ў іншым замку</string>
+	<string name="ad_doors_opened_1000">Адкрыць 1000 дзвярэй</string>
+	<string name="at_secrets_found_5">Асвоіў сакрэты</string>
+	<string name="ad_secrets_found_5">Знайсці 5 сакрэтаў</string>
+	<string name="at_secrets_found_10">Даследчык</string>
+	<string name="ad_secrets_found_10">Знайсці 10 сакрэтаў</string>
+	<string name="at_secrets_found_25">Ідзі за белым трусам</string>
+	<string name="ad_secrets_found_25">Знайсці 25 сакрэтаў</string>
+	<string name="at_secrets_found_50">Мяне клічуць Чалавек-рэнтген</string>
+	<string name="ad_secrets_found_50">Знайсці 50 сакрэтаў</string>
+	<string name="at_secrets_found_100">Індыяна Форд</string>
+	<string name="ad_secrets_found_100">Знайсці 100 сакрэтаў</string>
+	<string name="at_p100_kills_row_5" formatted="false">Усіх заб’ю, адзін застануся</string>
+	<string name="ad_p100_kills_row_5" formatted="false">100% забойстваў 5 узроўняў запар</string>
+	<string name="at_p100_items_row_5" formatted="false">Калекцыянер</string>
+	<string name="ad_p100_items_row_5" formatted="false">100% рэчаў 5 узроўняў запар</string>
+	<string name="at_p100_secrets_row_5" formatted="false">Жалезная Воля</string>
+	<string name="ad_p100_secrets_row_5" formatted="false">100% сакрэтаў 5 узроўняў запар</string>
+	<string name="at_p100_kills_row_10" formatted="false">Спусташальнік</string>
+	<string name="ad_p100_kills_row_10" formatted="false">100% забойстваў 10 узроўняў запар</string>
+	<string name="at_p100_items_row_10" formatted="false">Плюшкін</string>
+	<string name="ad_p100_items_row_10" formatted="false">100% рэчаў 10 узроўняў запар</string>
+	<string name="at_p100_secrets_row_10" formatted="false"><![CDATA[Супер-ніндзя <font color="#FFD700">+ Двайны пісталет БЯСПЛАТНА</font>]]></string>
+	<string name="ad_p100_secrets_row_10" formatted="false"><![CDATA[100% сакрэтаў 10 узроўняў запар <font color="#FFD700">+ Двайны пісталет БЯСПЛАТНА</font>]]></string>
+	<string name="at_quicky"><![CDATA[Шустрык <font color="#FFD700">+ Эпізод II БЯСПЛАТНА</font>]]></string>
+	<string name="ad_quicky"><![CDATA[Прайсці навучанне і першы эпізод менш чым за 4:30 <font color="#FFD700">+ Эпізод II БЯСПЛАТНА</font>]]></string>
+
+	<string name="pref_delete_profile">Debug: delete profile</string>
+	<string name="dlg_delete_profile">All credits and purchases will be lost.\nAre you sure?</string>
+</resources>

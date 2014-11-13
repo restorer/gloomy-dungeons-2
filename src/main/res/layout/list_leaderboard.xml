@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+	android:paddingRight="@dimen/gloomy_store_item_padding_hor"
+	android:paddingTop="@dimen/gloomy_store_item_padding_vert"
+	android:paddingBottom="@dimen/gloomy_store_item_padding_vert"
+>
+	<TextView
+		android:id="@+id/position"
+		android:layout_width="@dimen/gloomy_leaderboard_position_width"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:paddingRight="@dimen/gloomy_store_item_padding_hor"
+		style="@style/Gloomy.Leaderboard.Item.Position"
+	/>
+	<TextView
+		android:id="@+id/name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/position"
+		android:layout_toLeftOf="@+id/exp"
+		style="@style/Gloomy.Leaderboard.Item.Name"
+	/>
+	<TextView
+		android:id="@+id/achieved"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/position"
+		android:layout_toLeftOf="@+id/exp"
+		android:layout_below="@+id/name"
+		style="@style/Gloomy.Leaderboard.Item.Achieved"
+	/>
+	<TextView
+		android:id="@+id/exp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+		style="@style/Gloomy.Leaderboard.Item.Exp"
+	/>
+</RelativeLayout>

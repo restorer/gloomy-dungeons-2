@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+	android:paddingRight="@dimen/gloomy_store_item_padding_hor"
+	android:paddingTop="@dimen/gloomy_store_item_padding_vert"
+	android:paddingBottom="@dimen/gloomy_store_item_padding_vert"
+>
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/status"
+		style="@style/Gloomy.Store.Item.Title"
+	/>
+	<TextView
+		android:id="@+id/description"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/status"
+		android:layout_below="@+id/title"
+		style="@style/Gloomy.Store.Item.Text"
+	/>
+	<TextView
+		android:id="@+id/status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:paddingLeft="@dimen/gloomy_store_item_padding_hor"
+		style="@style/Gloomy.Store.Item.Price"
+	/>
+</RelativeLayout>

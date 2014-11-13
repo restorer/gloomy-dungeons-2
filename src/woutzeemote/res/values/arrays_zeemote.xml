@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_controls">
+        <item>Static Move Pad</item>
+        <item>Free Move Pad</item>
+    </string-array>
+</resources>

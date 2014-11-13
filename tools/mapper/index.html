@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+	<title>Gloomy Dungeons II Mapper</title>
+	<link rel="stylesheet" type="text/css" href="mapper.css" />
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/cell.js"></script>
+	<script type="text/javascript" src="js/file.js?v=2"></script>
+	<script type="text/javascript" src="js/lib.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/options.js"></script>
+	<script type="text/javascript" src="js/paths.js"></script>
+	<script type="text/javascript" src="js/selection.js"></script>
+	<script type="text/javascript" src="js/sidebar.js?v=3"></script>
+	<script type="text/javascript" src="js/zmenubar.js"></script>
+</head>
+<body onload="app.init()">
+	<ul class="menu">
+		<li><span class="b-mode b-draw active">Draw</span></li>
+		<li><span class="b-mode b-select b-selected">Select</span></li>
+		<li><span class="b-mode b-deselect b-depend-selection disabled">Deselect</span></li>
+		<li><span class="b-mode b-copy b-depend-selection disabled">Copy</span></li>
+		<li><span class="b-mode b-move b-depend-selection disabled">Move</span></li>
+		<li><span class="b-mode b-fill b-depend-selection disabled">Fill</span></li>
+		<li><span class="b-mode b-rotate-rt b-depend-selection disabled">&#8635;</span></li>
+		<li><span class="b-mode b-rotate-lt b-depend-selection disabled">&#8634;</span></li>
+		<li><span class="b-mode b-flip-hor b-depend-selection disabled">&#8644;</span></li>
+		<li><span class="b-mode b-flip-ver b-depend-selection disabled">&#8645;</span></li>
+		<li>
+			<span class="b-mode b-mark">Mark</span>
+			<div class="subdialog b-mode-sub b-mark-sub" style="display:none;">
+				<input class="b-mark-value b-mark-focus" type="text" size="10" />
+				<span class="b-mark-clear lpad">Clear</span>
+			</div>
+		</li>
+		<li><span class="b-mode b-undo disabled">Undo</span></li>
+		<li><span class="b-mode b-redo disabled">Redo</span></li>
+		<li><em class="b-selection-info"></em></li>
+		<li class="right"><span class="b-sidebar-zoom active" rel="">100%</span></li>
+		<li class="right"><span class="b-sidebar-zoom" rel="sidebar-z50">50%</span></li>
+		<li class="right"><em>Tools:</em></li>
+		<li class="right"><span class="b-map-rendermode" rel="c">C</span></li>
+		<li class="right"><span class="b-map-rendermode" rel="wc">WC</span></li>
+		<li class="right"><span class="b-map-rendermode" rel="cw">CW</span></li>
+		<li class="right"><span class="b-map-rendermode active" rel="fw">FW</span></li>
+		<li class="right"><span class="b-map-rendermode" rel="f">F</span></li>
+		<li class="right"><span class="b-map-zoom" _mult="1" rel="">100%</span></li>
+		<li class="right"><span class="b-map-zoom active" _mult="2" rel="map-z50">50%</span></li>
+		<li class="right"><span class="b-map-zoom" _mult="4" rel="map-z25">25%</span></li>
+		<li class="right"><em>Map:</em></li>
+		<li class="right">
+			<span class="b-save-load">Save / Load</span>
+			<div class="subdialog subdialog-right b-save-load-sub" style="display:none;">
+				<table>
+					<tr>
+						<td class="rpad">
+							<span class="b-clear-level">Clear</span>
+						</td>
+						<td class="lpad" style="text-align:right;">
+							<span class="b-refresh-list">Refresh list</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="rpad">
+							<span class="b-load-level">Load</span>
+						</td>
+						<td class="lpad">
+							<select id="levels-list" class="maxw"></select>
+						</td>
+					</tr>
+					<tr>
+						<td class="rpad">
+							<span class="b-save-level">Save</span>
+						</td>
+						<td class="lpad">
+							<input class="maxw" id="save-level-name" type="text" style="min-width:100px;" value="e88m88" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</li>
+		<li class="right">
+			<span class="b-options">Options</span>
+			<div class="subdialog subdialog-right b-options-sub" style="display:none;">
+				<table>
+					<tr>
+						<td class="rpad">
+							<table class="maxw">
+								<tr>
+									<td>
+										<em class="pad">Graphics</em>
+									</td>
+									<td class="maxw">
+										<select class="maxw" id="graphics-set">
+											<option selected="selected">set-1</option>
+											<option>set-2</option>
+											<option>set-3</option>
+											<option>set-4</option>
+											<option>set-5</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="pad" id="find-mark">Find mark</span>
+									</td>
+									<td class="maxw">
+										<input class="maxw" id="find-mark-value" type="text" />
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="maxw">
+										<span class="pad" id="find-hero">Find hero</span>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="maxw">
+										<span class="pad" id="center-map">Center map</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<em class="pad">Ensure</em>
+									</td>
+									<td class="maxw">
+										<select class="maxw" id="ensure">
+											<option value="0">None</option>
+											<option value="1">Pistol</option>
+											<option value="2" selected="selected">Shotgun</option>
+											<option value="3">Chaingun</option>
+											<option value="4">Double shotgun</option>
+											<option value="5">Rocket launcher</option>
+											<option value="6">Double chaingun</option>
+											<option value="7">Chainsaw</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<em class="pad">Difficulty</em>
+									</td>
+									<td class="maxw">
+										<select class="maxw" id="difficulty">
+											<option value="0.25">25%</option>
+											<option value="0.5">50%</option>
+											<option value="0.75">75%</option>
+											<option value="1" selected="selected">100%</option>
+											<option value="1.25">125%</option>
+											<option value="1.5">150%</option>
+											<option value="1.75">175%</option>
+											<option value="2">200%</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<hr />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" style="line-height:1.5em;">
+										BKey M, RKey M, GKey M<br />
+										Open M, Close M, Exit, Secret N<br />
+										BuryThis, Bury M<br />
+										Wall MT MF, Floor MT MF, Ceil MT MF<br />
+										ShowHelp, HideHelp<br />
+										ShowMessage Message, HideMessage<br />
+										Timeout M D
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="lpad">
+							<div><em>Actions:</em></div>
+							<textarea id="actions" rows="25" cols="50" class="maxh"></textarea>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</li>
+		<li class="right">
+			<div class="ajax-loader" style="display:none;">&#8635;</div>
+		</li>
+	</ul>
+	<div class="sidebar">
+		<div class="toolbox" id="special">
+			<strong>Special</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="floor">
+			<strong>Floor</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="ceil">
+			<strong>Ceiling</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="walls">
+			<strong>Walls</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="twall">
+			<strong>Transparent Walls</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="tpass">
+			<strong>Transparent Passable</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="twind">
+			<strong>Windows</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="doors">
+			<strong>Doors</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="ditem">
+			<strong>Decorations</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="dlamp">
+			<strong>Lamps</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="objects">
+			<strong>Objects</strong>
+			<div class="toolbox-items"></div>
+		</div>
+		<div class="toolbox" id="monsters">
+			<strong>Monsters</strong>
+			<div class="toolbox-items"></div>
+		</div>
+	</div>
+	<div class="map-wrap">
+		<div class="map map-z50"></div>
+	</div>
+</body>
+</html>

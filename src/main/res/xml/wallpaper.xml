@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wallpaper
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:thumbnail="@drawable/live_wp"
+	android:description="@string/app_name"
+/>
+<!--
+	android:settingsActivity="zame.game.WallpaperPreferencesActivity"
+-->

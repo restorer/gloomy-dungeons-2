@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources"
+>
+    <string name="menu_connect">컨트롤러 : 연결되었습니다.</string>
+    <string name="menu_disconnect">컨트롤러 : 연결이 끊어졌습니다.</string>
+    <string name="connecting">연결 &#8230;</string>
+    <string name="disconnecting">연결 종료 &#8230;</string>
+
+    <string name="dlg_select_zeemote_mapping">지도키 설정하기</string>
+    <string name="dlg_zeemote_preferences">zeemote 우선권</string>
+    <string name="pref_zeemote">zeemote </string>
+    <string name="pref_zeemote_x_accel">X가속계</string>
+    <string name="pref_zeemote_y_accel">Y가속계</string>
+    <string name="pref_zeemote_mapping_fire">A버튼</string>
+    <string name="pref_zeemote_mapping_a">B버튼</string>
+    <string name="pref_zeemote_mapping_b">C버튼</string>
+    <string name="pref_zeemote_mapping_c">D버튼</string>
+</resources>

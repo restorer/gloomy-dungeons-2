@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Gloomy.Theme" />
+	<style name="Gloomy.Theme.MainActivity" parent="@style/Holo.Theme.Fullscreen">
+		<item name="android:windowBackground">@color/background_dark</item>
+		<item name="actionBarTabStyle">@style/Gloomy.Theme.ActionBar.TabView</item>
+		<item name="android:actionBarTabStyle">@style/Gloomy.Theme.ActionBar.TabView</item>
+		<item name="actionBarTabTextStyle">@style/Gloomy.Theme.ActionBar.TabText</item>
+		<item name="android:actionBarTabTextStyle">@style/Gloomy.Theme.ActionBar.TabText</item>
+	</style>
+	<style name="Gloomy.Theme.ActionBar" />
+	<style name="Gloomy.Theme.ActionBar.TabView" parent="@style/Widget.AppCompat.ActionBar.TabView">
+		<item name="android:paddingLeft">@dimen/gloomy_actionbar_tab_padding</item>
+		<item name="android:paddingRight">@dimen/gloomy_actionbar_tab_padding</item>
+	</style>
+	<style name="Gloomy.Theme.ActionBar.TabText" parent="@style/Widget.AppCompat.ActionBar.TabText">
+		<item name="android:textSize">@dimen/gloomy_actionbar_tab_textsize</item>
+	</style>
+	<style name="Gloomy.Theme.WebActivity" parent="@style/Holo.Theme.NoActionBar.Fullscreen">
+		<item name="android:windowBackground">@color/background_dark</item>
+	</style>
+	<style name="Gloomy.Theme.FacebookLogin" parent="@style/Holo.Theme.NoActionBar.Fullscreen">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+	</style>
+</resources>
