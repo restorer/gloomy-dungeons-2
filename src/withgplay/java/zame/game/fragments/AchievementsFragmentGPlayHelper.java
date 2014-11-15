@@ -32,17 +32,23 @@ public class AchievementsFragmentGPlayHelper {
     // http://stackoverflow.com/questions/13894006/android-facebook-sdk-3-0-gives-remote-app-id-does-not-match-stored-id-while-lo
 
     protected void useNameFromFacebook(final AchievementsFragment achievementsFragment, final MainActivity activity) {
-        Session.openActiveSession(activity, true, new Session.StatusCallback() {
-            @Override
-            public void call(Session session, SessionState facebookState, Exception exception) {
-                if (BuildConfig.DEBUG) {
-                    Common.log("AchievementsFragment.useNameFromFacebook [1]");
-                }
+        Session session = new Session(activity);
+        Session.setActiveSession(session);
 
-                if (session.isOpened()) {
-                    if (BuildConfig.DEBUG) {
-                        Common.log("AchievementsFragment.useNameFromFacebook [2]");
+        try {
+            session.openForRead(new Session.OpenRequest(activity).setCallback(new Session.StatusCallback() {
+                @Override
+                public void call(Session session, SessionState facebookState, Exception exception) {
+                    if (session.isClosed()) {
+                        session.removeCallback(this);
+                        return;
                     }
+
+                    if (!session.isOpened()) {
+                        return;
+                    }
+
+                    session.removeCallback(this);
 
                     FacebookNameProvider.updateFacebookName(session, new FacebookNameProvider.IOnComplete() {
                         public void onComplete(boolean updated) {
@@ -51,7 +57,9 @@ public class AchievementsFragmentGPlayHelper {
                         }
                     });
                 }
-            }
-        });
+            }));
+        } catch (Exception ex) {
+            Common.log(ex);
+        }
     }
 }
