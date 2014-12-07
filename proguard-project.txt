@@ -1,5 +1,6 @@
 # Game
 
+-keepattributes EnclosingMethod
 -dontnote **SuppressLint
 -dontnote **TargetApi
 -keepclassmembers class zame.promo.PromoView$JsApi { public *; }
