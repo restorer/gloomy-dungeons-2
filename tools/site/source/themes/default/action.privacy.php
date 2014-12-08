@@ -17,8 +17,9 @@ We collect:
 			<p>
 Google Analytics: <a href="http://www.google.com/intl/en/analytics/privacyoverview.html"
 >http://www.google.com/intl/en/analytics/privacyoverview.html</a><br />
-AdMob: <a href="http://www.admob.com/home/privacy">http://www.admob.com/home/privacy</a><br />
 Facebook: <a href="https://www.facebook.com/about/privacy">https://www.facebook.com/about/privacy</a><br />
+<?php /*
+AdMob: <a href="http://www.admob.com/home/privacy">http://www.admob.com/home/privacy</a><br />
 Leadbolt: <a href="https://www.leadbolt.net/legal/privacy/type:publisher">https://www.leadbolt.net/legal/privacy/type:publisher</a><br />
 GetJar: <a href="http://www.getjar.com/privacy/">http://www.getjar.com/privacy/</a><br />
 TapJoy: <a href="http://info.tapjoy.com/about-tapjoy/privacy-policy/">http://info.tapjoy.com/about-tapjoy/privacy-policy/</a><br />
@@ -27,6 +28,7 @@ SponsorPay: <a href="http://sponsorpay.com/gateway/info/privacy-policy">http://s
 Pocket Change: <a href="http://pocketchange.com/privacy">http://pocketchange.com/privacy</a><br />
 HeyZap: <a href="http://www.heyzap.com/legal/privacy">http://www.heyzap.com/legal/privacy</a><br />
 Hooked: <a href="http://hookedmediagroup.com/mobile/Privacy.aspx">http://hookedmediagroup.com/mobile/Privacy.aspx</a><br />
+*/ ?>
 			</p>
 		</blockquote>
 	</div>

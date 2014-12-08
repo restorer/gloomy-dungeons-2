@@ -8,7 +8,7 @@
 	<?php $poplr->template('layout.languages') ?>
 	<li><a
 		style="color:#FFF;"
-		href="https://play.google.com/store/apps/details?id=org.zamedev.gloomydungeons2.gplay&amp;utm_medium=referral&amp;utm_source=gloomy2site&amp;utm_campaign=apps"
+		href="https://play.google.com/store/apps/details?id=org.zamedev.gloomydungeons2.fullnfree&amp;utm_medium=referral&amp;utm_source=gloomy2site&amp;utm_campaign=apps"
 	><?php
 		echo $poplr->etxt('app.index.menu.googlePlay')
 	?></a></li>
@@ -65,7 +65,7 @@
 		</div>
 	</div>
 	<div class="block" style="text-align:center;">
-		<a href="http://goo.gl/xDBmL"><img src="<?php echo $poplr->getThemedUrl('images/qr-big.png') ?>" /></a>
+		<a href="http://goo.gl/mzV1M8"><img src="<?php echo $poplr->getThemedUrl('images/qr-big.png') ?>" /></a>
 	</div>
 	<a name="how-to-play"></a>
 	<div class="block">
