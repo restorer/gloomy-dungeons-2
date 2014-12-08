@@ -23,7 +23,7 @@ It is oblivious, but I still want to note: all game resources are open-sourced *
 
 # Compiling
 
-There are 2 variants of game: for google play (with zeemote, facebook, and analytics support) and for f-droid
+There are 2 variants of game: for google play (with zeemote, facebook, and analytics support) and for f-droid.
 You can compile either by using build script or directly using gradle.
 
 ## Compile and install debug build
