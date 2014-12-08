@@ -43,9 +43,6 @@ case "$1" in
 		exit
 esac
 
-echo "${PREFIX}${TASK}${SUFFIX}"
-exit
-
 ./gradlew "${PREFIX}${TASK}${SUFFIX}"
 
 if [[ "$2" = "release" && -e "temp" && "$SRCNAME" != "" && "$DSTNAME" != "" ]] ; then
