@@ -17,8 +17,17 @@ public class GameView extends zame.game.libs.GLSurfaceView21 implements zame.gam
 	protected Engine engine;
 	protected HeroController heroController;
 
+	public GameView(Context context) {
+		super(context);
+		initialize(context);
+	}
+
 	public GameView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		initialize(context);
+	}
+
+	public void initialize(Context context) {
 		this.activity = (MainActivity)context;
 		this.engine = activity.engine;
 		this.heroController = engine.heroController;
@@ -26,13 +35,6 @@ public class GameView extends zame.game.libs.GLSurfaceView21 implements zame.gam
 		setFocusable(true);
 		requestFocus();
 		setFocusableInTouchMode(true);
-	}
-
-	@Override
-	protected void onFinishInflate() {
-		super.onFinishInflate();
-		engine.init();
-		setRenderer(this);
 	}
 
 	@Override

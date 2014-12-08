@@ -18,14 +18,6 @@ public abstract class BaseFragment extends Fragment {
 		this.activity.setupTabs();
 	}
 
-	@Override
-	public View onCreateView(org.holoeverywhere.LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View view = createFragmentView(inflater, container, savedInstanceState);
-		return view;
-	}
-
-	public abstract View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
-
 	public void onWindowFocusChanged(boolean hasWindowFocus) {
 	}
 

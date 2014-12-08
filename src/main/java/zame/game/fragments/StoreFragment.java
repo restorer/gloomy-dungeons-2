@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.support.v7.app.ActionBar;
+import org.holoeverywhere.LayoutInflater;
 import org.holoeverywhere.app.Activity;
 import zame.game.MyApplication;
 import zame.game.R;
@@ -62,7 +62,7 @@ public class StoreFragment extends BaseFragment implements ActionBarFragment, Ac
 	}
 
 	@Override
-	public View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_store, container, false);
 
 		itemsList = (ListView)viewGroup.findViewById(R.id.items);

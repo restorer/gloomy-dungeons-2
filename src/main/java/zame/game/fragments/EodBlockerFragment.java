@@ -1,11 +1,11 @@
 package zame.game.fragments;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import org.holoeverywhere.LayoutInflater;
 import zame.game.MyApplication;
 import zame.game.R;
 import zame.game.managers.SoundManager;
@@ -17,7 +17,7 @@ public class EodBlockerFragment extends BaseFragment {
 	protected ViewGroup viewGroup;
 
 	@Override
-	public View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_eod_blocker, container, false);
 
 		((Button)viewGroup.findViewById(R.id.cancel)).setOnClickListener(new View.OnClickListener() {

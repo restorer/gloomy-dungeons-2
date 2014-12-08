@@ -6,10 +6,11 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import org.holoeverywhere.LayoutInflater;
 import zame.game.R;
 import zame.game.engine.Config;
 import zame.game.engine.Engine;
@@ -23,6 +24,7 @@ import zame.game.misc.GameView;
 public class GameFragment extends BaseFragment implements SensorEventListener {
 	public static GameFragment self;
 
+	protected ViewGroup viewGroup;
 	protected GameView gameView;
 	protected Engine engine;
 	protected Game game;
@@ -50,10 +52,10 @@ public class GameFragment extends BaseFragment implements SensorEventListener {
 	}
 
 	@Override
-	public View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		ViewGroup viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_game, container, false);
-		gameView = (GameView)viewGroup.findViewById(R.id.game_view);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_game, container, false);
 		self = this;
+
 		return viewGroup;
 	}
 
@@ -62,9 +64,17 @@ public class GameFragment extends BaseFragment implements SensorEventListener {
 	public void onResume() {
 		super.onResume();
 
-		config.reload();
-		heroController.reload();
+		if (gameView != null) {
+			viewGroup.removeView(gameView);
+		}
+
+		gameView = new GameView(activity);
+		viewGroup.addView(gameView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+		gameView.setRenderer(gameView);
+		engine.init();
 		gameView.onResume();
+
 		zeemoteHelper.onResume();
 
 		if (config.accelerometerEnabled) {
@@ -96,7 +106,12 @@ public class GameFragment extends BaseFragment implements SensorEventListener {
 	public void onPause() {
 		super.onPause();
 
-		gameView.onPause();
+		if (gameView != null) {
+			gameView.onPause();
+			viewGroup.removeView(gameView);
+			gameView = null;
+		}
+
 		engine.onPause();
 
 		if (config.accelerometerEnabled && (sensorManager != null)) {

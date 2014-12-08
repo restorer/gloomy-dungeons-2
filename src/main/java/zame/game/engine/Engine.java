@@ -326,7 +326,7 @@ public class Engine {
 
 	public void onSurfaceCreated(GL10 gl) {
 		fboSupported = ((" " + gl.glGetString(GL10.GL_EXTENSIONS) + " ").indexOf(" GL_OES_framebuffer_object ") >= 0);
-		gl.glClearColor(0.0f, 0f, 0f, 1.0f);
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		gl.glEnable(GL10.GL_CULL_FACE);
 		gl.glFrontFace(GL10.GL_CCW);
@@ -401,7 +401,7 @@ public class Engine {
 		}
 
 		gl.glViewport(0, 0, this.width, this.height);
-		ratio = (float)this.width / (float)this.height;
+		ratio = (float)(this.width < 1 ? 1 : this.width) / (float)(this.height < 1 ? 1 : this.height);
 
 		levelRenderer.surfaceSizeChanged(gl);
 		heroController.surfaceSizeChanged();

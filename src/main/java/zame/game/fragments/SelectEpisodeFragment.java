@@ -2,7 +2,6 @@ package zame.game.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
+import org.holoeverywhere.LayoutInflater;
 import org.holoeverywhere.app.Activity;
 import zame.game.Common;
 import zame.game.MyApplication;
@@ -60,7 +60,7 @@ public class SelectEpisodeFragment extends BaseFragment {
 	}
 
 	@Override
-	public View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_select_episode, container, false);
 
 		images[0] = (ImageView)viewGroup.findViewById(R.id.image_1);

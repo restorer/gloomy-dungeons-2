@@ -29,6 +29,8 @@ import zame.game.providers.DlcProvider;
 import zame.game.store.Profile;
 
 public class MainActivity extends Activity {
+	protected static final String TAG_FRAGMENT_CURRENT = "MainActivity.CurrentFragment";
+
 	public static MainActivity self = null;
 
 	public SoundManager soundManager;
@@ -123,10 +125,12 @@ public class MainActivity extends Activity {
 		soundManager.onWindowFocusChanged(false, SoundManager.FOCUS_MASK_MAIN_ACTIVITY);
 
 		// if home screen button pressed, lock screen button pressed, call received or something similar - return to menu screen
+		/*
 		if (currentFragment == gameFragment) {
 			gameFragment.hideDialogs();
 			showFragment(menuFragment);
 		}
+		*/
 
 		super.onPause();
 	}
@@ -158,7 +162,7 @@ public class MainActivity extends Activity {
 		}
 
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-		transaction.replace(R.id.fragment_container, fragment);
+		transaction.replace(R.id.fragment_container, fragment, TAG_FRAGMENT_CURRENT);
 		transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE); // fix for cyanogenmod
 
 		try {
@@ -169,6 +173,12 @@ public class MainActivity extends Activity {
 			} catch (Exception exi) {
 				Common.log(exi.toString());
 			}
+		}
+
+		try {
+			getSupportFragmentManager().executePendingTransactions(); // fix FC due to "java.lang.IllegalStateException: Fragment already added"
+		} catch (Exception ex) {
+			Common.log(ex);
 		}
 	}
 

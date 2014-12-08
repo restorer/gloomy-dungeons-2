@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
@@ -15,6 +14,7 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
+import org.holoeverywhere.LayoutInflater;
 import org.holoeverywhere.app.Activity;
 import zame.game.Common;
 import zame.game.MyApplication;
@@ -74,7 +74,7 @@ public class MenuFragment extends BaseFragment {
 	}
 
 	@Override
-	public View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_menu, container, false);
 
 		((ImageButton)viewGroup.findViewById(R.id.play)).setOnClickListener(new View.OnClickListener() {

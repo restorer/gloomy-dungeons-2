@@ -5,11 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import org.holoeverywhere.LayoutInflater;
 import org.holoeverywhere.widget.ProgressBar;
 import zame.game.MyApplication;
 import zame.game.R;
@@ -54,7 +54,7 @@ public class PrepareFragment extends BaseFragment {
 	};
 
 	@Override
-	public View createFragmentView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		viewGroup = (ViewGroup)inflater.inflate(R.layout.fragment_prepare, container, false);
 
 		progressView = (ProgressBar)viewGroup.findViewById(R.id.progress);
