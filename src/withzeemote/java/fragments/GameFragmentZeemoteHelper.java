@@ -3,12 +3,14 @@ package zame.game.fragments;
 import com.zeemote.zc.event.ButtonEvent;
 import com.zeemote.zc.event.JoystickEvent;
 import com.zeemote.zc.ui.android.ControllerAndroidUi;
+import zame.game.Common;
 import zame.game.MyApplication;
 import zame.game.engine.controls.ControlsZeemoteHelper;
 
 public class GameFragmentZeemoteHelper {
     protected GameFragment gameFragment;
-    protected ControllerAndroidUi zeemoteControllerUi = null;
+    protected ControllerAndroidUi zeemoteControllerUi;
+    protected boolean keepConnection;
 
     public GameFragmentZeemoteHelper(GameFragment gameFragment) {
         this.gameFragment = gameFragment;
@@ -18,10 +20,24 @@ public class GameFragmentZeemoteHelper {
         if (gameFragment.config.controlScheme == ControlsZeemoteHelper.SCHEME_ZEEMOTE) {
             if (zeemoteControllerUi == null) {
                 zeemoteControllerUi = new ControllerAndroidUi(gameFragment.activity, MyApplication.self.zeemoteHelper.zeemoteController);
+                keepConnection = false;
             }
 
-            if (!MyApplication.self.zeemoteHelper.zeemoteController.isConnected()) {
+            if (!keepConnection && !MyApplication.self.zeemoteHelper.zeemoteController.isConnected()) {
                 zeemoteControllerUi.startConnectionProcess();
+                keepConnection = true;
+            } else {
+                keepConnection = false;
+            }
+        }
+    }
+
+    public void onPause() {
+        if (!keepConnection && MyApplication.self.zeemoteHelper.zeemoteController.isConnected()) {
+            try {
+                MyApplication.self.zeemoteHelper.zeemoteController.disconnect();
+            } catch (Exception ex) {
+                Common.log(ex);
             }
         }
     }
@@ -29,6 +45,7 @@ public class GameFragmentZeemoteHelper {
     public void showZeemoteControllerUi() {
         if (zeemoteControllerUi != null) {
             zeemoteControllerUi.showControllerMenu();
+            keepConnection = true;
         }
     }
 

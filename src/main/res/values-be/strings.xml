@@ -51,9 +51,6 @@
 	<string name="dlg_share">Падзяліцца</string>
 	<string name="dlg_state_enabled">Ўключана</string>
 	<string name="dlg_state_disabled">Выключана</string>
-	<!-- #if USE_TSTORE -->
-		<string name="dlg_tstore_info">%1$d credits / ￦%2$d</string>
-	<!-- #end -->
 
 	<string name="msg_game_saved">Гульня захавана</string>
 	<string name="msg_cant_copy_state">Не магу скапіраваць стан - верагодна скончылася месца ва ўнутранай памяці</string>

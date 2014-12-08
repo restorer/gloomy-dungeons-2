@@ -7,6 +7,9 @@ public class GameFragmentZeemoteHelper {
     public void onResume() {
     }
 
+    public void onPause() {
+    }
+
     public void showZeemoteControllerUi() {
     }
 }

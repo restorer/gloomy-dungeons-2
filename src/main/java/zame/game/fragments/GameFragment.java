@@ -106,6 +106,8 @@ public class GameFragment extends BaseFragment implements SensorEventListener {
 	public void onPause() {
 		super.onPause();
 
+		zeemoteHelper.onPause();
+
 		if (gameView != null) {
 			gameView.onPause();
 			viewGroup.removeView(gameView);

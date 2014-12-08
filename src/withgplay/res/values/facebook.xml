@@ -3,5 +3,5 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:ignore="UnusedResources"
 >
-	<string name="facebook_id">133929030107333</string>
+	<string translatable="false" name="facebook_id">133929030107333</string>
 </resources>

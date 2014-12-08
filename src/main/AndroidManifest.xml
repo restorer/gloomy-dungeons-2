@@ -6,7 +6,7 @@
 	android:installLocation="auto"
 >
 	<!-- xlargeScreens - For Android versions 3.2 or higher, there is a Zooming-In button which expands apps made for smart phones into a size fit for tablets. However, because this function obstructs proper running of ads, it should not be used. -->
-	<support-screens android:anyDensity="true" android:xlargeScreens="true" />
+	<supports-screens android:anyDensity="true" android:xlargeScreens="true" />
 
 	<uses-feature android:name="android.software.live_wallpaper" />
 

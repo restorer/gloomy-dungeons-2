@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="values_controls">
+    <string-array translatable="false" name="values_controls">
         <item>StaticMovePad</item>
         <item>FreeMovePad</item>
         <item>Zeemote</item>
     </string-array>
-    <string-array name="values_zeemote_mapping">
+    <string-array translatable="false" name="values_zeemote_mapping">
         <item>None</item>
         <item>Fire</item>
         <item>NextWeapon</item>
