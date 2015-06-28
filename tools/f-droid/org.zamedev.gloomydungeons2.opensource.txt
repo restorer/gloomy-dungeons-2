@@ -1,3 +1,4 @@
+AntiFeatures:Ads,UpstreamNonFree
 Categories:Games
 License:MIT
 Web Site:http://mobile.zame-dev.org/gloomy-ii/
@@ -41,19 +42,19 @@ Join the retro 3d shooter adventure!
 Have fun! :)
 
 In f-droid.org version Zeemote isn't supported and Google Analytics was removed.
-Non-personalized promo ads (of new games made by ZameDev) can be shown
+Non-personalized promo ads (of new games made by EightSines) can be shown
 on menu screen.
 .
 
 Repo Type:git
-Repo:https://github.com/restorer/Gloomy-Dungeons-3D
+Repo:https://github.com/restorer/gloomy-dungeons-2
 
 Build:2014.11.10.1200,1415610000
-    commit=PUT_COMMIT_HERE
-    gradle=assembleForfdroidWoutgplayWoutzeemoteWoutkoRelease
+    commit=<PUT_HERE>
+    gradle=ForfdroidWoutgplayWoutzeemoteWoutko
+    buildjni=no
     novcheck=yes
 
-AntiFeatures:Ads,UpstreamNonFree
 Update Check Mode:Static
 Auto Update Mode:None
 Current Version:2014.11.10.1200

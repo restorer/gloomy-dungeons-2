@@ -155,7 +155,7 @@ public class PromoView extends FrameLayout {
 
         if (isNetworkConnected()) {
             state = STATE_LOADING;
-            String url = PROMO_URL + context.getPackageName() + "&lang=" + Locale.getDefault().getLanguage().toLowerCase();
+            String url = PROMO_URL + context.getPackageName() + "&lang=" + Locale.getDefault().getLanguage().toLowerCase(Locale.US);
 
             if (BuildConfig.DEBUG) {
                 currentWebView.loadUrl(url + "&mode=debug");

@@ -185,26 +185,34 @@ public class MainActivity extends Activity {
 	public void setupTabs() {
 		ActionBar actionBar = getSupportActionBar();
 
-		if (currentFragment instanceof ActionBarFragment) {
-			if (currentFragment != prevActionBarFragment) {
-				actionBar.removeAllTabs();
+        if (actionBar == null) {
+            return; // don't know how this is possible, but just for case
+        }
 
-				try {
-					((ActionBarFragment)currentFragment).setupTabs(actionBar);
-				} catch (Exception ex) {
-					// java.lang.IllegalStateException: Fragment ao{40866688} not attached to Activity
-					Common.log(ex);
-				}
-			}
+        try {
+    		if (currentFragment instanceof ActionBarFragment) {
+    			if (currentFragment != prevActionBarFragment) {
+    				actionBar.removeAllTabs();
 
-			prevActionBarFragment = (ActionBarFragment)currentFragment;
+    				try {
+    					((ActionBarFragment)currentFragment).setupTabs(actionBar);
+    				} catch (Exception ex) {
+    					// java.lang.IllegalStateException: Fragment ao{40866688} not attached to Activity
+    					Common.log(ex);
+    				}
+    			}
 
-			actionBar.setDisplayOptions(0);
-			actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-			actionBar.show();
-		} else {
-			actionBar.hide();
-		}
+    			prevActionBarFragment = (ActionBarFragment)currentFragment;
+
+    			actionBar.setDisplayOptions(0);
+    			actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+    			actionBar.show();
+    		} else {
+    			actionBar.hide();
+    		}
+        } catch (Exception oex) {
+            Common.log(ex);
+        }
 	}
 
 	public void showPrevFragment() {
