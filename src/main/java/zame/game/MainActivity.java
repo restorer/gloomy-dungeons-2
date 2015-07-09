@@ -210,7 +210,7 @@ public class MainActivity extends Activity {
     		} else {
     			actionBar.hide();
     		}
-        } catch (Exception oex) {
+        } catch (Exception ex) {
             Common.log(ex);
         }
 	}
