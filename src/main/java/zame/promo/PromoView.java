@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.net.http.SslError;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
@@ -15,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.HttpAuthHandler;
 import android.webkit.JavascriptInterface;
-import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
@@ -345,11 +343,6 @@ public class PromoView extends FrameLayout {
             view.loadData("", "text/html", null);
 
             handler.post(reloadPromoRunnable);
-        }
-
-        @Override
-        public void onReceivedSslError(WebView view, SslErrorHandler sslErrorHandler, SslError error) {
-            sslErrorHandler.proceed();
         }
 
         @Override
