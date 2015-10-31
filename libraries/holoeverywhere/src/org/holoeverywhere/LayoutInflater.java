@@ -278,6 +278,14 @@ public class LayoutInflater extends android.view.LayoutInflater implements Clone
             }
             Object[] args = mConstructorArgs;
             args[1] = attrs;
+
+            // + @restorer
+            // hack for android 6
+            if (!constructor.isAccessible()) {
+                constructor.setAccessible(true);
+            }
+            // - @restorer
+
             final View view = constructor.newInstance(args);
             if (view instanceof ViewStub) {
                 final ViewStub viewStub = (ViewStub) view;
