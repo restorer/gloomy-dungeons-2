@@ -6,7 +6,7 @@ dependencies {
 }
 
 allprojects {
-    tasks.withType(Compile) {
+    tasks.withType(JavaCompile) {
         options.compilerArgs << '-Xlint:-deprecation'
     }
 }
