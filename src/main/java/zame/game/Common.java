@@ -136,18 +136,18 @@ public class Common {
 	public static void safeRename(String tmpName, String fileName) {
 		String oldName = fileName + ".old";
 
-		if ((new File(oldName)).exists()) {
-			(new File(oldName)).delete();
+		if (new File(oldName).exists()) {
+			new File(oldName).delete();
 		}
 
-		if ((new File(fileName)).exists()) {
-			(new File(fileName)).renameTo(new File(oldName));
+		if (new File(fileName).exists()) {
+			new File(fileName).renameTo(new File(oldName));
 		}
 
-		(new File(tmpName)).renameTo(new File(fileName));
+		new File(tmpName).renameTo(new File(fileName));
 
-		if ((new File(oldName)).exists()) {
-			(new File(oldName)).delete();
+		if (new File(oldName).exists()) {
+			new File(oldName).delete();
 		}
 	}
 
@@ -216,7 +216,7 @@ public class Common {
 			slotFileNames.clear();
 		}
 
-		String[] files = (new File(MyApplication.self.SAVES_FOLDER)).list();
+		String[] files = new File(MyApplication.self.SAVES_FOLDER).list();
 
 		if (files == null) {
 			return 0;
