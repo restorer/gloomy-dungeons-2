@@ -466,7 +466,7 @@ public class Request {
             parameters.putString("place", placeId);
         }
 
-        if (tagIds != null && tagIds.size() > 0) {
+        if (tagIds != null && !tagIds.isEmpty()) {
             String tags = TextUtils.join(",", tagIds);
             parameters.putString("tags", tags);
         }
@@ -1651,7 +1651,7 @@ public class Request {
             }
         }
 
-        if (callbacks.size() > 0) {
+        if (!callbacks.isEmpty()) {
             Runnable runnable = new Runnable() {
                 public void run() {
                     for (Pair<Callback, Response> pair : callbacks) {

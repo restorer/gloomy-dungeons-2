@@ -663,7 +663,7 @@ public class Session implements Serializable {
         }
 
         GraphObjectList<GraphObject> data = result.getData();
-        if (data == null || data.size() == 0) {
+        if (data == null || data.isEmpty()) {
             return null;
         }
         List<String> grantedPermissions = new ArrayList<String>(data.size());

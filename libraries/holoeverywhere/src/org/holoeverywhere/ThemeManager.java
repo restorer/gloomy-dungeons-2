@@ -901,7 +901,7 @@ public final class ThemeManager {
             return;
         }
         sThemeGetters.remove(themeGetter);
-        if (sThemeGetters.size() == 0) {
+        if (sThemeGetters.isEmpty()) {
             sThemeGetters = null;
         }
     }
@@ -959,7 +959,7 @@ public final class ThemeManager {
             return;
         }
         sThemeSetters.remove(themeSetter);
-        if (sThemeSetters.size() == 0) {
+        if (sThemeSetters.isEmpty()) {
             sThemeSetters = null;
         }
     }

@@ -141,7 +141,7 @@ public abstract class ResolverActivity extends AlertActivity implements
             final int oldItemCount = getCount();
             rebuildList();
             notifyDataSetChanged();
-            if (mList.size() == 0) {
+            if (mList.isEmpty()) {
                 finish();
             }
             final int newItemCount = getCount();

@@ -114,8 +114,8 @@ public final class Utility {
     // empty collections as
     // the same.
     public static <T> boolean isSubset(Collection<T> subset, Collection<T> superset) {
-        if ((superset == null) || (superset.size() == 0)) {
-            return ((subset == null) || (subset.size() == 0));
+        if ((superset == null) || (superset.isEmpty())) {
+            return ((subset == null) || (subset.isEmpty()));
         }
 
         HashSet<T> hash = new HashSet<T>(superset);
@@ -132,7 +132,7 @@ public final class Utility {
     }
 
     public static boolean isNullOrEmpty(String s) {
-        return (s == null) || (s.length() == 0);
+        return (s == null) || (s.isEmpty());
     }
 
     public static <T> Collection<T> unmodifiableCollection(T... ts) {

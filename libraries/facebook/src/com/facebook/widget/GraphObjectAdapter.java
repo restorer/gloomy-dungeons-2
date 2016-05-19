@@ -179,7 +179,7 @@ class GraphObjectAdapter<T extends GraphObject> extends BaseAdapter implements S
     }
 
     public void prioritizeViewRange(int firstVisibleItem, int lastVisibleItem, int prefetchBuffer) {
-        if ((lastVisibleItem < firstVisibleItem) || (sectionKeys.size() == 0)) {
+        if ((lastVisibleItem < firstVisibleItem) || (sectionKeys.isEmpty())) {
             return;
         }
 
@@ -495,7 +495,7 @@ class GraphObjectAdapter<T extends GraphObject> extends BaseAdapter implements S
     }
 
     SectionAndItem<T> getSectionAndItem(int position) {
-        if (sectionKeys.size() == 0) {
+        if (sectionKeys.isEmpty()) {
             return null;
         }
         String sectionKey = null;
@@ -580,12 +580,12 @@ class GraphObjectAdapter<T extends GraphObject> extends BaseAdapter implements S
     @Override
     public boolean isEmpty() {
         // We'll never populate sectionKeys unless we have at least one object.
-        return sectionKeys.size() == 0;
+        return sectionKeys.isEmpty();
     }
 
     @Override
     public int getCount() {
-        if (sectionKeys.size() == 0) {
+        if (sectionKeys.isEmpty()) {
             return 0;
         }
 

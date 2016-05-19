@@ -80,7 +80,7 @@ public class ContextMenuBuilder extends MenuBuilder implements SupportContextMen
         }
         mContextMenuInfo = getContextMenuInfo(originalView);
         mListener.onCreateContextMenu(this, originalView, mContextMenuInfo);
-        if (getVisibleItems().size() > 0) {
+        if (!getVisibleItems().isEmpty()) {
             if (VERSION.SDK_INT >= 8) {
                 EventLog.writeEvent(50001, 1);
             }

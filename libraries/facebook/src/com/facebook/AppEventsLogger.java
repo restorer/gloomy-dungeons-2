@@ -817,7 +817,7 @@ public class AppEventsLogger {
             }
         }
 
-        if (requestsToExecute.size() > 0) {
+        if (!requestsToExecute.isEmpty()) {
             Logger.log(LoggingBehavior.APP_EVENTS, TAG, "Flushing %d events due to %s.",
                     flushResults.numEvents,
                     reason.toString());
@@ -1499,7 +1499,7 @@ public class AppEventsLogger {
 
                 for (Map.Entry<AccessTokenAppIdPair, SessionEventsState> entry : eventsToPersist.entrySet()) {
                     List<AppEvent> events = entry.getValue().getEventsToPersist();
-                    if (events.size() == 0) {
+                    if (events.isEmpty()) {
                         continue;
                     }
 

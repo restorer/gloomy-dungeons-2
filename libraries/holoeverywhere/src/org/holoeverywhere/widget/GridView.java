@@ -662,7 +662,7 @@ public class GridView extends android.widget.GridView implements OnWindowFocusCh
     }
 
     public boolean removeFooterView(View v) {
-        if (mFooterViewInfos.size() > 0) {
+        if (!mFooterViewInfos.isEmpty()) {
             boolean result = false;
             if (mAdapter != null && ((HeaderViewListAdapter) mAdapter).removeFooter(v)) {
                 invalidateViews();
@@ -675,7 +675,7 @@ public class GridView extends android.widget.GridView implements OnWindowFocusCh
     }
 
     public boolean removeHeaderView(View v) {
-        if (mHeaderViewInfos.size() > 0) {
+        if (!mHeaderViewInfos.isEmpty()) {
             boolean result = false;
             if (mAdapter != null && ((HeaderViewListAdapter) mAdapter).removeHeader(v)) {
                 invalidateViews();
@@ -715,8 +715,8 @@ public class GridView extends android.widget.GridView implements OnWindowFocusCh
         }
         if (adapter == null) {
             mAdapter = null;
-        } else if (mForceHeaderListAdapter || mHeaderViewInfos.size() > 0
-                || mFooterViewInfos.size() > 0) {
+        } else if (mForceHeaderListAdapter || !mHeaderViewInfos.isEmpty()
+                || !mFooterViewInfos.isEmpty()) {
             mAdapter = new HeaderViewListAdapter(mHeaderViewInfos, mFooterViewInfos, adapter,
                     mListAdapterCallback);
         } else {

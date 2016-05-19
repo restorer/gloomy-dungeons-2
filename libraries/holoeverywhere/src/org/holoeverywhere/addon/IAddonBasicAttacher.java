@@ -60,7 +60,7 @@ public final class IAddonBasicAttacher<V extends IAddonBase<Z>, Z> implements IA
 
     @Override
     public void addon(Collection<Class<? extends IAddon>> classes) {
-        if (classes == null || classes.size() == 0) {
+        if (classes == null || classes.isEmpty()) {
             return;
         }
         for (Class<? extends IAddon> clazz : classes) {
@@ -111,7 +111,7 @@ public final class IAddonBasicAttacher<V extends IAddonBase<Z>, Z> implements IA
     }
 
     public void inhert(Collection<Class<? extends IAddon>> sourceClasses) {
-        if (sourceClasses == null || sourceClasses.size() == 0) {
+        if (sourceClasses == null || sourceClasses.isEmpty()) {
             return;
         }
         List<Class<? extends IAddon>> classes = new ArrayList<Class<? extends IAddon>>();
@@ -148,7 +148,7 @@ public final class IAddonBasicAttacher<V extends IAddonBase<Z>, Z> implements IA
 
     @Override
     public boolean performAddonAction(AddonCallback<V> callback) {
-        if (mAddonsSet.size() == 0) {
+        if (mAddonsSet.isEmpty()) {
             return callback.post();
         }
         if (mAddonsList == null) {

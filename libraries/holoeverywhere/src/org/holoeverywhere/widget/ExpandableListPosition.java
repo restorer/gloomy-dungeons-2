@@ -13,7 +13,7 @@ public class ExpandableListPosition {
     private static ExpandableListPosition getRecycledOrCreate() {
         ExpandableListPosition elp;
         synchronized (sPool) {
-            if (sPool.size() > 0) {
+            if (!sPool.isEmpty()) {
                 elp = sPool.remove(0);
             } else {
                 return new ExpandableListPosition();
