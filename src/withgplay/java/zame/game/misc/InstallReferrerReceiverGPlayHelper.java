@@ -6,6 +6,9 @@ import android.content.Intent;
 import zame.game.Common;
 
 public class InstallReferrerReceiverGPlayHelper {
+    private InstallReferrerReceiverGPlayHelper() {
+    }
+
     public static void onReceive(Context context, Intent intent) {
         try {
             BroadcastReceiver campaignReceiver = new com.google.analytics.tracking.android.CampaignTrackingReceiver();

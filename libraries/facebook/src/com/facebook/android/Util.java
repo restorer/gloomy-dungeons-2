@@ -45,6 +45,9 @@ public final class Util {
 
     private final static String UTF8 = "UTF-8";
 
+    private Util() {
+    }
+
     /**
      * Generate the multi-part post body providing the parameters and boundary
      * string

@@ -42,6 +42,9 @@ public class ImageDownloader {
 
     private static final Map<RequestKey, DownloaderContext> pendingRequests = new HashMap<RequestKey, DownloaderContext>();
 
+    private ImageDownloader() {
+    }
+
     /**
      * Downloads the image specified in the passed in request.
      * If a callback is specified, it is guaranteed to be invoked on the calling thread.

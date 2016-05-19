@@ -23,6 +23,9 @@ import org.json.JSONObject;
 import java.util.*;
 
 class JsonUtil {
+    private JsonUtil() {
+    }
+
     static void jsonObjectClear(JSONObject jsonObject) {
         @SuppressWarnings("unchecked")
         Iterator<String> keys = (Iterator<String>) jsonObject.keys();

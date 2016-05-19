@@ -14,6 +14,9 @@ public class DlcProvider {
 	public static final String BROADCAST_ACTION = "local:DlcProvider";
 	public static final String EXTRA_PROGRESS = "EXTRA_PROGRESS";
 
+	private DlcProvider() {
+	}
+
 	public interface IOnComplete {
 		void onComplete();
 	}

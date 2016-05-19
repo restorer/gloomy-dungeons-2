@@ -5,6 +5,9 @@ import java.lang.reflect.Method;
 
 public final class ReflectHelper {
 
+    private ReflectHelper() {
+    }
+
     private static Class<?>[] classess(Object[] args) {
         Class<?>[] result = new Class<?>[args.length];
         for (int i = 0; i < args.length; i++) {

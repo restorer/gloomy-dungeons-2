@@ -24,6 +24,9 @@ import android.os.Bundle;
  * any time.
  */
 public class LegacyHelper {
+    private LegacyHelper() {
+    }
+
     @Deprecated
     public static void extendTokenCompleted(Session session, Bundle bundle) {
         session.extendTokenCompleted(bundle);

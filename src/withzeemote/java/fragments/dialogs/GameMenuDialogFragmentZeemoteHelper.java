@@ -10,6 +10,9 @@ import zame.game.engine.Engine;
 import zame.game.engine.controls.ControlsZeemoteHelper;
 
 public class GameMenuDialogFragmentZeemoteHelper {
+    private GameMenuDialogFragmentZeemoteHelper() {
+    }
+
     public static void onCreateDialog(
         ViewGroup viewGroup,
         Engine engine,

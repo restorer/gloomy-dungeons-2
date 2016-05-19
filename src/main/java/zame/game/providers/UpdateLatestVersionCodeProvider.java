@@ -9,6 +9,9 @@ import zame.game.MyApplication;
 public class UpdateLatestVersionCodeProvider {
 	public static final String BROADCAST_ACTION = "local:UpdateLatestVersionCodeProvider";
 
+	private UpdateLatestVersionCodeProvider() {
+	}
+
 	public interface IOnComplete {
 		void onComplete(int versionCode, String downloadUrl);
 	}

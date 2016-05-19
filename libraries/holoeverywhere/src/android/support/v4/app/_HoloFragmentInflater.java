@@ -38,7 +38,10 @@ public class _HoloFragmentInflater {
             }
         };
     }
-    
+
+    private _HoloFragmentInflater() {
+    }
+
     public static void init() {
 		
 	}

@@ -9,6 +9,9 @@ import zame.game.store.Profile;
 public class UpdateLeaderboardProvider {
 	public static final String BROADCAST_ACTION = "local:UpdateLeaderboardProvider";
 
+	private UpdateLeaderboardProvider() {
+	}
+
 	public interface IOnComplete {
 		void onComplete();
 	}
