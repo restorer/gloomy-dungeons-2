@@ -219,7 +219,7 @@ public final class Util {
             }
         }
 
-        String response = "";
+        String response;
         try {
             response = read(conn.getInputStream());
         } catch (FileNotFoundException e) {

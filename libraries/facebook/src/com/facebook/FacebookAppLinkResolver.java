@@ -83,7 +83,7 @@ public class FacebookAppLinkResolver implements AppLinkResolver {
         StringBuilder graphRequestFields = new StringBuilder();
 
         for (Uri uri : uris) {
-            AppLink appLink = null;
+            AppLink appLink;
             synchronized (cachedAppLinks) {
                 appLink = cachedAppLinks.get(uri);
             }
@@ -140,7 +140,7 @@ public class FacebookAppLinkResolver implements AppLinkResolver {
                                 continue;
                             }
 
-                            JSONObject urlData = null;
+                            JSONObject urlData;
                             try {
                                 urlData = responseJson.getJSONObject(uri.toString());
                                 JSONObject appLinkData = urlData.getJSONObject(APP_LINK_KEY);

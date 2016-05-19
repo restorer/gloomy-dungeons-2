@@ -139,7 +139,7 @@ public final class FacebookRequestError {
         // https://developers.facebook.com/docs/reference/api/errors/
         Category errorCategory = null;
         int messageId = INVALID_MESSAGE_ID;
-        boolean shouldNotify = false;
+        boolean shouldNotify;
         if (isLocalException) {
             errorCategory = Category.CLIENT;
             messageId = INVALID_MESSAGE_ID;

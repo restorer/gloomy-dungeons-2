@@ -1148,7 +1148,7 @@ public class Session implements Serializable {
     }
 
     void authorize(AuthorizationRequest request) {
-        boolean started = false;
+        boolean started;
 
         request.setApplicationId(applicationId);
 
@@ -1355,7 +1355,7 @@ public class Session implements Serializable {
 
     private void logAuthorizationComplete(AuthorizationClient.Result.Code result, Map<String, String> resultExtras,
             Exception exception) {
-        Bundle bundle = null;
+        Bundle bundle;
         if (pendingAuthorizationRequest == null) {
             // We don't expect this to happen, but if it does, log an event for diagnostic purposes.
             bundle = AuthorizationClient.newAuthorizationLoggingBundle("");

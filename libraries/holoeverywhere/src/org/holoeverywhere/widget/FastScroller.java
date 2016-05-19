@@ -212,7 +212,7 @@ class FastScroller<T extends AbsListView & FastScrollerCallback> {
         canvas.translate(0, -y);
         if (mState == STATE_DRAGGING && mDrawOverlay) {
             if (mOverlayPosition == OVERLAY_AT_THUMB) {
-                int left = 0;
+                int left;
                 switch (mPosition) {
                     default:
                     case View.SCROLLBAR_POSITION_DEFAULT:
@@ -392,7 +392,7 @@ class FastScroller<T extends AbsListView & FastScrollerCallback> {
     }
 
     boolean isPointInside(float x, float y) {
-        boolean inTrack = false;
+        boolean inTrack;
         switch (mPosition) {
             default:
             case View.SCROLLBAR_POSITION_DEFAULT:

@@ -147,7 +147,7 @@ class SuggestionsAdapter extends ResourceCursorAdapter implements OnClickListene
          * for in app search we show the progress spinner until the cursor is returned with
          * the results.
          */
-        Cursor cursor = null;
+        Cursor cursor;
         if (mSearchView.getVisibility() != View.VISIBLE
                 || mSearchView.getWindowVisibility() != View.VISIBLE) {
             return null;

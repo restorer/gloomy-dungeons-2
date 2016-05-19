@@ -811,7 +811,7 @@ public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
             int degrees = value * stepSize;
             degrees = snapOnly30s(degrees, changeMultiplier);
             value = degrees / stepSize;
-            int maxValue = 0;
+            int maxValue;
             int minValue = 0;
             if (currentItemShowing == HOUR_INDEX) {
                 if (mIs24HourMode) {

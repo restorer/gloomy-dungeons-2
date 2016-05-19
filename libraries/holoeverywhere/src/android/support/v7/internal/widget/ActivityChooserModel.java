@@ -973,7 +973,7 @@ public class ActivityChooserModel extends DataSetObservable {
      * Command for reading the historical records from a file off the UI thread.
      */
     private void readHistoricalDataImpl() {
-        FileInputStream fis = null;
+        FileInputStream fis;
         try {
             fis = mContext.openFileInput(mHistoryFileName);
         } catch (FileNotFoundException fnfe) {
@@ -1054,7 +1054,7 @@ public class ActivityChooserModel extends DataSetObservable {
             List<HistoricalRecord> historicalRecords = (List<HistoricalRecord>) args[0];
             String hostoryFileName = (String) args[1];
 
-            FileOutputStream fos = null;
+            FileOutputStream fos;
 
             try {
                 fos = mContext.openFileOutput(hostoryFileName, Context.MODE_PRIVATE);

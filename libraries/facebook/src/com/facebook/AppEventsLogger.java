@@ -1277,7 +1277,7 @@ public class AppEventsLogger {
                 );
             }
 
-            boolean alreadyValidated = false;
+            boolean alreadyValidated;
             synchronized (validatedIdentifiers) {
                 alreadyValidated = validatedIdentifiers.contains(identifier);
             }
@@ -1434,7 +1434,7 @@ public class AppEventsLogger {
                 AccessTokenAppIdPair accessTokenAppId
         ) {
             restoreAppSessionInformation(context);
-            FacebookTimeSpentData result = null;
+            FacebookTimeSpentData result;
 
             result = appSessionInfoMap.get(accessTokenAppId);
             if (result == null) {

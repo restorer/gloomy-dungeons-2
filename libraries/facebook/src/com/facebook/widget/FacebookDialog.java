@@ -570,7 +570,7 @@ public class FacebookDialog {
             int protocolVersion = getProtocolVersionForNativeDialog(activity, action,
                     getMinVersionForFeatures(getDialogFeatures()));
 
-            Bundle extras = null;
+            Bundle extras;
             if (NativeProtocol.isVersionCompatibleWithBucketedIntent(protocolVersion)) {
                 // Facebook app supports the new bucketed protocol
                 extras = getMethodArguments();

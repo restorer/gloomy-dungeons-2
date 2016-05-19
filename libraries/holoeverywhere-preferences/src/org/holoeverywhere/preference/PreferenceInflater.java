@@ -131,7 +131,7 @@ public class PreferenceInflater extends GenericInflater<Preference, PreferenceGr
             throws XmlPullParserException {
         final String tag = parser.getName();
         if (tag.equals(PreferenceInflater.INTENT_TAG_NAME)) {
-            Intent intent = null;
+            Intent intent;
             try {
                 intent = parseIntent(getContext().getResources(), parser, attrs);
             } catch (IOException e) {

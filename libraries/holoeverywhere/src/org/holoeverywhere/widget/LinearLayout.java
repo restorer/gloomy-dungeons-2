@@ -180,7 +180,7 @@ public class LinearLayout extends android.widget.LinearLayout implements Drawabl
         }
         if (hasDividerBeforeChildAt(count)) {
             final View child = getChildAt(count - 1);
-            int bottom = 0;
+            int bottom;
             if (child == null) {
                 bottom = getHeight() - getPaddingBottom() - mDividerHeight;
             } else {

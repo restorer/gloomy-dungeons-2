@@ -1328,7 +1328,7 @@ public class Request {
      */
     public static HttpURLConnection toHttpConnection(RequestBatch requests) {
 
-        URL url = null;
+        URL url;
         try {
             if (requests.size() == 1) {
                 // Single request case.
@@ -1440,7 +1440,7 @@ public class Request {
     public static List<Response> executeBatchAndWait(RequestBatch requests) {
         Validate.notEmptyAndContainsNoNulls(requests, "requests");
 
-        HttpURLConnection connection = null;
+        HttpURLConnection connection;
         try {
             connection = toHttpConnection(requests);
         } catch (Exception ex) {
@@ -1895,7 +1895,7 @@ public class Request {
         OutputStream outputStream = null;
         try {
             if (hasOnProgressCallbacks(requests)) {
-                ProgressNoopOutputStream countingStream = null;
+                ProgressNoopOutputStream countingStream;
                 countingStream = new ProgressNoopOutputStream(requests.getCallbackHandler());
                 processRequest(requests, null, numRequests, url, countingStream);
 

@@ -665,7 +665,7 @@ public class ActivityChooserView extends ViewGroup implements
         }
 
         public int getCount() {
-            int count = 0;
+            int count;
             int activityCount = mDataModel.getActivityCount();
             if (!mShowDefaultActivity && mDataModel.getDefaultActivity() != null) {
                 activityCount--;

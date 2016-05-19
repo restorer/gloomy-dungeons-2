@@ -160,7 +160,7 @@ public class DayPickerView extends ListView implements OnScrollListener, OnDateC
 
         View child;
         int i = 0;
-        int top = 0;
+        int top;
         // Find a child that's completely in the view
         do {
             child = getChildAt(i++);

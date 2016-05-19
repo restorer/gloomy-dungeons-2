@@ -546,7 +546,7 @@ public interface GraphObject {
                 } else if (methodName.equals(PUT_METHOD)) {
                     return setJSONProperty(args);
                 } else if (methodName.equals(PUTALL_METHOD)) {
-                    Map<String, Object> map = null;
+                    Map<String, Object> map;
                     if (args[0] instanceof Map<?, ?>) {
                         @SuppressWarnings("unchecked")
                         Map<String, Object> castMap = (Map<String, Object>) args[0];
