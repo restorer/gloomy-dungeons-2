@@ -24,6 +24,7 @@ import java.math.BigDecimal;
 import java.util.Currency;
 
 /**
+ * @deprecated Kept for backward compatibility
  * This class is deprecated. Please use {@link AppEventsLogger} instead.
  */
 @Deprecated

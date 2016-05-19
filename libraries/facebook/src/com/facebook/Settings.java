@@ -315,6 +315,7 @@ public final class Settings {
     /**
      * Sets whether opening a Session should automatically publish install attribution to the Facebook graph.
      *
+     * @deprecated Kept for backward compatibility
      * @param shouldAutoPublishInstall true to automatically publish, false to not
      *
      * This method is deprecated.  See {@link AppEventsLogger#activateApp(Context, String)} for more info.
@@ -327,6 +328,7 @@ public final class Settings {
     /**
      * Gets whether opening a Session should automatically publish install attribution to the Facebook graph.
      *
+     * @deprecated Kept for backward compatibility
      * @return true to automatically publish, false to not
      *
      * This method is deprecated.  See {@link AppEventsLogger#activateApp(Context, String)} for more info.

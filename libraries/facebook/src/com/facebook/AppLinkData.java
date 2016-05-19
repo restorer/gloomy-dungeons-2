@@ -368,6 +368,7 @@ public class AppLinkData {
 
     /**
      * This method has been deprecated. Please use {@link AppLinkData#getArgumentBundle()} instead.
+     * @deprecated Kept for backward compatibility
      * @return JSONObject property bag.
      */
     @Deprecated

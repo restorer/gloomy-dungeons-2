@@ -111,6 +111,7 @@ public class Facebook {
     /**
      * Constructor for Facebook object.
      * 
+     * @deprecated Kept for backward compatibility
      * @param appId
      *            Your Facebook application ID. Found at
      *            www.facebook.com/developers/apps.php.

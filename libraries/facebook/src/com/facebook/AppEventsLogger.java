@@ -220,6 +220,7 @@ public class AppEventsLogger {
 
     /**
      * This method is deprecated.  Use {@link Settings#getLimitEventAndDataUsage(Context)} instead.
+     * @deprecated Kept for backward compatibility
      */
     @Deprecated
     public static boolean getLimitEventUsage(Context context) {
@@ -228,6 +229,7 @@ public class AppEventsLogger {
 
     /**
      * This method is deprecated.  Use {@link Settings#setLimitEventAndDataUsage(Context, boolean)} instead.
+     * @deprecated Kept for backward compatibility
      */
     @Deprecated
     public static void setLimitEventUsage(Context context, boolean limitEventUsage) {
