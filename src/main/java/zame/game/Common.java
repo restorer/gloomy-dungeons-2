@@ -159,6 +159,7 @@ public class Common {
 		boolean success = true;
 		InputStream in = null;
 		OutputStream out = null;
+
 		try {
 			in = new FileInputStream(srcFileName);
 			out = new FileOutputStream(destFileName);
@@ -169,7 +170,6 @@ public class Common {
 			while ((len = in.read(buf)) > 0) {
 				out.write(buf, 0, len);
 			}
-
 		} catch (Exception ex) {
 			if (logExceptions) {
 				log(ex);
@@ -177,23 +177,29 @@ public class Common {
 
 			success = false;
 		} finally {
-			try {
-				if (in != null)
-					in.close();
-			} catch (IOException e) {
-				if (logExceptions) {
-					log(e);
-				}
-				success = false;
-			}
-			try {
-				if (out != null)
+			if (out != null) {
+				try {
 					out.close();
-			} catch (IOException e) {
-				if (logExceptions) {
-					log(e);
+				} catch (Exception ex) {
+					if (logExceptions) {
+						log(ex);
+					}
+
+					success = false;
 				}
-				success = false;
+			}
+
+			if (in != null) {
+				try {
+					in.close();
+				} catch (Exception ex) {
+					if (logExceptions) {
+						log(ex);
+					}
+
+					// do not unset success flag,
+					// because error while closing InputStream is safe in our case
+				}
 			}
 		}
 

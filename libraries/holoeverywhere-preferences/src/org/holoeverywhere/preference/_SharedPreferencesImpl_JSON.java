@@ -430,13 +430,19 @@ public class _SharedPreferencesImpl_JSON extends _SharedPreferencesBase {
         } catch (Exception e) {
             return new JSONObject();
         } finally {
-            try {
-                if (reader != null)
+            if (reader != null) {
+                try {
                     reader.close();
-                if (is != null)
+                } catch (IOException e) {
+                    Log.e(TAG, "IOException", e);
+                }
+            }
+            if (is != null) {
+                try {
                     is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+                } catch (IOException e) {
+                    Log.e(TAG, "IOException", e);
+                }
             }
         }
     }
