@@ -23,6 +23,9 @@ import java.util.Set;
 })
 public class XmlUtils {
 
+    private XmlUtils() {
+    }
+
     public static final void beginDocument(XmlPullParser parser,
                                            String firstElementName) throws XmlPullParserException, IOException {
         int type;

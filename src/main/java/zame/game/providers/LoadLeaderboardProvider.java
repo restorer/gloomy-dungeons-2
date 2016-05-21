@@ -11,6 +11,9 @@ import zame.game.store.Profile;
 public class LoadLeaderboardProvider {
 	public static final String BROADCAST_ACTION = "local:LoadLeaderboardProvider";
 
+	private LoadLeaderboardProvider() {
+	}
+
 	public interface IOnComplete {
 		void onComplete(boolean success);
 	}

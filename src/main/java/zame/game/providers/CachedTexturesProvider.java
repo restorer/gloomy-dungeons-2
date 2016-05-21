@@ -52,6 +52,9 @@ public class CachedTexturesProvider {
 		{ R.drawable.texmap_mon_8_p, R.drawable.texmap_mon_8_a },
 	};
 
+	private CachedTexturesProvider() {
+	}
+
 	public interface IOnComplete {
 		void onComplete();
 	}

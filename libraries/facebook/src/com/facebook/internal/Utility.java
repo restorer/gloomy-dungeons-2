@@ -77,7 +77,10 @@ public final class Utility {
     private static Map<String, FetchedAppSettings> fetchedAppSettings =
             new ConcurrentHashMap<String, FetchedAppSettings>();
 
-  public static class FetchedAppSettings {
+    private Utility() {
+    }
+
+    public static class FetchedAppSettings {
         private boolean supportsAttribution;
         private boolean supportsImplicitLogging;
         private String nuxContent;

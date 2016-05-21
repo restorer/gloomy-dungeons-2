@@ -28,6 +28,9 @@ import zame.game.MyApplication;
 */
 
 public class FacebookNameProvider {
+    private FacebookNameProvider() {
+    }
+
     public interface IOnComplete {
         void onComplete(boolean updated);
     }

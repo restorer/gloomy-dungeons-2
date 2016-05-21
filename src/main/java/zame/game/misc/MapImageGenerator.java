@@ -17,6 +17,9 @@ public class MapImageGenerator {
 	protected static final int CELL_WIDTH = 40;
 	protected static final int CELL_HEIGHT = 30;
 
+	private MapImageGenerator() {
+	}
+
 	public static class MapPathItem {
 		int x;
 		int y;
