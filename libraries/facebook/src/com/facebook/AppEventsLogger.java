@@ -261,7 +261,7 @@ public class AppEventsLogger {
             throw new IllegalArgumentException("Both context and applicationId must be non-null");
         }
 
-        if ((context instanceof Activity)) {
+        if (context instanceof Activity) {
             setSourceApplication((Activity) context);
         } else {
           // If context is not an Activity, we cannot get intent nor calling activity.
