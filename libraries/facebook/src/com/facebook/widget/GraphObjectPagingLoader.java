@@ -195,7 +195,7 @@ class GraphObjectPagingLoader<T extends GraphObject> extends Loader<SimpleGraphO
         boolean fromCache = response.getIsFromCache();
 
         GraphObjectList<T> data = result.getData().castToListOf(graphObjectClass);
-        boolean haveData = data.size() > 0;
+        boolean haveData = !data.isEmpty();
 
         if (haveData) {
             nextRequest = response.getRequestForPagedResults(Response.PagingDirection.NEXT);

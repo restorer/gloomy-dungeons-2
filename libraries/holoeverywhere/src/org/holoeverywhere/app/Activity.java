@@ -369,7 +369,7 @@ public abstract class Activity extends _HoloActivity {
     public Bundle saveInstanceState() {
         Bundle bundle = new Bundle(getClassLoader());
         onSaveInstanceState(bundle);
-        return bundle.size() > 0 ? bundle : null;
+        return !bundle.isEmpty() ? bundle : null;
     }
 
     @Override

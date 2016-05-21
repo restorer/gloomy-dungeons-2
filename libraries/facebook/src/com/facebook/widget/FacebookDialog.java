@@ -619,10 +619,10 @@ public class FacebookDialog {
                 @Override
                 public void onPresent(Context context) throws Exception {
                     // We're actually being presented, so put our attachments in the content provider.
-                    if (imageAttachments != null && imageAttachments.size() > 0) {
+                    if (imageAttachments != null && !imageAttachments.isEmpty()) {
                         getAttachmentStore().addAttachmentsForCall(context, appCall.getCallId(), imageAttachments);
                     }
-                    if (imageAttachmentFiles != null && imageAttachmentFiles.size() > 0) {
+                    if (imageAttachmentFiles != null && !imageAttachmentFiles.isEmpty()) {
                         getAttachmentStore().addAttachmentFilesForCall(context, appCall.getCallId(),
                                 imageAttachmentFiles);
                     }

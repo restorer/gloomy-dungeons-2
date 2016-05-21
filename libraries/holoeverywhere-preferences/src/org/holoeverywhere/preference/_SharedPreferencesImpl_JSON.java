@@ -518,7 +518,7 @@ public class _SharedPreferencesImpl_JSON extends _SharedPreferencesBase {
         if (listeners.contains(listener)) {
             listeners.remove(listener);
         }
-        if (listeners.size() == 0) {
+        if (listeners.isEmpty()) {
             getReference().listeners = null;
         }
     }

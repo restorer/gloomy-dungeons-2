@@ -99,7 +99,7 @@ public class ExpandableListConnector extends BaseAdapter implements Filterable {
         private static PositionMetadata getRecycledOrCreate() {
             PositionMetadata pm;
             synchronized (sPool) {
-                if (sPool.size() > 0) {
+                if (!sPool.isEmpty()) {
                     pm = sPool.remove(0);
                 } else {
                     return new PositionMetadata();

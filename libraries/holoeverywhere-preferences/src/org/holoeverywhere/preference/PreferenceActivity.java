@@ -519,7 +519,7 @@ public abstract class PreferenceActivity extends ListActivity implements
                             XmlUtils.skipCurrentTag(parser);
                         }
                     }
-                    if (curBundle.size() > 0) {
+                    if (!curBundle.isEmpty()) {
                         header.fragmentArguments = curBundle;
                         curBundle = null;
                     }
@@ -612,7 +612,7 @@ public abstract class PreferenceActivity extends ListActivity implements
                 }
             } else {
                 onBuildHeaders(mHeaders);
-                if (mHeaders.size() > 0) {
+                if (!mHeaders.isEmpty()) {
                     if (!mSinglePane) {
                         if (initialFragment == null) {
                             Header h = onGetInitialHeader();
@@ -633,7 +633,7 @@ public abstract class PreferenceActivity extends ListActivity implements
                         : null;
                 showBreadCrumbs(initialTitleStr, initialShortTitleStr);
             }
-        } else if (mHeaders.size() > 0) {
+        } else if (!mHeaders.isEmpty()) {
             setListAdapter(new HeaderAdapter(getThemedContext(), mHeaders));
             if (!mSinglePane) {
                 getListView().setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
@@ -803,7 +803,7 @@ public abstract class PreferenceActivity extends ListActivity implements
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        if (mHeaders.size() > 0) {
+        if (!mHeaders.isEmpty()) {
             outState.putParcelableArrayList(PreferenceActivity.HEADERS_TAG,
                     mHeaders);
             if (mCurHeader != null) {

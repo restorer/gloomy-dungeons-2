@@ -114,7 +114,7 @@ public final class NativeAppCallAttachmentStore implements NativeAppCallContentP
 
     private <T> void addAttachments(Context context, UUID callId, Map<String, T> attachments,
             ProcessAttachment<T> processor) {
-        if (attachments.size() == 0) {
+        if (attachments.isEmpty()) {
             return;
         }
 
