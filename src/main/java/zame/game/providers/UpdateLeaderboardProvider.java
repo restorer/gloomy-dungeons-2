@@ -56,6 +56,9 @@ public class UpdateLeaderboardProvider {
 		}
 	}
 
+	private UpdateLeaderboardProvider() {
+	}
+
 	public static void updateLeaderboard() {
 		MyApplication.self.handler.post(new Runnable() {
 			public void run() {

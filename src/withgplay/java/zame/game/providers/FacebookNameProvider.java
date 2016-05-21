@@ -32,6 +32,9 @@ public class FacebookNameProvider {
         void onComplete(boolean updated);
     }
 
+    private FacebookNameProvider() {
+    }
+
     public static void updateFacebookName(final Session session, final IOnComplete onComplete) {
         MyApplication.self.handler.post(new Runnable() {
             public void run() {

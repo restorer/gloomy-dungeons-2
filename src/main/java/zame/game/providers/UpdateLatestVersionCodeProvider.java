@@ -41,6 +41,9 @@ public class UpdateLatestVersionCodeProvider {
 		}
 	}
 
+	private UpdateLatestVersionCodeProvider() {
+	}
+
 	public static void updateLatestVersionCode() {
 		MyApplication.self.handler.post(new Runnable() {
 			public void run() {

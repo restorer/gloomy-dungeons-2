@@ -11,6 +11,9 @@ import zame.game.Common;
 import zame.game.R;
 
 public class IntentProvider {
+	private IntentProvider() {
+	}
+
 	public static Intent getTwitterIntent(Context context, String title, String url) {
 		Intent intent = null;
 		String text = url + " - " + title;

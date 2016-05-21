@@ -142,6 +142,9 @@ public class DlcProvider {
 		}
 	}
 
+	private DlcProvider() {
+	}
+
 	public static boolean needToDownloadMusic() {
 		for (int i = 0, len = SoundManager.LIST_MAIN.list.length; i < len; i++) {
 			String name = SoundManager.LIST_MAIN.list[i];
