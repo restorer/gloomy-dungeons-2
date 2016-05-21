@@ -265,14 +265,14 @@ public final class Settings {
     }
 
     private static Executor getAsyncTaskExecutor() {
-        Field executorField = null;
+        Field executorField;
         try {
             executorField = AsyncTask.class.getField("THREAD_POOL_EXECUTOR");
         } catch (NoSuchFieldException e) {
             return null;
         }
 
-        Object executorObject = null;
+        Object executorObject;
         try {
             executorObject = executorField.get(null);
         } catch (IllegalAccessException e) {
@@ -541,7 +541,7 @@ public final class Settings {
             return;
         }
 
-        ApplicationInfo ai = null;
+        ApplicationInfo ai;
         try {
             ai = context.getPackageManager().getApplicationInfo(
                     context.getPackageName(), PackageManager.GET_META_DATA);

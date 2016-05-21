@@ -421,7 +421,7 @@ public class ActionMenuView extends LinearLayout implements MenuBuilder.ItemInvo
         final int childCount = getChildCount();
         final int midVertical = (top + bottom) / 2;
         //final int dividerWidth = getDividerWidth();  No access outside framework
-        int overflowWidth = 0;
+        int overflowWidth;
         int nonOverflowWidth = 0;
         int nonOverflowCount = 0;
         int widthRemaining = right - left - getPaddingRight() - getPaddingLeft();

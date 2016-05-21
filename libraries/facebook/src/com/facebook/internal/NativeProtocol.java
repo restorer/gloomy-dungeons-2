@@ -227,7 +227,7 @@ public final class NativeProtocol {
                 return true;
             }
 
-            PackageInfo packageInfo = null;
+            PackageInfo packageInfo;
             try {
                 packageInfo = context.getPackageManager().getPackageInfo(packageName,
                         PackageManager.GET_SIGNATURES);

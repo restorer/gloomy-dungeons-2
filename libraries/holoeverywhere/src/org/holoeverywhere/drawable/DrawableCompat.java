@@ -139,7 +139,7 @@ public final class DrawableCompat {
         if (dr != null) {
             return dr;
         }
-        Drawable.ConstantState cs = null;
+        Drawable.ConstantState cs;
         if (value.string == null) {
             throw new NotFoundException("Resource is not a Drawable (color or path): " + value);
         }

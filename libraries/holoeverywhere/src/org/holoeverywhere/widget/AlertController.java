@@ -771,7 +771,7 @@ public class AlertController {
         }
 
         if (hasTitle) {
-            View divider = null;
+            View divider;
             if (mMessage != null || mView != null || mListView != null) {
                 divider = mWindow.findViewById(R.id.titleDivider);
             } else {

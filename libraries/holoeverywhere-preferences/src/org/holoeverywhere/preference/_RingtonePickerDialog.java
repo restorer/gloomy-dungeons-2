@@ -159,7 +159,7 @@ public class _RingtonePickerDialog implements OnItemSelectedListener, Runnable,
         boolean positiveResult = which == DialogInterface.BUTTON_POSITIVE;
         ringtoneManager.stopPreviousRingtone();
         if (positiveResult) {
-            Uri uri = null;
+            Uri uri;
             if (clickedPos == defaultRingtonePos) {
                 uri = uriForDefaultItem;
             } else if (clickedPos == silentPos) {

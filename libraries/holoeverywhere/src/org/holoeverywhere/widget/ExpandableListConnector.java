@@ -438,8 +438,8 @@ public class ExpandableListConnector extends BaseAdapter implements Filterable {
                         midExpGm.gPos, childPos, midExpGm, midExpGroupIndex);
             }
         }
-        int insertPosition = 0;
-        int groupPos = 0;
+        int insertPosition;
+        int groupPos;
         if (leftExpGroupIndex > midExpGroupIndex) {
             final GroupMetadata leftExpGm = egml.get(leftExpGroupIndex - 1);
             insertPosition = leftExpGroupIndex;

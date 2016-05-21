@@ -402,7 +402,7 @@ public final class AccessToken implements Serializable {
             return null;
         }
 
-        long secondsFromBase = Long.MIN_VALUE;
+        long secondsFromBase;
 
         Object secondsObject = bundle.get(key);
         if (secondsObject instanceof Long) {

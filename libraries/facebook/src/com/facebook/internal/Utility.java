@@ -290,7 +290,7 @@ public final class Utility {
 
             final int bufferSize = 1024 * 2;
             char[] buffer = new char[bufferSize];
-            int n = 0;
+            int n;
             while ((n = reader.read(buffer)) != -1) {
                 stringBuilder.append(buffer, 0, n);
             }

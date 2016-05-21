@@ -649,7 +649,7 @@ public class Facebook {
         String response = request(b);
 
         long currentTimeMillis = System.currentTimeMillis();
-        Session sessionToClose = null;
+        Session sessionToClose;
 
         synchronized (this.lock) {
             sessionToClose = session;
@@ -913,8 +913,8 @@ public class Facebook {
     @Deprecated
     public final Session getSession() {
         while (true) {
-            String cachedToken = null;
-            Session oldSession = null;
+            String cachedToken;
+            Session oldSession;
 
             synchronized (this.lock) {
                 if (userSetSession != null) {

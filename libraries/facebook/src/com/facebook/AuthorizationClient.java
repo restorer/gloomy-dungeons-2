@@ -406,7 +406,7 @@ class AuthorizationClient implements Serializable {
             @Override
             public void onBatchCompleted(RequestBatch batch) {
                 try {
-                    Result result = null;
+                    Result result;
                     if (fbids.size() == 2 && fbids.get(0) != null && fbids.get(1) != null &&
                             fbids.get(0).equals(fbids.get(1))) {
                         // Modify the token to have the right permission set.
@@ -483,7 +483,7 @@ class AuthorizationClient implements Serializable {
 
     private void logAuthorizationMethodComplete(String method, String result, String errorMessage, String errorCode,
             Map<String, String> loggingExtras) {
-        Bundle bundle = null;
+        Bundle bundle;
         if (pendingRequest == null) {
             // We don't expect this to happen, but if it does, log an event for diagnostic purposes.
             bundle = newAuthorizationLoggingBundle("");
