@@ -8,8 +8,13 @@
 	android:background="@drawable/back_common"
 	tools:ignore="NestedWeights,Overdraw"
 >
-	<include layout="@layout/inc_select_episode_gplay_promo" />
-	<include layout="@layout/inc_select_episode_gplay_share" />
+	<zame.promo.PromoView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		zame:layout_x="0dp"
+		zame:layout_y="0dp"
+		zame:layout_heightWeight="0.25"
+	/>
 	<!-- layout_yWeight = 0.3625 - 0.1125 -->
 	<TextView
 		android:id="@+id/episode"

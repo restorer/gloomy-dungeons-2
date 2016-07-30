@@ -49,7 +49,6 @@ public class MyApplication extends Application {
 	public volatile boolean cachedTexturesReady = false;
 	public UpdateLatestVersionCodeProvider.Task updateLatestVersionCodeTask = null;
 	public MyApplicationZeemoteHelper zeemoteHelper = new MyApplicationZeemoteHelper();
-	public MyApplicationGPlayHelper gPlayHelper = new MyApplicationGPlayHelper();
 
 	protected String cachedVersionName = null;
 	protected int cachedVersionCode = 0;

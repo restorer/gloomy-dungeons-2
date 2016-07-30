@@ -170,9 +170,6 @@
 
 	<string name="share_title">Gloomy Dungeons 2: Blood Honor: алдскульны шутар з сучаснымі 3D эфектамі</string>
 	<string name="send_email_using">Адправіць email выкарыстоўваючы...</string>
-	<string name="share_fb_name">Gloomy Dungeons II</string>
-	<string name="share_fb_caption">Gloomy Dungeons II – алдскульны шутар з сучаснымі 3D эфектамі</string>
-	<string name="share_fb_description">ВОПЫТ: %1$d / КАРТА: %2$s / МОНСТРАЎ: %3$d / ПРАДМЕТАЎ: %4$d / САКРЭТАЎ: %5$d / ЧАС: %6$s</string>
 
 	<!-- store : levels -->
 	<string name="pt_tutorial">Навучанне</string>
@@ -213,8 +210,8 @@
 	<string name="pt_codes">Спіс кодаў</string>
 	<string name="pd_codes">Жадаеце прапусціць узровень? Даведацца пра бягучы FPS? Атрымаць усе ключы разам? Ці вы проста фанат чыт кодаў? Гэта кіраўніцтва прыадкрые таямніцу ігравых кодаў</string>
 
-	<string name="pt_earn_debug">Атрымаць крэдыты</string>
-	<string name="pd_earn_debug">+100 крэдытаў</string>
+	<string name="pt_earn_debug">Бясконцыя бясплатныя крэдыты</string>
+	<string name="pd_earn_debug">+100 крэдытаў на кожны клік (без рэкламы і без падману)</string>
 
 	<!-- store : texts -->
 	<string name="store_secrets"><![CDATA[

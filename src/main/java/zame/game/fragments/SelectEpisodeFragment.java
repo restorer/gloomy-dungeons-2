@@ -34,7 +34,6 @@ public class SelectEpisodeFragment extends BaseFragment {
 	protected State state;
 	protected MapImageGenerator.MapImageBitmaps mapImageBitmaps = null;
 	protected HashMap<Integer,MapImageGenerator.MapPath> mapPathsHash = new HashMap<Integer,MapImageGenerator.MapPath>();
-	protected SelectEpisodeFragmentGPlayHelper gPlayHelper = new SelectEpisodeFragmentGPlayHelper();
 
 	protected final Runnable switchImages = new Runnable() {
 		public void run() {
@@ -79,9 +78,7 @@ public class SelectEpisodeFragment extends BaseFragment {
 		images[0].setOnClickListener(onContinueClick);
 		images[1].setOnClickListener(onContinueClick);
 
-		gPlayHelper.createFragmentView(viewGroup, activity, state, profile);
 		updateImages();
-
 		return viewGroup;
 	}
 
@@ -125,7 +122,6 @@ public class SelectEpisodeFragment extends BaseFragment {
 		}
 
 		String episodeName = (level.storeEpisodeId == -1 ? getString(R.string.pt_tutorial) : getString(R.string.app_name));
-		gPlayHelper.updateImages(viewGroup, level);
 
 		if (level.storeEpisodeId >= 0) {
 			for (Product product : Store.CATEGORIES[Store.CATEGORY_LEVELS]) {

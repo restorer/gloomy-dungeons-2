@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="UnusedResources"
 >
-    <string name="achievements_use_facebook_name">Ужыць імя з Facebook</string>
     <string name="menu_rate_game">Ацаніце гэтую гульню!</string>
     <string name="pt_earn_facebook">Лайкнуць гульню на Facebook</string>
     <string name="pd_earn_facebook">Лайкніце гэтую гульню на Facebook і атрымайце 0 крэдытаў і бясконцую павагу</string>

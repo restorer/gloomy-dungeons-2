@@ -51,5 +51,5 @@ if [[ "$2" = "release" && -e "temp" && "$SRCNAME" != "" && "$DSTNAMEPART" != "" 
 	[ -e "temp/${DSTNAMEPART}.apk" ] && rm "temp/${DSTNAMEPART}.apk"
 	[ -e "temp/${DSTNAMEPART}.txt" ] && rm "temp/${DSTNAMEPART}.txt"
 	[ -e "build/outputs/apk/${SRCNAME}" ] && cp "build/outputs/apk/${SRCNAME}" "temp/${DSTNAMEPART}.apk"
-	[ -e "build/outputs/proguard/${LCTASK}/release/mapping.txt" ] && cp "build/outputs/proguard/${LCTASK}/release/mapping.txt" "temp/${DSTNAMEPART}.txt"
+	[ -e "build/outputs/mapping/${LCTASK}/release/mapping.txt" ] && cp "build/outputs/mapping/${LCTASK}/release/mapping.txt" "temp/${DSTNAMEPART}.txt"
 fi

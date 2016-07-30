@@ -51,30 +51,6 @@ public class IntentProvider {
 		return intent;
 	}
 
-	// https://m.facebook.com/dialog/feed?app_id=458358780877780&link=http://example.com&picture=http://fbrell.com/f8.jpg&name=TestName&caption=TestCaption&description=TestDescription&redirect_uri=https://mighty-lowlands-6381.herokuapp.com/
-
-	// http://stackoverflow.com/questions/4191492/launch-facebook-app-from-other-app
-	// facebook://feed
-	// fb://feed
-
-	// I'm on map <map_name> - try to beat me! Total
-
-	public static Intent getEndlFacebookIntent(Context context, String link, String name, String caption, String description) {
-		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(String.format(
-			Locale.US,
-			"https://m.facebook.com/dialog/feed?app_id=%1$s&link=%2$s&picture=%3$s&name=%4$s&caption=%5$s&description=%6$s&redirect_uri=%7$s",
-			"458358780877780",
-			Common.urlEncode(link),
-			"http://fbrell.com/f8.jpg",
-			Common.urlEncode(name),
-			Common.urlEncode(caption),
-			Common.urlEncode(description),
-			"https://mighty-lowlands-6381.herokuapp.com/"
-		)));
-
-		return intent;
-	}
-
 	public static Intent getFacebookIntent(Context context, String title, String url) {
 		Intent intent = null;
 

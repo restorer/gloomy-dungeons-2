@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="UnusedResources"
 >
-    <string name="achievements_use_facebook_name">Use name from Facebook</string>
     <string name="menu_rate_game">Rate this game!</string>
     <string name="pt_earn_facebook">Like the game on Facebook</string>
     <string name="pd_earn_facebook">Like the game on Facebook and get 0 credits and infinite respect</string>

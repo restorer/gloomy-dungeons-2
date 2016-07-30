@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="UnusedResources"
 >
-    <string name="achievements_use_facebook_name">Facebook에서의 사용자 이름</string>
     <string name="menu_rate_game">이 게임을 평가하기</string>
     <string name="pt_earn_facebook">Facebook에서 이 게임 like하기</string>
     <string name="pd_earn_facebook">Facebook에서 이 게임 like - 0 코인</string>
