@@ -406,9 +406,10 @@ public class _SharedPreferencesImpl_JSON extends _SharedPreferencesBase {
     }
 
     protected JSONObject readDataFromFile(File file) {
+        InputStream is = null;
+        Reader reader = null;
         try {
-            InputStream is = new FileInputStream(file);
-            Reader reader;
+            is = new FileInputStream(file);
             try {
                 reader = new InputStreamReader(is, charset);
             } catch (UnsupportedEncodingException e) {
@@ -425,11 +426,24 @@ public class _SharedPreferencesImpl_JSON extends _SharedPreferencesBase {
             while ((c = reader.read(buffer)) > 0) {
                 builder.append(buffer, 0, c);
             }
-            reader.close();
-            is.close();
             return new JSONObject(builder.toString());
         } catch (Exception e) {
             return new JSONObject();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    Log.e(TAG, "IOException", e);
+                }
+            }
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    Log.e(TAG, "IOException", e);
+                }
+            }
         }
     }
 

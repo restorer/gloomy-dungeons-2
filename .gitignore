@@ -8,3 +8,7 @@
 /local.properties
 .DS_Store
 /infer-out
+/.idea
+/*.iml
+/libraries/*.iml
+/libraries/*/*.iml

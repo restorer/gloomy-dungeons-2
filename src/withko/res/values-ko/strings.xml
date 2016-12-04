@@ -170,9 +170,6 @@
 
 	<string name="share_title">글루미 던전스 2: 피의 훈장은 당신을 위한 진짜 3D 슈팅 게임입니다.</string>
 	<string name="send_email_using">메일을 전송중입니다..</string>
-	<string name="share_fb_name">글루미 던전스 2.</string>
-	<string name="share_fb_caption">글루미 던전스 2: 피의 훈장은 당신을 위한 진짜 3D 슈팅 게임입니다.</string>
-	<string name="share_fb_description">EXP: %1$d / MAP: %2$s / KILLS: %3$d / ITEMS: %4$d / SECRETS: %5$d / TIME: %6$s</string>
 
 	<!-- store : levels -->
 	<string name="pt_tutorial">튜토리얼</string>

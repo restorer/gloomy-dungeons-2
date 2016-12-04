@@ -1,7 +1,6 @@
 package zame.game;
 
 import android.content.Intent;
-import com.facebook.Session;
 import org.holoeverywhere.preference.SharedPreferences;
 import zame.game.fragments.dialogs.RateGameDialogFragment;
 
@@ -34,12 +33,5 @@ public class MainActivityGPlayHelper {
     }
 
     public void onActivityResult(MainActivity activity, int requestCode, int resultCode, Intent data) {
-        try {
-            if (Session.getActiveSession() != null) {
-                Session.getActiveSession().onActivityResult(activity, requestCode, resultCode, data);
-            }
-        } catch (Exception ex) {
-            Common.log(ex);
-        }
     }
 }

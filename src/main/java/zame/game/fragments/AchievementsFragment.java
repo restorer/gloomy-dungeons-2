@@ -36,7 +36,6 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 	protected ProgressBar progressBar;
 	protected BaseAdapter adapter = null;
 	protected int currentTag = TAG_ACHIEVEMENTS;
-	protected AchievementsFragmentGPlayHelper gPlayHelper = new AchievementsFragmentGPlayHelper();
 
 	protected final BroadcastReceiver leaderboardLoadedReceiver = new BroadcastReceiver() {
 		@Override
@@ -95,7 +94,6 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 
 		((TextView)viewGroup.findViewById(R.id.exp)).setText(getString(R.string.achievements_exp, profile.exp));
 
-		gPlayHelper.createFragmentView(this, viewGroup, activity);
 		updatePlayerName();
 		ensureSelectedTab();
 		isActive = true;
@@ -147,7 +145,6 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 	public void updatePlayerName() {
 		String playerName = MyApplication.self.profile.playerName;
 		((TextView)viewGroup.findViewById(R.id.player_name)).setText(playerName);
-		gPlayHelper.updatePlayerName(viewGroup, playerName);
 	}
 
 	protected void ensureSelectedTab() {

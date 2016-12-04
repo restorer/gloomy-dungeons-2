@@ -58,6 +58,9 @@ public class MapImageGenerator {
 		}
 	}
 
+	private MapImageGenerator() {
+	}
+
 	public static Bitmap generateMapImage(MapPath mapPath, int highlighted, MapImageBitmaps bmps) {
 		float xoff = FloatMath.floor((float)(MAP_WIDTH - mapPath.width) / 2.0f * (float)CELL_WIDTH);
 		float yoff = FloatMath.floor((float)(MAP_HEIGHT - mapPath.height) / 2.0f * (float)CELL_HEIGHT);

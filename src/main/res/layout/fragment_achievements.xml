@@ -50,7 +50,6 @@
 			style="@style/Gloomy.Store.Footer.Button"
 			android:text="@string/store_back"
 		/>
-		<include layout="@layout/inc_achievements_gplay" />
 		<TextView
 			android:id="@+id/player_name"
 			android:layout_width="wrap_content"

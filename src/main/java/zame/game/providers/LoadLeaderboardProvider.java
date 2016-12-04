@@ -74,6 +74,9 @@ public class LoadLeaderboardProvider {
 		}
 	}
 
+	private LoadLeaderboardProvider() {
+	}
+
 	public static void loadLeaderboard() {
 		MyApplication.self.handler.post(new Runnable() {
 			public void run() {

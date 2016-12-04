@@ -1,5 +1,6 @@
 package zame.game.engine;
 
+import android.os.SystemClock;
 import android.util.FloatMath;
 import java.io.File;
 import java.util.Random;
@@ -147,7 +148,7 @@ public class Engine {
 		gameViewActive = true;
 		renderBlackScreen = false;
 		callResumeAfterSurfaceCreated = true;
-		startTime = System.currentTimeMillis();
+		startTime = SystemClock.elapsedRealtime();
 	}
 
 	public void updateAfterLevelLoadedOrCreated() {
@@ -427,7 +428,7 @@ public class Engine {
 			isPaused = false;
 			elapsedTime = state.tempElapsedTime;
 			lastTime = state.tempLastTime;
-			startTime = System.currentTimeMillis() - elapsedTime;
+			startTime = SystemClock.elapsedRealtime() - elapsedTime;
 		}
 
 		game.resume();
@@ -444,7 +445,7 @@ public class Engine {
 		}
 
 		heroController.onDrawFrame();
-		elapsedTime = System.currentTimeMillis() - startTime;
+		elapsedTime = SystemClock.elapsedRealtime() - startTime;
 
 		if (lastTime > elapsedTime) {
 			lastTime = elapsedTime;
@@ -604,7 +605,7 @@ public class Engine {
 	protected int getAvgFps() {
 		frames++;
 
-		long time = System.currentTimeMillis();
+		long time = SystemClock.elapsedRealtime();
 		long diff = time - prevRenderTime;
 
 		if (diff > 1000) {

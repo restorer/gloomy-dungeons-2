@@ -235,6 +235,9 @@ public class CachedTexturesProvider {
 		}
 	}
 
+	private CachedTexturesProvider() {
+	}
+
 	public static Bitmap decodeResource(Resources resources, int resId, BitmapFactory.Options bitmapOptions) {
 		Bitmap result = null;
 

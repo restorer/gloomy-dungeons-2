@@ -170,9 +170,6 @@
 
 	<string name="share_title">Gloomy Dungeons 2: Blood Honor: a true old school 3D shooter for you</string>
 	<string name="send_email_using">Send email using...</string>
-	<string name="share_fb_name">Gloomy Dungeons II</string>
-	<string name="share_fb_caption">Gloomy Dungeons II – a true old school 3D shooter for you</string>
-	<string name="share_fb_description">EXP: %1$d / MAP: %2$s / KILLS: %3$d / ITEMS: %4$d / SECRETS: %5$d / TIME: %6$s</string>
 
 	<!-- store : levels -->
 	<string name="pt_tutorial">Tutorial</string>
@@ -213,8 +210,8 @@
 	<string name="pt_codes">Cheat codes</string>
 	<string name="pd_codes">Want to skip level? Show current FPS? Get all keys at once? Or you are just fan of secret codes? This guide reveals the mystery of the secrect codes.</string>
 
-	<string name="pt_earn_debug">Free credits</string>
-	<string name="pd_earn_debug">+100 credits</string>
+	<string name="pt_earn_debug">Infinite free credits</string>
+	<string name="pd_earn_debug">+100 credits per each tap (no ads, no popups, free as beer)</string>
 
 	<!-- store : texts -->
 	<string name="store_secrets"><![CDATA[

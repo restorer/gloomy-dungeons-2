@@ -121,7 +121,7 @@ public class DataReader {
 		SignaturedObjectInputStream is = new SignaturedObjectInputStream(ois);
 
 		String signatureAndVersion = is.readUTF();
-		int version = 0;
+		int version;
 
 		if (signatureAndVersion == null) {
 			throw new UnknownSignatureException(UnknownSignatureException.INVALID_SIGNATURE);

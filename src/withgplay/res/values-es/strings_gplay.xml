@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="UnusedResources"
 >
-    <string name="achievements_use_facebook_name">Usa el nombre de Facebook</string>
     <string name="menu_rate_game">¡Puntua este juego!</string>
     <string name="pt_earn_facebook">Me gusta el juego en Facebook</string>
     <string name="pd_earn_facebook">Haz un "Me gusta" el juego en facebook y gana 0 creditos</string>

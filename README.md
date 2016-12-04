@@ -21,6 +21,20 @@ This game is released under MIT License (http://www.opensource.org/licenses/mit-
 
 It is oblivious, but I still want to note: all game resources are open-sourced **except** mp3 rock music which are downloaded from the server.
 
+# Product support
+
+This product is already finished, so no long support is planned.
+
+| Feature | Support status |
+|---|---|
+| New features | No |
+| Non-critical bugfixes | No |
+| Critical bugfixes | Yes, if it will be easy to understand where to fix |
+| Pull requests | Accepted (after review) |
+| Issues | Monitored, but if you want to change something - submit a pull request |
+| Android version planned to support | Up to 8.x |
+| Estimated end-of-life | Up to 2018 |
+
 # Compiling
 
 There are 2 variants of game: for google play (with zeemote, facebook, and analytics support) and for f-droid.
@@ -45,3 +59,9 @@ keyPassword=put_key_password_here
   - `./gradlew assembleForfdroidWoutgplayWoutzeemoteWoutkoRelease`
 
 Search for result .apk files in build/outputs/apk/
+
+# Known forks
+
+Long live open-source, at least one fork is known.
+
+- Jurassic Doom (unfortunately levels are the same :(, just graphics changed a little)

@@ -20,4 +20,7 @@ public class StoreGPlayHelper {
             R.drawable.ic_facebook, 0
         ),
     };
+
+    private StoreGPlayHelper() {
+    }
 }

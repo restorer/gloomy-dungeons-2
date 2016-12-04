@@ -170,9 +170,6 @@
 
 	<string name="share_title">Gloomy Dungeons 2: Blood Honor: un verdadero juego de disparos 3D de la vieja escuela.</string>
 	<string name="send_email_using">Mandar email usando…</string>
-	<string name="share_fb_name">Gloomy Dungeons II</string>
-	<string name="share_fb_caption">Gloomy Dungeons II – un verdadero juego de acción 3D para ti</string>
-	<string name="share_fb_description">EXP: %1$d / MAPA: %2$s / MUERTES: %3$d / ARTICULOS: %4$d / SECRETOS: %5$d / TIEMPO: %6$s</string>
 
 	<!-- store : levels -->
 	<string name="pt_tutorial">Tutorial</string>
@@ -214,8 +211,8 @@
 	<string name="pd_codes">¿Quieres salir del nivel? ¿Mostrar FPS actual? ¿Obtener todos los códigos? ¿O te gustan los códigos secretos? Esta guia revela el misterio de los códigos secretos.</string>
 
 	<!-- store : earn -->
-	<string name="pt_earn_debug">créditos</string>
-	<string name="pd_earn_debug">100 créditos</string>
+	<string name="pt_earn_debug">Créditos de libre infinitas</string>
+	<string name="pd_earn_debug">+100 créditos por clic</string>
 
 	<!-- store : texts -->
 	<string name="store_secrets"><![CDATA[

@@ -157,10 +157,12 @@ public class Common {
 
 	public static boolean copyFile(String srcFileName, String destFileName, int errorMessageResId, boolean logExceptions) {
 		boolean success = true;
+		InputStream in = null;
+		OutputStream out = null;
 
 		try {
-			InputStream in = new FileInputStream(srcFileName);
-			OutputStream out = new FileOutputStream(destFileName);
+			in = new FileInputStream(srcFileName);
+			out = new FileOutputStream(destFileName);
 
 			byte[] buf = new byte[1024];
 			int len;
@@ -168,15 +170,37 @@ public class Common {
 			while ((len = in.read(buf)) > 0) {
 				out.write(buf, 0, len);
 			}
-
-			in.close();
-			out.close();
 		} catch (Exception ex) {
 			if (logExceptions) {
 				log(ex);
 			}
 
 			success = false;
+		} finally {
+			if (out != null) {
+				try {
+					out.close();
+				} catch (Exception ex) {
+					if (logExceptions) {
+						log(ex);
+					}
+
+					success = false;
+				}
+			}
+
+			if (in != null) {
+				try {
+					in.close();
+				} catch (Exception ex) {
+					if (logExceptions) {
+						log(ex);
+					}
+
+					// do not unset success flag,
+					// because error while closing InputStream is safe in our case
+				}
+			}
 		}
 
 		if (!success && errorMessageResId != 0) {
