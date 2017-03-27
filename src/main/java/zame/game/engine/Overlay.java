@@ -8,10 +8,17 @@ import zame.game.MyApplication;
 import zame.game.store.Achievements;
 
 public class Overlay implements EngineObject {
+
     public static final int BLOOD = 1;
     public static final int ITEM = 2;
     public static final int MARK = 3;
 
+    /**
+     * This enum is used for building a gradient.
+     * Coordinates represent bottom-left and top-right corners of the gradient rectangle.
+     * CAUTION!!! DON'T CHANGE THE ORDER OF ELEMENTS! They are arranged like that for a reason.
+     * The ordinals of these elements are used in some other methods for math computations.
+    **/
     public enum GradientDirection {
         Right   (0.9f, 0.0f, 1.0f, 1.0f),
         Top     (0f, 0.8f, 1.0f, 1.0f),
@@ -41,7 +48,7 @@ public class Overlay implements EngineObject {
     protected Resources resources;
     protected int overlayType = 0;
     protected long overlayTime = 0;
-    protected long[] hitSideTime = {0, 0, 0, 0};
+    protected long[] hitSideTime = {0, 0, 0, 0}; //timers for all the four gradients
     protected String shownLabel = null;
     protected long labelTime = 0;
     protected float delayTime = 300;
@@ -153,25 +160,101 @@ public class Overlay implements EngineObject {
         gl.glPopMatrix();
     }
 
+
+    /**
+     * This method is used to draw a gradient on a certain side.
+     * Here, the GradientDirection enum is used.
+     */
     public void renderHitSide(GL10 gl) {
+        //initialise a rectangle
         renderer.initOrtho(gl, true, false, 0.0f, 1.0f, 0.0f, 1.0f, 0f, 1.0f);
         renderer.init();
+        //set the color
         renderer.setQuadRGB(1.0f, 0.0f, 0.0f); // red
 
+        //apply in all cases except the wallpaper mode
         if (!engine.inWallpaperMode) {
+            //repeat for each of the four sides
             for (int i = 0; i < hitSideTime.length; i++) {
+                //mn stands for "magic number". Used for math.
                 int mn = (i + 1) * 3;
+                /**
+                 * The logic behind it.
+                 * Remember the ortho quadrants location:
+                 *  2 | 3
+                 *  -----
+                 *  1 | 4
+                 *
+                 *  These are the corners of the gradient rectangle, in this order.
+                 *  So when we assign alphas to the corners, we assign 1 to the brightest side,
+                 *  and 0 to the faintest side.
+                 *  Then for right side gradient we would have: 0 0 1 1 (in this order),
+                 *  because the right corners are the brightest, and so on.
+                 *  So what if we wrote this as a binary number?
+                 *
+                 *  Right:  0011    =3  =(0+1)*3    where Right.ordinal()   ==0
+                 *  Top:    0110    =6  =(1+1)*3    where Top.ordinal()     ==1
+                 *  Bottom: 1001    =9  =(2+1)*3    where Bottom.ordinal()  ==2
+                 *  Left:   1100    =12 =(3+1)*3    where Left.ordinal()    ==3
+                 *
+                 *  So basically mn==(ordinal+1)*3 that exactly equals the bit sequence of gradients.
+                 *  This will allow us to use bitwise operations in a uniform way to obtain alpha values
+                 *  we need in each certain case.
+                **/
+
+
+                //how much time has passed since the shot occured
                 int deltaTime = (int) (engine.elapsedTime - hitSideTime[i]);
                 float delayRatio;
                 if (deltaTime < delayTime) {
+
+                    //delayRatio was, at the beginning, just the fraction of the time interval during which
+                    //the gradient should fade, but later, we changed it to ease computations,
+                    //adding here many otherwise repeated operations.
+                    //First of all, as the gradient should fade with time and not become brighter,
+                    //the quantity should actually decrease, so we subtract it from 1 to reach the effect.
+                    //Then, we thought that it would look better if we decreased opacity of the gradient as a whole,
+                    //so we added a multiplier to obtain that.
                     delayRatio = (1 - deltaTime / delayTime) * 0.8f;
+
+                    /**
+                     * So there is where all the interesting things happen.
+                     * Now we should retrieve the alpha bits from the mn variable.
+                     * Remember that counting right-to-left, as with place values,
+                     * we have:
+                     * a1   quadrant 1  3rd position    x2^3
+                     * a2   quadrant 2  2nd position    x2^2
+                     * a3   quadrant 3  1st position    x2^1
+                     * a4   quadrant 4  0th position    x2^0
+                     *
+                     * So now we should convert these positions back to 1s and 0s.
+                     * For that, we could use the bitwise AND to retrieve the needed bit:
+                     * a1   **** & 1000 = *000  (1000 = 8 = 2^3)
+                     * a2   **** & 0100 = 0*00  (0100 = 4 = 2^2)
+                     * a3   **** & 0010 = 00*0  (0010 = 2 = 2^1)
+                     * a4   **** & 0001 = 000*  (0001 = 1 = 2^0)
+                     *
+                     * So now we have isolated this bit, and the one bit that is still left
+                     * needs to be moved to the 0th position in order to become a decimal 1 or 0:
+                     * a1   *000 >> 3 = 000* = 0 or 1
+                     * a2   0*00 >> 2 = 000* = 0 or 1
+                     * a3   00*0 >> 1 = 000* = 0 or 1
+                     * a4   000* >> 0 = 000* = 0 or 1
+                     *
+                     * Now if you look at the assignments you will see that is exactly what was done.
+                     * Finally, we multiply everything by delayRatio in order to establish proper fading.
+                     *
+                     */
                     renderer.a1 = ((mn & 8) >> 3) * delayRatio;
                     renderer.a2 = ((mn & 4) >> 2) * delayRatio;
                     renderer.a3 = ((mn & 2) >> 1) * delayRatio;
                     renderer.a4 = (mn & 1) * delayRatio;
+
+                    //set the coordinates of the gradient rectangle, taken from a enum element with a given ordinal
                     renderer.setQuadOrthoCoords(GradientDirection.values()[i].x1, GradientDirection.values()[i].y1, GradientDirection.values()[i].x2, GradientDirection.values()[i].y2); // from top
                     renderer.drawQuad();
                 } else {
+                    //no gradient at all
                     renderer.a2 = 0f;
                     renderer.a3 = 0f;
                     renderer.a1 = 0f;
@@ -285,10 +368,10 @@ public class Overlay implements EngineObject {
     }
 
     public Overlay.GradientDirection getDirection(float mx, float my, float px, float py, float pa) {
-        float boundary1 = GameMath.PI_F / 3.0f;            // top-left boundary
-        float boundary2 = GameMath.PI_F * 5.0f / 6.0f;        // left-bottom boundary
-        float boundary3 = GameMath.PI_M2F - boundary2;    // bottom-right boundary
-        float boundary4 = GameMath.PI_M2F - boundary1;    // right-top boundary
+        float boundary1 = GameMath.PI_F / 3.0f;                 // top-left boundary
+        float boundary2 = GameMath.PI_F * 5.0f / 6.0f;          // left-bottom boundary
+        float boundary3 = GameMath.PI_M2F - boundary2;          // bottom-right boundary
+        float boundary4 = GameMath.PI_M2F - boundary1;          // right-top boundary
         float paRad = pa * GameMath.G2RAD_F;
         float gamma = GameMath.getAngle(px - mx, py - my);
         float phi = ((paRad - gamma) > 0) ? (paRad - gamma) : (GameMath.PI_M2F + paRad - gamma);
