@@ -3,6 +3,7 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
 
     dependencies {
@@ -71,37 +72,37 @@ android {
 
     productFlavors {
         forgplay {
-            flavorDimension 'package'
+            dimension 'package'
             applicationId 'org.zamedev.gloomydungeons2.fullnfree'
         }
 
         forfdroid {
-            flavorDimension 'package'
+            dimension 'package'
             applicationId 'org.zamedev.gloomydungeons2.opensource'
         }
 
         withgplay {
-            flavorDimension 'gplay'
+            dimension 'gplay'
         }
 
         woutgplay {
-            flavorDimension 'gplay'
+            dimension 'gplay'
         }
 
         withzeemote {
-            flavorDimension 'zeemote'
+            dimension 'zeemote'
         }
 
         woutzeemote {
-            flavorDimension 'zeemote'
+            dimension 'zeemote'
         }
 
         withko {
-            flavorDimension 'langko'
+            dimension 'langko'
         }
 
         woutko {
-            flavorDimension 'langko'
+            dimension 'langko'
         }
     }
 }
