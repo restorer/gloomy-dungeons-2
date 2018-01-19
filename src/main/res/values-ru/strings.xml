@@ -3,7 +3,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:ignore="UnusedResources"
 >
-	<string name="app_name">Gloomy Dungeons II</string>
 	<string name="typeface">furore.ttf</string>
 	<string name="typeface_interface">roboto</string>
 
@@ -146,7 +145,8 @@
 	<string name="store_levels">Уровни</string>
 	<string name="store_upgrade">Прокачка</string>
 	<string name="store_additional">Дополнительно</string>
-	<string name="store_earn">★ Получить кредиты ★</string>
+	<!-- <string name="store_earn">★ Получить кредиты ★</string> -->
+	<string name="store_earn">★ :) ★</string>
 	<string name="store_back">← Назад</string>
 	<string name="store_credits">%d кредитов</string>
 	<string name="store_item_locked">НЕДОСТУПНО</string>

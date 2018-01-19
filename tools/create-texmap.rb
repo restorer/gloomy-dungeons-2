@@ -30,7 +30,9 @@ COUNT_MONSTER = 0x10	# block = [up, rt, dn, lt], monster = block[walk_a, walk_b,
 class TexMapCreator
 	def initialize
 		@src_dir = File.dirname(__FILE__) + '/graphics'
-		@dst_dir = File.dirname(__FILE__) + '/../src/main/res/drawable-nodpi'
+		@dst_main_dir = File.dirname(__FILE__) + '/../src/main/res/drawable-nodpi'
+		@dst_withhalloween_dir = File.dirname(__FILE__) + '/../src/withhalloween/res/drawable-nodpi'
+		@dst_wouthalloween_dir = File.dirname(__FILE__) + '/../src/wouthalloween/res/drawable-nodpi'
 	end
 
 	def save_pixels_alpha(img, pixels_name, alpha_name)
@@ -174,7 +176,7 @@ class TexMapCreator
 		load_texture(result, "#{base}/icons/back_joy.png", BASE_BACKS + 0, :nowrap)
 		load_texture(result, "#{base}/icons/btn_upgrade.png", BASE_BACKS + 2, :nowrap)
 
-		result.write("#{@dst_dir}/texmap_common.png")
+		result.write("#{@dst_main_dir}/texmap_common.png")
 	end
 
 	def process(set_idx)
@@ -295,31 +297,42 @@ class TexMapCreator
 		load_texture(result, "#{base}/ceil/ceil_05.png", BASE_CEIL + 4, :floor)
 		load_texture(result, "#{base}/ceil/ceil_06.png", BASE_CEIL + 5, :floor)
 
-		result.write("#{@dst_dir}/texmap_#{set_idx}.png")
+		result.write("#{@dst_main_dir}/texmap_#{set_idx}.png")
 	end
 
 	def process_mon(mon_idx, subset)
+		if subset == :normal
+			subset_dir = 'normal'
+			dst_dir = @dst_wouthalloween_dir
+		elsif subset == :halloween
+			subset_dir = 'halloween'
+			dst_dir = @dst_withhalloween_dir
+		elsif
+			puts "Unknown subset"
+		end
+
 		base = "#{@src_dir}/common"
 		result = Magick::Image.new(1024, 256).matte_reset!
 
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_a1.png", 0)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_a2.png", 1)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_a3.png", 2)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_a4.png", 3)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_b1.png", 4)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_b2.png", 5)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_b3.png", 6)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_b4.png", 7)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_c1.png", 8)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_c2.png", 9)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_c3.png", 10)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_c4.png", 11)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_d1.png", 12)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_d2.png", 13)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_d3.png", 14)
-		load_texture_mon(result, "#{base}/monsters-#{subset}/mon_0#{mon_idx}_e.png",  15)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_a1.png", 0)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_a2.png", 1)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_a3.png", 2)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_a4.png", 3)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_b1.png", 4)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_b2.png", 5)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_b3.png", 6)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_b4.png", 7)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_c1.png", 8)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_c2.png", 9)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_c3.png", 10)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_c4.png", 11)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_d1.png", 12)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_d2.png", 13)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_d3.png", 14)
+		load_texture_mon(result, "#{base}/monsters-#{subset_dir}/mon_0#{mon_idx}_e.png",  15)
 
-		save_pixels_alpha(result, "#{@dst_dir}/texmap_mon_#{mon_idx}_p.jpg", "#{@dst_dir}/texmap_mon_#{mon_idx}_a.png")
+		save_pixels_alpha(result, "#{dst_dir}/texmap_mon_#{mon_idx}_p.jpg", "#{dst_dir}/texmap_mon_#{mon_idx}_a.png")
+		# result.write("#{dst_dir}/texmap_mon_#{mon_idx}.png")
 	end
 
 	def process_hit
@@ -331,22 +344,20 @@ class TexMapCreator
 			img = load_alpha_image("#{base}/#{name}")
 
 			subname = name.gsub(/\.png$/i, '')
-			save_pixels_alpha(img, "#{@dst_dir}/#{subname}_p.jpg", "#{@dst_dir}/#{subname}_a.png")
+			save_pixels_alpha(img, "#{@dst_main_dir}/#{subname}_p.jpg", "#{@dst_main_dir}/#{subname}_a.png")
 		end
 	end
 
 	def optimize
-		`pushd "#{@dst_dir}" ; optipng -strip all -o7 hit_*.png ; popd`
-		`pushd "#{@dst_dir}" ; optipng -strip all -o7 texmap_*.png ; popd`
+		`pushd "#{@dst_main_dir}" ; optipng -strip all -o7 hit_*.png ; popd`
+		`pushd "#{@dst_main_dir}" ; optipng -strip all -o7 texmap_*.png ; popd`
 	end
 end
-
-monsters_subset = 'normal'
-# monsters_subset = 'halloween'
 
 tmc = TexMapCreator.new
 tmc.process_common
 (1 .. 5).each { |idx| tmc.process(idx) }
-(1 .. 8).each { |idx| tmc.process_mon(idx, monsters_subset) }
+(1 .. 8).each { |idx| tmc.process_mon(idx, :normal) }
+(1 .. 8).each { |idx| tmc.process_mon(idx, :halloween) }
 tmc.process_hit
 tmc.optimize

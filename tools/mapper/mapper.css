@@ -53,6 +53,7 @@ th, td {
 	line-height: 30px;
 	background: #888;
 	border-bottom: 1px solid #666;
+	z-index: 1000;
 }
 
 .menu li {

@@ -3,7 +3,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:ignore="UnusedResources"
 >
-	<string name="app_name">Gloomy Dungeons II</string>
 	<string name="typeface">JockeyOne-Regular.ttf</string>
 	<string name="typeface_interface">roboto</string>
 
@@ -146,7 +145,8 @@
 	<string name="store_levels">Niveles</string>
 	<string name="store_upgrade">Mejorar</string>
 	<string name="store_additional">Adicional</string>
-	<string name="store_earn">★ Ganar Créditos ★</string>
+	<!-- <string name="store_earn">★ Ganar Créditos ★</string> -->
+	<string name="store_earn">★ :) ★</string>
 	<string name="store_back">← Volver</string>
 	<string name="store_credits">%d créditos</string>
 	<string name="store_item_locked">BLOQUEADO</string>

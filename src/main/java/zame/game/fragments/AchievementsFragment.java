@@ -25,7 +25,7 @@ import zame.game.providers.UpdateLeaderboardProvider;
 import zame.game.store.AchievementsAdapter;
 import zame.game.store.Profile;
 
-public class AchievementsFragment extends BaseFragment implements ActionBarFragment, ActionBar.TabListener {
+public class AchievementsFragment extends BaseFragment /* implements ActionBarFragment, ActionBar.TabListener */ {
 	protected final static int TAG_ACHIEVEMENTS = 1;
 	protected final static int TAG_LEADERBOARD = 2;
 
@@ -59,6 +59,7 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 		this.profile = MyApplication.self.profile;
 	}
 
+	/*
 	@Override
 	public void setupTabs(ActionBar actionBar) {
 		actionBar.addTab(actionBar.newTab()
@@ -73,7 +74,7 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 			.setTabListener(this)
 		);
 	}
-
+	*/
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -148,6 +149,7 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 	}
 
 	protected void ensureSelectedTab() {
+		/*
 		ActionBar actionBar = activity.getSupportActionBar();
 
 		if (actionBar == null || actionBar.getSelectedTab() == null || actionBar.getSelectedTab().getTag() == null) {
@@ -164,6 +166,7 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 				}
 			}
 		}
+		*/
 	}
 
 	public void changeTag(int newTag) {
@@ -177,6 +180,7 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 		}
 	}
 
+	/*
 	@Override
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction transaction) {
 		if (isActive && ((Integer)tab.getTag() != currentTag)) {
@@ -192,4 +196,5 @@ public class AchievementsFragment extends BaseFragment implements ActionBarFragm
 	@Override
 	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction transaction) {
 	}
+	*/
 }

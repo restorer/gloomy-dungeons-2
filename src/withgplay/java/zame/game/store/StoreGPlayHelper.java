@@ -9,11 +9,13 @@ public class StoreGPlayHelper {
     public static final int EARN_FACEBOOK = 10;
 
     public static final Product[] CATEGORY_EARN = new Product[] {
+        /*
         new ProductEarnDebug(
             Store.EARN_DEBUG, -1, -100,
             R.string.pt_earn_debug, R.string.pd_earn_debug,
             R.drawable.ic_earn, 0
         ),
+        */
         new ProductEarnFacebook(
             EARN_FACEBOOK, -1, 0,
             R.string.pt_earn_facebook, R.string.pd_earn_facebook,

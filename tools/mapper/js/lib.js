@@ -113,7 +113,7 @@ var lib = (function() {
 				removeClass: function(className) {
 					lib.each(elements, function(element) {
 						element.className = (' ' + element.className + ' ')
-							.replace(/ /, '  ')
+							.replace(/ /g, '  ')
 							.replace(new RegExp(' ' + lib.quoteRegExp(className) + ' '), '')
 							.replace(/[ ]{2,}/, ' ')
 							.replace(/^[ ]+/, '')
@@ -187,7 +187,7 @@ var lib = (function() {
 					if (elements.length == 0) {
 						return (def || null);
 					} else {
-						return (typeof(elements[0][name]) == 'undefined' ? (def || null) : elements[0][name]);
+						return (typeof(elements[0][name]) == 'undefined' ? (elements[0].getAttribute(name) || def || null) : elements[0][name]);
 					}
 				},
 

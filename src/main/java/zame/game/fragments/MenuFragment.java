@@ -28,6 +28,7 @@ import zame.game.store.Profile;
 import zame.game.store.Store;
 
 public class MenuFragment extends BaseFragment {
+	protected static final boolean DISCOUNT_OFFER_ENABLED = false;
 	protected static final long DISCOUNT_OFFER_HOURS = 48;
 
 	protected ViewGroup viewGroup;
@@ -134,7 +135,7 @@ public class MenuFragment extends BaseFragment {
 
 		discountOfferWrapView = (ViewGroup)viewGroup.findViewById(R.id.discount_offer_wrap);
 
-		if (profile.discountOfferTime < 0) {
+		if (profile.discountOfferTime < 0 || !DISCOUNT_OFFER_ENABLED) {
 			discountOfferWrapView.setVisibility(View.GONE);
 		} else {
 			if (profile.discountOfferTime == 0) {
@@ -230,7 +231,7 @@ public class MenuFragment extends BaseFragment {
 	}
 
 	protected synchronized void startTask() {
-		if (profile.discountOfferTime <= 0) {
+		if (profile.discountOfferTime <= 0 || !DISCOUNT_OFFER_ENABLED) {
 			return;
 		}
 
@@ -263,7 +264,7 @@ public class MenuFragment extends BaseFragment {
 	}
 
 	protected void updateDiscountOffer() {
-		if (profile.discountOfferTime <= 0 || discountOfferTimeView == null) {
+		if (profile.discountOfferTime <= 0 || discountOfferTimeView == null || !DISCOUNT_OFFER_ENABLED) {
 			return;
 		}
 

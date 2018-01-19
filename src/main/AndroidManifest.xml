@@ -22,6 +22,10 @@
 		android:hardwareAccelerated="false"
 		android:largeHeap="true"
 	>
+		<meta-data
+			android:name="android.max_aspect"
+			android:value="2.1"
+		/>
 		<activity
 			android:screenOrientation="landscape"
 			android:name="zame.game.MainActivity"

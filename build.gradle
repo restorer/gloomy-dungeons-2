@@ -67,41 +67,54 @@ android {
         }
     }
 
-    flavorDimensions 'package', 'gplay', 'zeemote', 'langko'
+    flavorDimensions 'package', 'gplay', 'zeemote', 'langko', 'gfxhalloween'
 
     productFlavors {
         forgplay {
-            flavorDimension 'package'
+            dimension 'package'
             applicationId 'org.zamedev.gloomydungeons2.fullnfree'
         }
 
+        forgplayhalloween {
+            dimension 'package'
+            applicationId 'org.zamedev.gloomydungeons2.halloween'
+        }
+
         forfdroid {
-            flavorDimension 'package'
+            dimension 'package'
             applicationId 'org.zamedev.gloomydungeons2.opensource'
         }
 
         withgplay {
-            flavorDimension 'gplay'
+            dimension 'gplay'
         }
 
         woutgplay {
-            flavorDimension 'gplay'
+            dimension 'gplay'
         }
 
         withzeemote {
-            flavorDimension 'zeemote'
+            dimension 'zeemote'
         }
 
         woutzeemote {
-            flavorDimension 'zeemote'
+            dimension 'zeemote'
         }
 
         withko {
-            flavorDimension 'langko'
+            dimension 'langko'
         }
 
         woutko {
-            flavorDimension 'langko'
+            dimension 'langko'
+        }
+
+        withhalloween {
+            dimension 'gfxhalloween'
+        }
+
+        wouthalloween {
+            dimension 'gfxhalloween'
         }
     }
 }

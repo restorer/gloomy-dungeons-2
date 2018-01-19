@@ -50,7 +50,10 @@ public class StoreFragment extends BaseFragment implements ActionBarFragment, Ac
 		addTab(actionBar, R.string.store_levels, Store.CATEGORY_LEVELS);
 		addTab(actionBar, R.string.store_upgrade, Store.CATEGORY_UPGRADE);
 		addTab(actionBar, R.string.store_additional, Store.CATEGORY_ADDITIONAL);
-		addTab(actionBar, R.string.store_earn, Store.CATEGORY_EARN);
+
+		if (Store.CATEGORIES[Store.CATEGORY_EARN].length != 0) {
+			addTab(actionBar, R.string.store_earn, Store.CATEGORY_EARN);
+		}
 	}
 
 	protected void addTab(ActionBar actionBar, int titleResourceId, int storeCategory) {

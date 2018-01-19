@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$1" = "" || "$2" = "" ]] ; then
-	echo "Usage: z-build <gplay|fdroid> <debug|release> [install]"
+	echo "Usage: z-build <gplay|gplayhalloween|fdroid> <debug|release> [install]"
 	exit
 fi
 
@@ -29,15 +29,22 @@ esac
 
 case "$1" in
 	gplay)
-		TASK="ForgplayWithgplayWithzeemoteWoutko"
-		LCTASK="forgplaywithgplaywithzeemotewoutko"
-		SRCNAME="gloomy-dungeons-2-forgplay-withgplay-withzeemote-woutko-release.apk"
+		TASK="ForgplayWithgplayWithzeemoteWoutkoWouthalloween"
+		LCTASK="forgplaywithgplaywithzeemotewoutkowouthalloween"
+		SRCNAME="gloomy-dungeons-2-forgplay-withgplay-withzeemote-woutko-wouthalloween-release.apk"
 		DSTNAMEPART="gloomy-dungeons-2-fullnfree-${VERSION_NAME}"
 		;;
 
+	gplayhalloween)
+		TASK="ForgplayhalloweenWithgplayWithzeemoteWoutkoWithhalloween"
+		LCTASK="forgplayhalloweenwithgplaywithzeemotewoutkowithhalloween"
+		SRCNAME="gloomy-dungeons-2-forgplayhalloween-withgplay-withzeemote-woutko-withhalloween-release.apk"
+		DSTNAMEPART="gloomy-dungeons-2-halloween-${VERSION_NAME}"
+		;;
+
 	fdroid)
-		TASK="ForfdroidWoutgplayWoutzeemoteWoutko"
-		LCTASK="forfdroidwoutgplaywoutzeemotewoutko"
+		TASK="ForfdroidWoutgplayWoutzeemoteWoutkoWouthalloween"
+		LCTASK="forfdroidwoutgplaywoutzeemotewoutkowouthalloween"
 		;;
 
 	*)

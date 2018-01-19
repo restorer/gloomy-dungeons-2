@@ -1,8 +1,0 @@
-
-/messages/*
-/helpers/Common.php
-/views/status/_finishOrderDialog.php
-/views/accountStatement.php
-/views/employeeCard.php
-/views/common/_accounting.php
-/views/clientCard.php

@@ -14,6 +14,8 @@ import zame.game.engine.data.DataWriter;
 import zame.game.managers.Tracker;
 
 public class Profile extends BaseState {
+	protected static final int INITIAL_CREDITS = 9000;
+
 	public static final String BROADCAST_ACTION_UPDATED = "local:Profile.updated";
 
 	protected static final int FIELD_BUILD = 1;
@@ -28,11 +30,12 @@ public class Profile extends BaseState {
 	protected static final int FIELD_ALREADY_COMPLETED_LEVELS = 10;
 	protected static final int FIELD_PLAYER_UID = 11;
 	protected static final int FIELD_PLAYER_NAME = 12;
+	protected static final int FIELD_INITIAL_CREDITS_EARNED = 13;
 
 	public boolean autoSaveOnUpdate = true;
 	public boolean isUnsavedUpdates = false;
 
-	public int credits = 0;
+	public int credits = INITIAL_CREDITS;
 	public int exp = 0;
 	public long discountOfferTime = 0;
 	public boolean discountOfferSuccess = false;
@@ -41,6 +44,7 @@ public class Profile extends BaseState {
 	public HashSet<String> alreadyCompletedLevels = new HashSet<String>();
 	public String playerUid = "";
 	public String playerName = "";
+	public boolean initialCreditsEarned = false;
 
 	public ProfileLevel[] levels = {
 		new ProfileLevel("e00m00", -1),
@@ -166,7 +170,7 @@ public class Profile extends BaseState {
 		autoSaveOnUpdate = false;
 		isUnsavedUpdates = false;
 
-		credits = 0;
+		credits = INITIAL_CREDITS;
 		exp = 0;
 		discountOfferTime = 0;
 		discountOfferSuccess = false;
@@ -199,6 +203,7 @@ public class Profile extends BaseState {
 		writer.write(FIELD_ALREADY_COMPLETED_LEVELS, alreadyCompletedLevels.toArray(new String[0]));
 		writer.write(FIELD_PLAYER_UID, playerUid);
 		writer.write(FIELD_PLAYER_NAME, playerName);
+		writer.write(FIELD_INITIAL_CREDITS_EARNED, initialCreditsEarned);
 	}
 
 	@Override
@@ -211,6 +216,7 @@ public class Profile extends BaseState {
 		discountOfferSuccess = reader.readBoolean(FIELD_DISCOUNT_OFFER_SUCCESS);
 		playerUid = reader.readString(FIELD_PLAYER_UID);
 		playerName = reader.readString(FIELD_PLAYER_NAME);
+		initialCreditsEarned = reader.readBoolean(FIELD_INITIAL_CREDITS_EARNED);
 
 		alreadyCompletedLevels.clear();
 
@@ -260,6 +266,39 @@ public class Profile extends BaseState {
 			products[Store.EPISODE_1]._purchased = true;
 			changed = true;
 		}
+
+		// + Already purchased episodes
+		if (!products[Store.EPISODE_2]._purchased) {
+			products[Store.EPISODE_2]._purchased = true;
+			changed = true;
+		}
+
+		if (!products[Store.EPISODE_3]._purchased) {
+			products[Store.EPISODE_3]._purchased = true;
+			changed = true;
+		}
+
+		if (!products[Store.EPISODE_4]._purchased) {
+			products[Store.EPISODE_4]._purchased = true;
+			changed = true;
+		}
+
+		if (!products[Store.EPISODE_5]._purchased) {
+			products[Store.EPISODE_5]._purchased = true;
+			changed = true;
+		}
+		// - Already purchased episodes
+
+		// + Initial credits
+		if (!initialCreditsEarned) {
+			if (credits < INITIAL_CREDITS) {
+				credits = INITIAL_CREDITS;
+			}
+
+			initialCreditsEarned = true;
+			changed = true;
+		}
+		// - Initial credits
 
 		if (achieved[Achievements.QUICKY] && !products[Store.EPISODE_2]._purchased) {
 			products[Store.EPISODE_2]._purchased = true;
