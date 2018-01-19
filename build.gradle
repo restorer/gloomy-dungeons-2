@@ -3,10 +3,11 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.2.3'
     }
 }
 
@@ -21,8 +22,8 @@ allprojects {
 }
 
 android {
-    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    compileSdkVersion 22
+    buildToolsVersion '25.0.2'
     // useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
@@ -122,7 +123,7 @@ android {
 dependencies {
     compile project(':libraries:holoeverywhere')
     compile project(':libraries:holoeverywhere-preferences')
-    compile fileTree(dir: 'src/main/libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'src/main/libs')
     withgplayCompile fileTree(dir: 'src/withgplay/libs', include: ['*.jar'])
     withzeemoteCompile fileTree(dir: 'src/withzeemote/libs', include: ['*.jar'])
 }
