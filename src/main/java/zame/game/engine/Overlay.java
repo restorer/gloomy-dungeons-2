@@ -177,7 +177,7 @@ public class Overlay implements EngineObject {
 
         renderer.initOrtho(gl, true, false, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 1.0f);
         renderer.init();
-        renderer.setQuadRGB(COLORS[BLOOD - 1][0], COLORS[BLOOD - 1][1], COLORS[BLOOD - 1][0]);
+        renderer.setQuadRGB(COLORS[BLOOD - 1][0], COLORS[BLOOD - 1][1], COLORS[BLOOD - 1][2]);
 
         // repeat for each of the four sides
         for (int i = 0, len = hitSideTime.length; i < len; i++) {
