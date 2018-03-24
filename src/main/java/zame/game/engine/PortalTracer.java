@@ -363,7 +363,9 @@ public class PortalTracer implements EngineObject {
 					}
 				}
 
-				if (localLevel[y][x] == 0) {
+				int cellValue = localLevel[y][x];
+
+				if (cellValue == 0) {
 					if (wall) {
 						if (portal) {
 							float innerToAngle = (portToX >= 0 ? GameMath.getAngle(portToX - heroX, portToY - heroY) /* + ANG_CORRECT (leaved here just for case) */ : toAngle);
@@ -383,7 +385,76 @@ public class PortalTracer implements EngineObject {
 						portal = false;
 					}
 				} else {
-					addWallBlock(x, y, localLevel[y][x] > 0); // -1 = closed door
+                    if (cellValue < 0) { // -1 is vertical closed door and -2 is horizontal closed door
+                        addWallBlock(x, y, false);
+
+                        // due to portal tracer "feature", if door is closed, than in rare moments
+                        // is can cause visual bug:
+                        //
+                        // WWWWW
+                        // WWWWW <- this wall (W capital) is visible
+                        // WWWWW
+                        //   D   <- this door is visible, and if it was wall, then wall at bottom (w lovercase)
+                        //   D   <- will be invisible.
+                        //   D   <- but this is door, not wall, so...
+                        // wwwww
+                        // wwwww <- this wall is not rendered, which cause visual bug
+                        // wwwww
+                        //
+                        // to avoid this, let just add appropriate walls near the door
+
+                        if (cellValue == -1) { // -1 means vertical door
+                            if (y > 0 && !localTouchedCellsMap[y - 1][x]) {
+                                localTouchedCellsMap[y - 1][x] = true;
+
+                                if (touchedCellsCount < MAX_TOUCHED_CELLS) {
+                                    localTouchedCells[touchedCellsCount].x = x;
+                                    localTouchedCells[touchedCellsCount].y = y - 1;
+                                    touchedCellsCount++;
+                                }
+
+                                addWallBlock(x, y - 1, true);
+                            }
+
+                            if (y < levelHeight - 1 && !localTouchedCellsMap[y + 1][x]) {
+                                localTouchedCellsMap[y + 1][x] = true;
+
+                                if (touchedCellsCount < MAX_TOUCHED_CELLS) {
+                                    localTouchedCells[touchedCellsCount].x = x;
+                                    localTouchedCells[touchedCellsCount].y = y + 1;
+                                    touchedCellsCount++;
+                                }
+
+                                addWallBlock(x, y + 1, true);
+                            }
+                        } else { // handle horizontal door
+                            if (x > 0 && !localTouchedCellsMap[y][x - 1]) {
+                                localTouchedCellsMap[y][x - 1] = true;
+
+                                if (touchedCellsCount < MAX_TOUCHED_CELLS) {
+                                    localTouchedCells[touchedCellsCount].x = x - 1;
+                                    localTouchedCells[touchedCellsCount].y = y;
+                                    touchedCellsCount++;
+                                }
+
+                                addWallBlock(x - 1, y, true);
+                            }
+
+                            if (x < levelWidth - 1 && !localTouchedCellsMap[y][x + 1]) {
+                                localTouchedCellsMap[y][x + 1] = true;
+
+                                if (touchedCellsCount < MAX_TOUCHED_CELLS) {
+                                    localTouchedCells[touchedCellsCount].x = x + 1;
+                                    localTouchedCells[touchedCellsCount].y = y;
+                                    touchedCellsCount++;
+                                }
+
+                                addWallBlock(x + 1, y, true);
+                            }
+                        }
+                    } else {
+                        addWallBlock(x, y, true);
+                    }
 
 					if (!wall) {
 						lastX = prevX;

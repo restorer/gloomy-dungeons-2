@@ -333,7 +333,7 @@ public class Level implements EngineObject {
 					door.texture = value - 1;
 					door.vert = isVert;
 
-					state.wallsMap[i][j] = -1;	// mark door for PortalTracer
+					state.wallsMap[i][j] = (isVert ? -1 : -2); // mark door for PortalTracer
 					state.passableMap[i][j] |= PASSABLE_IS_DOOR;
 				} else if (type == T_OBJ) {
 					state.objectsMap[i][j] = value - 1 + TextureLoader.BASE_OBJECTS;

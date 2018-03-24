@@ -124,7 +124,7 @@ public class Door extends DataListItem implements EngineObject, DataItem {
 
 	public void update(long elapsedTime) {
 		if (dir > 0) {
-			state.wallsMap[y][x] = 0;	// clear door mark for PortalTracer
+			state.wallsMap[y][x] = 0; // clear door mark for PortalTracer
 
 			if (openPos >= OPEN_POS_PASSABLE) {
 				state.passableMap[y][x] &= ~Level.PASSABLE_IS_DOOR;
@@ -145,7 +145,7 @@ public class Door extends DataListItem implements EngineObject, DataItem {
 				}
 
 				if (openPos <= 0.0f) {
-					state.wallsMap[y][x] = -1;	// mark door for PortalTracer
+					state.wallsMap[y][x] = (vert ? -1 : -2); // mark door for PortalTracer
 					openPos = 0.0f;
 					dir = 0;
 				}
