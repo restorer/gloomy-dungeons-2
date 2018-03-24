@@ -8,6 +8,10 @@ import zame.game.MyApplication;
 import zame.game.store.Achievements;
 
 public class Overlay implements EngineObject {
+    private static final float GRADIENT_BOUNDARY_1 = GameMath.PI_F / 3.0f; // top-left boundary
+    private static final float GRADIENT_BOUNDARY_2 = GameMath.PI_F * 5.0f / 6.0f; // left-bottom boundary
+    private static final float GRADIENT_BOUNDARY_3 = GameMath.PI_M2F - GRADIENT_BOUNDARY_2; // bottom-right boundary
+    private static final float GRADIENT_BOUNDARY_4 = GameMath.PI_M2F - GRADIENT_BOUNDARY_1; // right-top boundary
 
     public static final int BLOOD = 1;
     public static final int ITEM = 2;
@@ -367,23 +371,23 @@ public class Overlay implements EngineObject {
         gl.glPopMatrix();
     }
 
-    public Overlay.GradientDirection getDirection(float mx, float my, float px, float py, float pa) {
-        float boundary1 = GameMath.PI_F / 3.0f;                 // top-left boundary
-        float boundary2 = GameMath.PI_F * 5.0f / 6.0f;          // left-bottom boundary
-        float boundary3 = GameMath.PI_M2F - boundary2;          // bottom-right boundary
-        float boundary4 = GameMath.PI_M2F - boundary1;          // right-top boundary
+    private Overlay.GradientDirection getDirection(float mx, float my, float px, float py, float pa) {
         float paRad = pa * GameMath.G2RAD_F;
         float gamma = GameMath.getAngle(px - mx, py - my);
-        float phi = ((paRad - gamma) > 0) ? (paRad - gamma) : (GameMath.PI_M2F + paRad - gamma);
-        if ((phi <= boundary1) || (phi >= boundary4)) {
+        float phi = (paRad - gamma > 0 ? paRad : GameMath.PI_M2F + paRad) - gamma;
+
+        if (phi <= GRADIENT_BOUNDARY_1 || phi >= GRADIENT_BOUNDARY_4) {
             return GradientDirection.Bottom;
         }
-        if ((phi > boundary1) && (phi <= boundary2)) {
+
+        if (phi > GRADIENT_BOUNDARY_1 && phi <= GRADIENT_BOUNDARY_2) {
             return GradientDirection.Left;
         }
-        if ((phi > boundary2) && (phi <= boundary3)) {
+
+        if (phi > GRADIENT_BOUNDARY_2 && phi <= GRADIENT_BOUNDARY_3) {
             return GradientDirection.Top;
         }
+
         return GradientDirection.Right;
     }
 }
