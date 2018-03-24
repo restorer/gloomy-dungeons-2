@@ -101,8 +101,10 @@ var lib = (function() {
 				},
 
 				addClass: function(className) {
+					var classNameRe = new RegExp(' ' + lib.quoteRegExp(className) + ' ');
+
 					lib.each(elements, function(element) {
-						if (!(' ' + element.className + ' ').match(new RegExp(' ' + lib.quoteRegExp(className) + ' '))) {
+						if (!(' ' + element.className + ' ').match(classNameRe)) {
 							element.className += ' ' + className;
 						}
 					});
@@ -111,11 +113,13 @@ var lib = (function() {
 				},
 
 				removeClass: function(className) {
+					var classNameRe = new RegExp(' ' + lib.quoteRegExp(className) + ' ');
+
 					lib.each(elements, function(element) {
 						element.className = (' ' + element.className + ' ')
 							.replace(/ /g, '  ')
-							.replace(new RegExp(' ' + lib.quoteRegExp(className) + ' '), '')
-							.replace(/[ ]{2,}/, ' ')
+							.replace(classNameRe, '')
+							.replace(/[ ]{2,}/g, ' ')
 							.replace(/^[ ]+/, '')
 							.replace(/[ ]+$/, '');
 					});

@@ -384,9 +384,11 @@ public class Game implements EngineObject {
 			return;
 		}
 
-		// overlay.showOverlay(Overlay.BLOOD);
-
-		overlay.showHitSide(mon.x, mon.y);
+		if (mon != null) {
+			overlay.showHitSide(mon.x, mon.y);
+		} else {
+			overlay.showOverlay(Overlay.BLOOD);
+		}
 
 		if (!state.godMode && nextLevelTime == 0) {
 			if (state.heroArmor > 0) {
