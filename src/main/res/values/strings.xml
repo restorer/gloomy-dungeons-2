@@ -126,7 +126,7 @@
 	<string name="lblm_door">To open the door, just go through it</string>
 	<string name="lblm_switch">To activate the switch, go up to him as close as possible</string>
 	<string name="lblm_turn_left">Turn left</string>
-	<string name="lblm_turn_right">Than turn right</string>
+	<string name="lblm_turn_right">Then turn right</string>
 	<string name="lblm_this_is_window">This is the window. You shouldn’t go through it</string>
 
 	<string name="eod_info">Congratulations! You have completed all the episodes.\nBut this is not the end - purchase new levels and continue playing!</string>
