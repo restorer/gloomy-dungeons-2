@@ -127,7 +127,7 @@
 	<string name="lblm_door">문을 열려면 그냥 통과 하십시오</string>
 	<string name="lblm_switch">스위치를 켜려면 가능한 만큼 최대한 가까이 접근하면 됩니다.</string>
 	<string name="lblm_turn_left">Turn left</string>
-	<string name="lblm_turn_right">Than turn right</string>
+	<string name="lblm_turn_right">Then turn right</string>
 	<string name="lblm_this_is_window">This is the window. You shouldn’t go through it</string>
 
 	<string name="eod_info">축하합니다! 전체 에피소드를 클리어 하셨습니다.\n하지만 이것이 끝은 아닙니다. 새로운 레벨을 구입하여 다시 도전해 보세요!</string>
