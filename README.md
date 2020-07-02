@@ -24,7 +24,7 @@ This game is released under MIT License (http://www.opensource.org/licenses/mit-
 
 ## Note
 
-It is oblivious, but I still want to note: all game resources are open-sourced **except** mp3 rock music which are downloaded from the server.
+It is obvious, but I still want to note: all game resources are open-sourced **except** mp3 rock music which are downloaded from the server.
 
 # Product support
 
